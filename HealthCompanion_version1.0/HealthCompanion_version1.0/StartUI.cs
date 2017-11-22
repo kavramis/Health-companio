@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace HealthCompanion_version1._0
 {
-    public partial class Form1 : Form
+    public partial class StartUI : Form
     {
-        public Form1()
+        public StartUI()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
