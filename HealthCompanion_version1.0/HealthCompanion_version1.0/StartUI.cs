@@ -16,5 +16,52 @@ namespace HealthCompanion_version1._0
         {
             InitializeComponent();
         }
+
+        private void RegisterBtn_Click(object sender, EventArgs e)
+        {
+            RegisterPanel.Visible = true;
+            LoginPanel.Visible = false;
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            RegisterPanel.Visible = false;
+            LoginPanel.Visible = true;
+        }
+
+        private void loginUserTxtBox_Enter(object sender, EventArgs e)
+        {
+            loginUserTxtBox.Text = "";
+            loginUserTxtBox.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void loginUserTxtBox_Leave(object sender, EventArgs e)
+        {
+            if (loginUserTxtBox.Text.Equals(""))
+            {
+                loginUserTxtBox.Text = "Username";
+                loginUserTxtBox.ForeColor = System.Drawing.Color.Silver;
+            }
+        }
+
+        private void loginPassTxtBox_Enter(object sender, EventArgs e)
+        {
+            loginPassTxtBox.Text = "";
+            loginPassTxtBox.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void loginPassTxtBox_Leave(object sender, EventArgs e)
+        {
+            if (loginPassTxtBox.Text.Equals(""))
+            {
+                loginPassTxtBox.Text = "Password";
+                loginPassTxtBox.ForeColor = System.Drawing.Color.Silver;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
