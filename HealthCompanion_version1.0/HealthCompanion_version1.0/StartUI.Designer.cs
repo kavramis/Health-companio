@@ -76,7 +76,7 @@
             this.panel1.Controls.Add(this.LoginPanel);
             this.panel1.Controls.Add(this.RegisterPanel);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(491, 0);
+            this.panel1.Location = new System.Drawing.Point(491, -4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(503, 657);
             this.panel1.TabIndex = 0;
@@ -375,9 +375,9 @@
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(0, -4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(493, 657);
+            this.panel2.Size = new System.Drawing.Size(506, 660);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
@@ -385,23 +385,21 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(490, 654);
+            this.pictureBox1.Size = new System.Drawing.Size(503, 657);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // StartUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 657);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(981, 649);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StartUI";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartUI";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.LoginPanel.ResumeLayout(false);

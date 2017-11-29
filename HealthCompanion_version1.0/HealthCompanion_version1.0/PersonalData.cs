@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace HealthCompanion_version1._0
 {
-    public partial class AfterLogin : Form
+    public partial class PersonalData : Form
     {
-        public AfterLogin()
+        public PersonalData()
         {
             InitializeComponent();
         }
 
-        private void ExitBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }

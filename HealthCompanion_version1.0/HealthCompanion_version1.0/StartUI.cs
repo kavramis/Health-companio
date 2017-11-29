@@ -15,16 +15,22 @@ namespace HealthCompanion_version1._0
         public StartUI()
         {
             InitializeComponent();
+            LoginPanel.Location = new Point(1000, 1000);
         }
 
         private void RegisterBtn_Click(object sender, EventArgs e)
-        {
+        {   
+            LoginPanel.Location = new Point(1000, 1000);
+            RegisterPanel.Location = new Point(95, 137);
             RegisterPanel.Visible = true;
             LoginPanel.Visible = false;
+
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+            RegisterPanel.Location = new Point(2000, 2000);
+            LoginPanel.Location = new Point(95, 137);
             RegisterPanel.Visible = false;
             LoginPanel.Visible = true;
         }
