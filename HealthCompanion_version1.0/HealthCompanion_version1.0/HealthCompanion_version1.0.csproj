@@ -59,6 +59,12 @@
     <Compile Include="StartUI.Designer.cs">
       <DependentUpon>StartUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrainningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainningForm.Designer.cs">
+      <DependentUpon>TrainningForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="PersonalData.resx">
       <DependentUpon>PersonalData.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +79,9 @@
     </Compile>
     <EmbeddedResource Include="StartUI.resx">
       <DependentUpon>StartUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainningForm.resx">
+      <DependentUpon>TrainningForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
