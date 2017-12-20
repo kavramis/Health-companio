@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DietForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DietForm.Designer.cs">
+      <DependentUpon>DietForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalForm.Designer.cs">
+      <DependentUpon>FinalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonalData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +77,12 @@
     <Compile Include="TrainningForm.Designer.cs">
       <DependentUpon>TrainningForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DietForm.resx">
+      <DependentUpon>DietForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalForm.resx">
+      <DependentUpon>FinalForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PersonalData.resx">
       <DependentUpon>PersonalData.cs</DependentUpon>
     </EmbeddedResource>
