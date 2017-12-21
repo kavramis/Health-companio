@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 namespace HealthCompanion_version1._0
 {
-    public partial class PersonalData : Form
+    public partial class TrainningForm : Form
     {
-        public PersonalData()
+        public TrainningForm()
         {
             InitializeComponent();
-            genderRadioBtnMale.Select();
+            comboBox1.Text = comboBox1.Items[0].ToString();
+            comboBox2.Text = comboBox2.Items[0].ToString();
+            comboBox3.Text = comboBox3.Items[0].ToString();
+            comboBox4.Text = comboBox4.Items[0].ToString();
         }
     }
 }
