@@ -16,6 +16,17 @@ namespace HealthCompanion_version1._0
         {
             InitializeComponent();
             genderRadioBtnMale.Select();
+            heightLabel.BackColor = System.Drawing.Color.Transparent;
+            weightLabel.BackColor = System.Drawing.Color.Transparent;
+            ageLabel.BackColor = System.Drawing.Color.Transparent;
+            genderLabel.BackColor = System.Drawing.Color.Transparent;
+            groupBox1.BackColor = System.Drawing.Color.Transparent;
+            submitBtn.BackColor = System.Drawing.Color.Transparent;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

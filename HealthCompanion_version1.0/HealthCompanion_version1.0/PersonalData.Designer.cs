@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalData));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.genderRadioBtnMale = new System.Windows.Forms.RadioButton();
             this.genderRadionBtnFemale = new System.Windows.Forms.RadioButton();
@@ -39,14 +41,16 @@
             this.ageLabel = new System.Windows.Forms.Label();
             this.weightLabel = new System.Windows.Forms.Label();
             this.heightLabel = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.heightLabel);
             this.panel2.Controls.Add(this.numericUpDown1);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.submitBtn);
@@ -55,102 +59,11 @@
             this.panel2.Controls.Add(this.genderLabel);
             this.panel2.Controls.Add(this.ageLabel);
             this.panel2.Controls.Add(this.weightLabel);
-            this.panel2.Controls.Add(this.heightLabel);
-            this.panel2.Location = new System.Drawing.Point(0, 1);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(337, 318);
+            this.panel2.Size = new System.Drawing.Size(340, 332);
             this.panel2.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.genderRadioBtnMale);
-            this.groupBox1.Controls.Add(this.genderRadionBtnFemale);
-            this.groupBox1.Location = new System.Drawing.Point(116, 116);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 29);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            // 
-            // genderRadioBtnMale
-            // 
-            this.genderRadioBtnMale.AutoSize = true;
-            this.genderRadioBtnMale.Location = new System.Drawing.Point(6, 8);
-            this.genderRadioBtnMale.Name = "genderRadioBtnMale";
-            this.genderRadioBtnMale.Size = new System.Drawing.Size(59, 21);
-            this.genderRadioBtnMale.TabIndex = 11;
-            this.genderRadioBtnMale.TabStop = true;
-            this.genderRadioBtnMale.Text = "Male";
-            this.genderRadioBtnMale.UseVisualStyleBackColor = true;
-            // 
-            // genderRadionBtnFemale
-            // 
-            this.genderRadionBtnFemale.AutoSize = true;
-            this.genderRadionBtnFemale.Location = new System.Drawing.Point(110, 8);
-            this.genderRadionBtnFemale.Name = "genderRadionBtnFemale";
-            this.genderRadionBtnFemale.Size = new System.Drawing.Size(75, 21);
-            this.genderRadionBtnFemale.TabIndex = 12;
-            this.genderRadionBtnFemale.TabStop = true;
-            this.genderRadionBtnFemale.Text = "Female";
-            this.genderRadionBtnFemale.UseVisualStyleBackColor = true;
-            // 
-            // submitBtn
-            // 
-            this.submitBtn.Location = new System.Drawing.Point(94, 189);
-            this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(122, 46);
-            this.submitBtn.TabIndex = 14;
-            this.submitBtn.Text = "Submit";
-            this.submitBtn.UseVisualStyleBackColor = true;
-            // 
-            // ageTxtBox
-            // 
-            this.ageTxtBox.Location = new System.Drawing.Point(116, 77);
-            this.ageTxtBox.Name = "ageTxtBox";
-            this.ageTxtBox.Size = new System.Drawing.Size(100, 22);
-            this.ageTxtBox.TabIndex = 10;
-            // 
-            // heightTxtBox
-            // 
-            this.heightTxtBox.Location = new System.Drawing.Point(116, 19);
-            this.heightTxtBox.Name = "heightTxtBox";
-            this.heightTxtBox.Size = new System.Drawing.Size(100, 22);
-            this.heightTxtBox.TabIndex = 8;
-            // 
-            // genderLabel
-            // 
-            this.genderLabel.AutoSize = true;
-            this.genderLabel.Location = new System.Drawing.Point(12, 128);
-            this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(56, 17);
-            this.genderLabel.TabIndex = 5;
-            this.genderLabel.Text = "Gender";
-            // 
-            // ageLabel
-            // 
-            this.ageLabel.AutoSize = true;
-            this.ageLabel.Location = new System.Drawing.Point(12, 82);
-            this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(33, 17);
-            this.ageLabel.TabIndex = 3;
-            this.ageLabel.Text = "Age";
-            // 
-            // weightLabel
-            // 
-            this.weightLabel.AutoSize = true;
-            this.weightLabel.Location = new System.Drawing.Point(12, 52);
-            this.weightLabel.Name = "weightLabel";
-            this.weightLabel.Size = new System.Drawing.Size(52, 17);
-            this.weightLabel.TabIndex = 1;
-            this.weightLabel.Text = "Weight";
-            // 
-            // heightLabel
-            // 
-            this.heightLabel.AutoSize = true;
-            this.heightLabel.Location = new System.Drawing.Point(12, 24);
-            this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(49, 17);
-            this.heightLabel.TabIndex = 0;
-            this.heightLabel.Text = "Height";
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // numericUpDown1
             // 
@@ -162,12 +75,113 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(122, 22);
             this.numericUpDown1.TabIndex = 17;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.genderRadioBtnMale);
+            this.groupBox1.Controls.Add(this.genderRadionBtnFemale);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(116, 116);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 29);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            // 
+            // genderRadioBtnMale
+            // 
+            this.genderRadioBtnMale.AutoSize = true;
+            this.genderRadioBtnMale.ForeColor = System.Drawing.Color.White;
+            this.genderRadioBtnMale.Location = new System.Drawing.Point(6, 8);
+            this.genderRadioBtnMale.Name = "genderRadioBtnMale";
+            this.genderRadioBtnMale.Size = new System.Drawing.Size(59, 21);
+            this.genderRadioBtnMale.TabIndex = 11;
+            this.genderRadioBtnMale.TabStop = true;
+            this.genderRadioBtnMale.Text = "Male";
+            this.genderRadioBtnMale.UseVisualStyleBackColor = true;
+            // 
+            // genderRadionBtnFemale
+            // 
+            this.genderRadionBtnFemale.AutoSize = true;
+            this.genderRadionBtnFemale.ForeColor = System.Drawing.Color.White;
+            this.genderRadionBtnFemale.Location = new System.Drawing.Point(110, 8);
+            this.genderRadionBtnFemale.Name = "genderRadionBtnFemale";
+            this.genderRadionBtnFemale.Size = new System.Drawing.Size(75, 21);
+            this.genderRadionBtnFemale.TabIndex = 12;
+            this.genderRadionBtnFemale.TabStop = true;
+            this.genderRadionBtnFemale.Text = "Female";
+            this.genderRadionBtnFemale.UseVisualStyleBackColor = true;
+            // 
+            // submitBtn
+            // 
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.submitBtn.ForeColor = System.Drawing.Color.White;
+            this.submitBtn.Location = new System.Drawing.Point(116, 189);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(122, 46);
+            this.submitBtn.TabIndex = 14;
+            this.submitBtn.Text = "Submit";
+            this.submitBtn.UseVisualStyleBackColor = true;
+            // 
+            // ageTxtBox
+            // 
+            this.ageTxtBox.Location = new System.Drawing.Point(116, 77);
+            this.ageTxtBox.Name = "ageTxtBox";
+            this.ageTxtBox.Size = new System.Drawing.Size(122, 22);
+            this.ageTxtBox.TabIndex = 10;
+            // 
+            // heightTxtBox
+            // 
+            this.heightTxtBox.Location = new System.Drawing.Point(116, 19);
+            this.heightTxtBox.Name = "heightTxtBox";
+            this.heightTxtBox.Size = new System.Drawing.Size(122, 22);
+            this.heightTxtBox.TabIndex = 8;
+            // 
+            // genderLabel
+            // 
+            this.genderLabel.AutoSize = true;
+            this.genderLabel.ForeColor = System.Drawing.Color.White;
+            this.genderLabel.Location = new System.Drawing.Point(12, 128);
+            this.genderLabel.Name = "genderLabel";
+            this.genderLabel.Size = new System.Drawing.Size(56, 17);
+            this.genderLabel.TabIndex = 5;
+            this.genderLabel.Text = "Gender";
+            // 
+            // ageLabel
+            // 
+            this.ageLabel.AutoSize = true;
+            this.ageLabel.ForeColor = System.Drawing.Color.White;
+            this.ageLabel.Location = new System.Drawing.Point(12, 82);
+            this.ageLabel.Name = "ageLabel";
+            this.ageLabel.Size = new System.Drawing.Size(33, 17);
+            this.ageLabel.TabIndex = 3;
+            this.ageLabel.Text = "Age";
+            // 
+            // weightLabel
+            // 
+            this.weightLabel.AutoSize = true;
+            this.weightLabel.ForeColor = System.Drawing.Color.White;
+            this.weightLabel.Location = new System.Drawing.Point(12, 52);
+            this.weightLabel.Name = "weightLabel";
+            this.weightLabel.Size = new System.Drawing.Size(52, 17);
+            this.weightLabel.TabIndex = 1;
+            this.weightLabel.Text = "Weight";
+            // 
+            // heightLabel
+            // 
+            this.heightLabel.AutoSize = true;
+            this.heightLabel.ForeColor = System.Drawing.Color.White;
+            this.heightLabel.Location = new System.Drawing.Point(12, 19);
+            this.heightLabel.Name = "heightLabel";
+            this.heightLabel.Size = new System.Drawing.Size(49, 17);
+            this.heightLabel.TabIndex = 18;
+            this.heightLabel.Text = "Height";
             // 
             // PersonalData
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(247)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(340, 322);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -176,9 +190,9 @@
             this.Text = "PersonalData";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,9 +206,9 @@
         private System.Windows.Forms.Label genderLabel;
         private System.Windows.Forms.Label ageLabel;
         private System.Windows.Forms.Label weightLabel;
-        private System.Windows.Forms.Label heightLabel;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label heightLabel;
     }
 }
