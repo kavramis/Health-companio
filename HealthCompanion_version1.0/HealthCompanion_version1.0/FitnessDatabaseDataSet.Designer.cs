@@ -48,19 +48,19 @@ namespace HealthCompanion_version1._0 {
         
         private global::System.Data.DataRelation relationFoodsDietPlanFood;
         
-        private global::System.Data.DataRelation relationUserGoals;
-        
         private global::System.Data.DataRelation relationExerciseRoutineExercise;
         
         private global::System.Data.DataRelation relationRoutinesRoutineExercise;
         
         private global::System.Data.DataRelation relationDietPlanUserDietPlan;
         
-        private global::System.Data.DataRelation relationUserUserDietPlan;
-        
         private global::System.Data.DataRelation relationRoutinesUserRoutine;
         
         private global::System.Data.DataRelation relationUserUserRoutine;
+        
+        private global::System.Data.DataRelation relationUserUserDietPlan;
+        
+        private global::System.Data.DataRelation relationUserGoals;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -430,13 +430,13 @@ namespace HealthCompanion_version1._0 {
             }
             this.relationDietPlanDietPlanFood = this.Relations["DietPlanDietPlanFood"];
             this.relationFoodsDietPlanFood = this.Relations["FoodsDietPlanFood"];
-            this.relationUserGoals = this.Relations["UserGoals"];
             this.relationExerciseRoutineExercise = this.Relations["ExerciseRoutineExercise"];
             this.relationRoutinesRoutineExercise = this.Relations["RoutinesRoutineExercise"];
             this.relationDietPlanUserDietPlan = this.Relations["DietPlanUserDietPlan"];
-            this.relationUserUserDietPlan = this.Relations["UserUserDietPlan"];
             this.relationRoutinesUserRoutine = this.Relations["RoutinesUserRoutine"];
             this.relationUserUserRoutine = this.Relations["UserUserRoutine"];
+            this.relationUserUserDietPlan = this.Relations["UserUserDietPlan"];
+            this.relationUserGoals = this.Relations["UserGoals"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -475,10 +475,6 @@ namespace HealthCompanion_version1._0 {
                         this.tableFoods.FoodIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableDietPlanFood.FoodIDColumn}, false);
             this.Relations.Add(this.relationFoodsDietPlanFood);
-            this.relationUserGoals = new global::System.Data.DataRelation("UserGoals", new global::System.Data.DataColumn[] {
-                        this.tableUser.UserIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGoals.UserIDColumn}, false);
-            this.Relations.Add(this.relationUserGoals);
             this.relationExerciseRoutineExercise = new global::System.Data.DataRelation("ExerciseRoutineExercise", new global::System.Data.DataColumn[] {
                         this.tableExercise.Ex_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableRoutineExercise.ExIDColumn}, false);
@@ -491,10 +487,6 @@ namespace HealthCompanion_version1._0 {
                         this.tableDietPlan.DietPlanIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableUserDietPlan.DietPlanIDColumn}, false);
             this.Relations.Add(this.relationDietPlanUserDietPlan);
-            this.relationUserUserDietPlan = new global::System.Data.DataRelation("UserUserDietPlan", new global::System.Data.DataColumn[] {
-                        this.tableUser.UserIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUserDietPlan.UserIDColumn}, false);
-            this.Relations.Add(this.relationUserUserDietPlan);
             this.relationRoutinesUserRoutine = new global::System.Data.DataRelation("RoutinesUserRoutine", new global::System.Data.DataColumn[] {
                         this.tableRoutines.RoutineNameColumn}, new global::System.Data.DataColumn[] {
                         this.tableUserRoutine.RoutineNameColumn}, false);
@@ -503,6 +495,14 @@ namespace HealthCompanion_version1._0 {
                         this.tableUser.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableUserRoutine.UserIDColumn}, false);
             this.Relations.Add(this.relationUserUserRoutine);
+            this.relationUserUserDietPlan = new global::System.Data.DataRelation("UserUserDietPlan", new global::System.Data.DataColumn[] {
+                        this.tableUser.UserIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableUserDietPlan.UserIDColumn}, false);
+            this.Relations.Add(this.relationUserUserDietPlan);
+            this.relationUserGoals = new global::System.Data.DataRelation("UserGoals", new global::System.Data.DataColumn[] {
+                        this.tableUser.UserIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGoals.UserIDColumn}, false);
+            this.Relations.Add(this.relationUserGoals);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3030,13 +3030,6 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public UserRow FindByUserID(int UserID) {
-                return ((UserRow)(this.Rows.Find(new object[] {
-                            UserID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 UserDataTable cln = ((UserDataTable)(base.Clone()));
                 cln.InitVars();
@@ -3085,7 +3078,7 @@ namespace HealthCompanion_version1._0 {
                 this.columnGender = new global::System.Data.DataColumn("Gender", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGender);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnUserID}, true));
+                                this.columnUserID}, false));
                 this.columnUserID.AutoIncrement = true;
                 this.columnUserID.AutoIncrementSeed = -1;
                 this.columnUserID.AutoIncrementStep = -1;
@@ -4925,12 +4918,12 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public GoalsRow[] GetGoalsRows() {
-                if ((this.Table.ChildRelations["UserGoals"] == null)) {
-                    return new GoalsRow[0];
+            public UserRoutineRow[] GetUserRoutineRows() {
+                if ((this.Table.ChildRelations["UserUserRoutine"] == null)) {
+                    return new UserRoutineRow[0];
                 }
                 else {
-                    return ((GoalsRow[])(base.GetChildRows(this.Table.ChildRelations["UserGoals"])));
+                    return ((UserRoutineRow[])(base.GetChildRows(this.Table.ChildRelations["UserUserRoutine"])));
                 }
             }
             
@@ -4947,12 +4940,12 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public UserRoutineRow[] GetUserRoutineRows() {
-                if ((this.Table.ChildRelations["UserUserRoutine"] == null)) {
-                    return new UserRoutineRow[0];
+            public GoalsRow[] GetGoalsRows() {
+                if ((this.Table.ChildRelations["UserGoals"] == null)) {
+                    return new GoalsRow[0];
                 }
                 else {
-                    return ((UserRoutineRow[])(base.GetChildRows(this.Table.ChildRelations["UserUserRoutine"])));
+                    return ((GoalsRow[])(base.GetChildRows(this.Table.ChildRelations["UserGoals"])));
                 }
             }
         }
@@ -8259,12 +8252,17 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT UserID, UserName, UserLastName, UserPassword, Age, Height, Weight, isAthle" +
                 "tic, Gender FROM [User]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT COUNT(*) FROM [User] WHERE UserName = ?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserName", global::System.Data.OleDb.OleDbType.WChar, 20, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserName", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8286,6 +8284,42 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual FitnessDatabaseDataSet.UserDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            FitnessDatabaseDataSet.UserDataTable dataTable = new FitnessDatabaseDataSet.UserDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int fillCheckUsername(FitnessDatabaseDataSet.UserDataTable dataTable, string UserName) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((UserName == null)) {
+                throw new global::System.ArgumentNullException("UserName");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(UserName));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual FitnessDatabaseDataSet.UserDataTable getCheckUsername(string UserName) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((UserName == null)) {
+                throw new global::System.ArgumentNullException("UserName");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(UserName));
+            }
             FitnessDatabaseDataSet.UserDataTable dataTable = new FitnessDatabaseDataSet.UserDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

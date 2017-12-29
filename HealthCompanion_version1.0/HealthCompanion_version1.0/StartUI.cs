@@ -69,5 +69,34 @@ namespace HealthCompanion_version1._0
         {
             this.Close();
         }
+
+        private void Create_Click(object sender, EventArgs e)
+        {
+            lnameMsg.Text = "";
+            unameMsg.Text = "";
+            cpassMsg.Text = "";
+            nameMsg.Text = "";
+
+            if (nameTxtBox.Text == "" || nameTxtBox.Text == null)
+            {
+                nameMsg.Text = "Fill the field Name";
+                return;
+            }
+            if (lnameTxtBox.Text == "" || lnameTxtBox.Text == null)
+            {
+                lnameMsg.Text = "Fill the field Last Name";
+                return;
+            }
+            if (userTxtBox.Text == "" || userTxtBox.Text == null)
+            {
+                unameMsg.Text = "Give a Username for login";
+                return;
+            }
+            if (cpassTxtBox.Text == "" || cpassTxtBox.Text == null || !cpassTxtBox.Text.Equals(passTxtBox.Text))
+                {
+                    cpassMsg.Text = "Please fill correctly the field Confirm Password";
+                    return;
+                }
+            }
+        }
     }
-}
