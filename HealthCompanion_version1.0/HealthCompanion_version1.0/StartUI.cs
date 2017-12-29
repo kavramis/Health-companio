@@ -96,6 +96,7 @@ namespace HealthCompanion_version1._0
                 {
                     cpassMsg.Text = "Please fill correctly the field Confirm Password";
                     return;
+
                 }
             }
         }
