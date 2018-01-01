@@ -63,7 +63,7 @@
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.RegisterPanel.SuspendLayout();
@@ -461,7 +461,6 @@
             // 
             // userTableAdapter1
             // 
-            this.userTableAdapter1.ClearBeforeFill = true;
             // 
             // StartUI
             // 
@@ -523,6 +522,6 @@
         private System.Windows.Forms.Label nameMsg;
         private System.Windows.Forms.Label createMsg;
         private System.Windows.Forms.Label passMsg;
-        private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
+
     }
 }
