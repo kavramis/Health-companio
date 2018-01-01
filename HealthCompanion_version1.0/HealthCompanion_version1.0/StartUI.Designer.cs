@@ -64,7 +64,7 @@
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+            this.passMsg = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.RegisterPanel.SuspendLayout();
@@ -128,7 +128,7 @@
             this.LoginPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.LoginPanel.Location = new System.Drawing.Point(95, 415);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(306, 185);
+            this.LoginPanel.Size = new System.Drawing.Size(306, 220);
             this.LoginPanel.TabIndex = 2;
             this.LoginPanel.Visible = false;
             // 
@@ -169,13 +169,14 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(8, 155);
+            this.button1.Location = new System.Drawing.Point(8, 179);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 28);
+            this.button1.Size = new System.Drawing.Size(292, 37);
             this.button1.TabIndex = 3;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // checkBox1
             // 
@@ -211,6 +212,7 @@
             // 
             // RegisterPanel
             // 
+            this.RegisterPanel.Controls.Add(this.passMsg);
             this.RegisterPanel.Controls.Add(this.createMsg);
             this.RegisterPanel.Controls.Add(this.cpassMsg);
             this.RegisterPanel.Controls.Add(this.unameMsg);
@@ -470,7 +472,16 @@
             // 
             // userTableAdapter1
             // 
-            this.userTableAdapter1.ClearBeforeFill = true;
+            // 
+            // passMsg
+            // 
+            this.passMsg.AutoSize = true;
+            this.passMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.passMsg.ForeColor = System.Drawing.Color.Red;
+            this.passMsg.Location = new System.Drawing.Point(309, 136);
+            this.passMsg.Name = "passMsg";
+            this.passMsg.Size = new System.Drawing.Size(0, 17);
+            this.passMsg.TabIndex = 18;
             // 
             // StartUI
             // 
@@ -533,6 +544,6 @@
         private System.Windows.Forms.Label lnameMsg;
         private System.Windows.Forms.Label nameMsg;
         private System.Windows.Forms.Label createMsg;
-        private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
+        private System.Windows.Forms.Label passMsg;
     }
 }

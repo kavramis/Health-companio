@@ -57,11 +57,6 @@
     <Compile Include="FinalForm.Designer.cs">
       <DependentUpon>FinalForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FitnessDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="PersonalData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,17 +101,6 @@
     <EmbeddedResource Include="TrainningForm.resx">
       <DependentUpon>TrainningForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="FitnessDatabaseDataSet.xsc">
-      <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FitnessDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FitnessDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FitnessDatabaseDataSet.xss">
-      <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,11 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FitnessDatabase.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
