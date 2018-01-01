@@ -14,7 +14,7 @@ namespace HealthCompanion_version1._0
         }
 
         private void RegisterBtn_Click(object sender, EventArgs e)
-        {   
+        {
             LoginPanel.Location = new Point(1000, 1000);
             RegisterPanel.Location = new Point(95, 137);
             RegisterPanel.Visible = true;
@@ -90,45 +90,44 @@ namespace HealthCompanion_version1._0
                 unameMsg.Text = "Give a Username for login";
                 count++;
             }
-            if(passTxtBox.Text=="" || passTxtBox.Text == null)
+            if (passTxtBox.Text == "" || passTxtBox.Text == null)
             {
                 passMsg.Text = "First fill this field";
                 count++;
             }
             else if (cpassTxtBox.Text == "" || cpassTxtBox.Text == null || !cpassTxtBox.Text.Equals(passTxtBox.Text))
-                {
+            {
                 cpassMsg.Text = "Please fill correctly the field Confirm Password";
                 count++;
-                }   
-            if(count > 0)
+            }
+            if (count > 0)
             {
                 return;
             }
-          /*  if(userTableAdapter1.checkRegister(userTxtBox.Text).Value == 1)
-            {
-                createMsg.Text = "There is already a user with this Username try again";
-                unameMsg.Text = "*****";
-            }
-            else
-            {
-                userTableAdapter1.Insert(userTxtBox.Text, nameTxtBox.Text + " " + lnameTxtBox.Text, cpassTxtBox.Text, 0, 0, 0, "", "");                
-                createMsg.Text = "Succesfull Register... Welcome to Health Companion";
-            }*/
+            if(userTableAdapter1.checkRegister(userTxtBox.Text).Value == 1)
+              {
+                  createMsg.Text = "There is already a user with this Username try again";
+                  unameMsg.Text = "*****";
+              }
+              else
+              {
+                  userTableAdapter1.Insert(nameTxtBox.Text,lnameTxtBox.Text,cpassTxtBox.Text,0,0,0,"","",0,0,userTxtBox.Text);      
+                
+                  createMsg.Text = "Succesfull Register... Welcome to Health Companion";
+              }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             errorMsg.Text = "";
-           /* if (userTableAdapter1.checkLogin(loginUserTxtBox.Text,loginPassTxtBox.Text).Value == 1)
-            {
-                
-                // do things
-                this.Hide();
-            }
-            else
-            {
-                errorMsg.Text = "Wrong Username or Password. \nPlease try again!";
-            }*/
+            if (userTableAdapter1.checkLogin(loginUserTxtBox.Text,loginPassTxtBox.Text).Value == 1)
+             {
+                 // do things
+             }
+             else
+             {
+                 errorMsg.Text = "Wrong Username or Password. \nPlease try again!";
+             }
         }
     }
-    }
+}
