@@ -64,12 +64,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+            this.fitnessDatabaseDataSet1 = new HealthCompanion_version1._0.FitnessDatabaseDataSet();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.RegisterPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -463,6 +465,11 @@
             // 
             this.userTableAdapter1.ClearBeforeFill = true;
             // 
+            // fitnessDatabaseDataSet1
+            // 
+            this.fitnessDatabaseDataSet1.DataSetName = "FitnessDatabaseDataSet";
+            this.fitnessDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // StartUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -482,6 +489,7 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,5 +532,6 @@
         private System.Windows.Forms.Label createMsg;
         private System.Windows.Forms.Label passMsg;
         private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
+        private FitnessDatabaseDataSet fitnessDatabaseDataSet1;
     }
 }
