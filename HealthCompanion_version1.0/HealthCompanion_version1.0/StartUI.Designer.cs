@@ -41,6 +41,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.RegisterPanel = new System.Windows.Forms.Panel();
+            this.createMsg = new System.Windows.Forms.Label();
             this.cpassMsg = new System.Windows.Forms.Label();
             this.unameMsg = new System.Windows.Forms.Label();
             this.lnameMsg = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.createMsg = new System.Windows.Forms.Label();
             this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -234,6 +234,17 @@
             this.RegisterPanel.Name = "RegisterPanel";
             this.RegisterPanel.Size = new System.Drawing.Size(579, 272);
             this.RegisterPanel.TabIndex = 1;
+            // 
+            // createMsg
+            // 
+            this.createMsg.AutoSize = true;
+            this.createMsg.BackColor = System.Drawing.Color.White;
+            this.createMsg.Font = new System.Drawing.Font("Modern No. 20", 7.8F);
+            this.createMsg.ForeColor = System.Drawing.Color.Red;
+            this.createMsg.Location = new System.Drawing.Point(5, 196);
+            this.createMsg.Name = "createMsg";
+            this.createMsg.Size = new System.Drawing.Size(0, 16);
+            this.createMsg.TabIndex = 17;
             // 
             // cpassMsg
             // 
@@ -456,17 +467,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // createMsg
-            // 
-            this.createMsg.AutoSize = true;
-            this.createMsg.BackColor = System.Drawing.Color.White;
-            this.createMsg.Font = new System.Drawing.Font("Modern No. 20", 7.8F);
-            this.createMsg.ForeColor = System.Drawing.Color.Red;
-            this.createMsg.Location = new System.Drawing.Point(5, 196);
-            this.createMsg.Name = "createMsg";
-            this.createMsg.Size = new System.Drawing.Size(0, 16);
-            this.createMsg.TabIndex = 17;
             // 
             // userTableAdapter1
             // 

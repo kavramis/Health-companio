@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HealthCompanion_version1._0
 {
     public partial class StartUI : Form
     {
+        private int count = 0;
         public StartUI()
         {
             InitializeComponent();
@@ -72,24 +67,30 @@ namespace HealthCompanion_version1._0
 
         private void Create_Click(object sender, EventArgs e)
         {
+            count = 0;
             lnameMsg.Text = "";
             unameMsg.Text = "";
             cpassMsg.Text = "";
             nameMsg.Text = "";
+            createMsg.Text = "";
 
             if (nameTxtBox.Text == "" || nameTxtBox.Text == null)
             {
                 nameMsg.Text = "Fill the field Name";
-                return;
+                count++;
             }
             if (lnameTxtBox.Text == "" || lnameTxtBox.Text == null)
             {
                 lnameMsg.Text = "Fill the field Last Name";
-                return;
+                count++;
             }
             if (userTxtBox.Text == "" || userTxtBox.Text == null)
             {
                 unameMsg.Text = "Give a Username for login";
+                count++;
+            }
+            if(count > 0)
+            {
                 return;
             }
             if (cpassTxtBox.Text == "" || cpassTxtBox.Text == null || !cpassTxtBox.Text.Equals(passTxtBox.Text))
@@ -97,7 +98,18 @@ namespace HealthCompanion_version1._0
                     cpassMsg.Text = "Please fill correctly the field Confirm Password";
                     return;
 
-                }
+                }            
+
+            if(userTableAdapter1.getCheckUsername(userTxtBox.Text).Rows[0][0].ToString() == "1")
+            {
+                createMsg.Text = "There is already a user with this Username try again";
+                unameMsg.Text = "*****";
+            }
+            else
+            {
+                userTableAdapter1.Insert(userTxtBox.Text, nameTxtBox.Text + " " + lnameTxtBox.Text, cpassTxtBox.Text, 0, 0, 0, "", "");
+                createMsg.Text = "Succesfull Register... Welcome to Health Companion";
+            }
             }
         }
     }

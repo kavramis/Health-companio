@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace HealthCompanion_version1._0 {
     
     
@@ -8582,6 +8584,11 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+
+        internal void Insert(string text1, string v1, object text2, int v2, int v3, int v4, string v5, string v6)
+        {
+            throw new NotImplementedException();
         }
     }
     
