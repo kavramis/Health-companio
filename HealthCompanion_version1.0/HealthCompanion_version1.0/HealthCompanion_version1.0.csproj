@@ -86,6 +86,7 @@
     <Compile Include="TrainningForm.Designer.cs">
       <DependentUpon>TrainningForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserClass.cs" />
     <EmbeddedResource Include="DietForm.resx">
       <DependentUpon>DietForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,123 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalData));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.genderRadioBtnMale = new System.Windows.Forms.RadioButton();
-            this.genderRadionBtnFemale = new System.Windows.Forms.RadioButton();
-            this.submitBtn = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.PersonalDataPanel = new System.Windows.Forms.Panel();
+            this.SubmitBtn = new System.Windows.Forms.Button();
+            this.BmrValue = new System.Windows.Forms.Label();
+            this.BmiValue = new System.Windows.Forms.Label();
+            this.BmrLabel = new System.Windows.Forms.Label();
+            this.BmiLabel = new System.Windows.Forms.Label();
+            this.GenderComboBox = new System.Windows.Forms.ComboBox();
+            this.weightTxtBox = new System.Windows.Forms.TextBox();
+            this.heightLabel = new System.Windows.Forms.Label();
             this.ageTxtBox = new System.Windows.Forms.TextBox();
             this.heightTxtBox = new System.Windows.Forms.TextBox();
             this.genderLabel = new System.Windows.Forms.Label();
             this.ageLabel = new System.Windows.Forms.Label();
             this.weightLabel = new System.Windows.Forms.Label();
-            this.heightLabel = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.BiometricTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.athleticCmbBox = new System.Windows.Forms.ComboBox();
+            this.isAthleticLabel = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fitnessDatabaseDataSet = new HealthCompanion_version1._0.FitnessDatabaseDataSet();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userLastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userPasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.heightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isAthleticDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bMRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bMIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userAliasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonalDataPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
+            // PersonalDataPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.Controls.Add(this.heightLabel);
-            this.panel2.Controls.Add(this.numericUpDown1);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.submitBtn);
-            this.panel2.Controls.Add(this.ageTxtBox);
-            this.panel2.Controls.Add(this.heightTxtBox);
-            this.panel2.Controls.Add(this.genderLabel);
-            this.panel2.Controls.Add(this.ageLabel);
-            this.panel2.Controls.Add(this.weightLabel);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(340, 332);
-            this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.PersonalDataPanel.BackColor = System.Drawing.Color.Salmon;
+            this.PersonalDataPanel.Controls.Add(this.dataGridView1);
+            this.PersonalDataPanel.Controls.Add(this.isAthleticLabel);
+            this.PersonalDataPanel.Controls.Add(this.athleticCmbBox);
+            this.PersonalDataPanel.Controls.Add(this.SubmitBtn);
+            this.PersonalDataPanel.Controls.Add(this.BmrValue);
+            this.PersonalDataPanel.Controls.Add(this.BmiValue);
+            this.PersonalDataPanel.Controls.Add(this.BmrLabel);
+            this.PersonalDataPanel.Controls.Add(this.BmiLabel);
+            this.PersonalDataPanel.Controls.Add(this.GenderComboBox);
+            this.PersonalDataPanel.Controls.Add(this.weightTxtBox);
+            this.PersonalDataPanel.Controls.Add(this.heightLabel);
+            this.PersonalDataPanel.Controls.Add(this.ageTxtBox);
+            this.PersonalDataPanel.Controls.Add(this.heightTxtBox);
+            this.PersonalDataPanel.Controls.Add(this.genderLabel);
+            this.PersonalDataPanel.Controls.Add(this.ageLabel);
+            this.PersonalDataPanel.Controls.Add(this.weightLabel);
+            this.PersonalDataPanel.Location = new System.Drawing.Point(0, 0);
+            this.PersonalDataPanel.Name = "PersonalDataPanel";
+            this.PersonalDataPanel.Size = new System.Drawing.Size(527, 1000);
+            this.PersonalDataPanel.TabIndex = 0;
             // 
-            // numericUpDown1
+            // SubmitBtn
             // 
-            this.numericUpDown1.DecimalPlaces = 1;
-            this.numericUpDown1.Location = new System.Drawing.Point(116, 47);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            150,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(122, 22);
-            this.numericUpDown1.TabIndex = 17;
+            this.SubmitBtn.Location = new System.Drawing.Point(12, 237);
+            this.SubmitBtn.Name = "SubmitBtn";
+            this.SubmitBtn.Size = new System.Drawing.Size(128, 23);
+            this.SubmitBtn.TabIndex = 26;
+            this.SubmitBtn.Text = "Save My Info";
+            this.SubmitBtn.UseVisualStyleBackColor = true;
+            this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
-            // groupBox1
+            // BmrValue
             // 
-            this.groupBox1.Controls.Add(this.genderRadioBtnMale);
-            this.groupBox1.Controls.Add(this.genderRadionBtnFemale);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(116, 116);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 29);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
+            this.BmrValue.AutoSize = true;
+            this.BmrValue.Font = new System.Drawing.Font("Nina", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BmrValue.Location = new System.Drawing.Point(329, 49);
+            this.BmrValue.Name = "BmrValue";
+            this.BmrValue.Size = new System.Drawing.Size(0, 16);
+            this.BmrValue.TabIndex = 25;
             // 
-            // genderRadioBtnMale
+            // BmiValue
             // 
-            this.genderRadioBtnMale.AutoSize = true;
-            this.genderRadioBtnMale.ForeColor = System.Drawing.Color.White;
-            this.genderRadioBtnMale.Location = new System.Drawing.Point(6, 8);
-            this.genderRadioBtnMale.Name = "genderRadioBtnMale";
-            this.genderRadioBtnMale.Size = new System.Drawing.Size(59, 21);
-            this.genderRadioBtnMale.TabIndex = 11;
-            this.genderRadioBtnMale.TabStop = true;
-            this.genderRadioBtnMale.Text = "Male";
-            this.genderRadioBtnMale.UseVisualStyleBackColor = true;
+            this.BmiValue.AutoSize = true;
+            this.BmiValue.Font = new System.Drawing.Font("Nina", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BmiValue.Location = new System.Drawing.Point(329, 22);
+            this.BmiValue.Name = "BmiValue";
+            this.BmiValue.Size = new System.Drawing.Size(0, 16);
+            this.BmiValue.TabIndex = 24;
             // 
-            // genderRadionBtnFemale
+            // BmrLabel
             // 
-            this.genderRadionBtnFemale.AutoSize = true;
-            this.genderRadionBtnFemale.ForeColor = System.Drawing.Color.White;
-            this.genderRadionBtnFemale.Location = new System.Drawing.Point(110, 8);
-            this.genderRadionBtnFemale.Name = "genderRadionBtnFemale";
-            this.genderRadionBtnFemale.Size = new System.Drawing.Size(75, 21);
-            this.genderRadionBtnFemale.TabIndex = 12;
-            this.genderRadionBtnFemale.TabStop = true;
-            this.genderRadionBtnFemale.Text = "Female";
-            this.genderRadionBtnFemale.UseVisualStyleBackColor = true;
+            this.BmrLabel.AutoSize = true;
+            this.BmrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.BmrLabel.Location = new System.Drawing.Point(269, 50);
+            this.BmrLabel.Name = "BmrLabel";
+            this.BmrLabel.Size = new System.Drawing.Size(45, 16);
+            this.BmrLabel.TabIndex = 23;
+            this.BmrLabel.Text = "BMR:";
             // 
-            // submitBtn
+            // BmiLabel
             // 
-            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(116, 189);
-            this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(122, 46);
-            this.submitBtn.TabIndex = 14;
-            this.submitBtn.Text = "Submit";
-            this.submitBtn.UseVisualStyleBackColor = true;
+            this.BmiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.BmiLabel.Location = new System.Drawing.Point(269, 20);
+            this.BmiLabel.Name = "BmiLabel";
+            this.BmiLabel.Size = new System.Drawing.Size(41, 16);
+            this.BmiLabel.TabIndex = 22;
+            this.BmiLabel.Text = "BMI:";
+            // 
+            // GenderComboBox
+            // 
+            this.GenderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GenderComboBox.FormattingEnabled = true;
+            this.GenderComboBox.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.GenderComboBox.Location = new System.Drawing.Point(116, 120);
+            this.GenderComboBox.Name = "GenderComboBox";
+            this.GenderComboBox.Size = new System.Drawing.Size(121, 21);
+            this.GenderComboBox.TabIndex = 21;
+            this.GenderComboBox.SelectedIndexChanged += new System.EventHandler(this.GenderComboBox_SelectedIndexChanged);
+            // 
+            // weightTxtBox
+            // 
+            this.weightTxtBox.Location = new System.Drawing.Point(115, 86);
+            this.weightTxtBox.Name = "weightTxtBox";
+            this.weightTxtBox.Size = new System.Drawing.Size(122, 20);
+            this.weightTxtBox.TabIndex = 20;
+            // 
+            // heightLabel
+            // 
+            this.heightLabel.AutoSize = true;
+            this.heightLabel.ForeColor = System.Drawing.Color.White;
+            this.heightLabel.Location = new System.Drawing.Point(28, 24);
+            this.heightLabel.Name = "heightLabel";
+            this.heightLabel.Size = new System.Drawing.Size(58, 13);
+            this.heightLabel.TabIndex = 18;
+            this.heightLabel.Text = "Height(cm)";
             // 
             // ageTxtBox
             // 
-            this.ageTxtBox.Location = new System.Drawing.Point(116, 77);
+            this.ageTxtBox.Location = new System.Drawing.Point(116, 53);
             this.ageTxtBox.Name = "ageTxtBox";
-            this.ageTxtBox.Size = new System.Drawing.Size(122, 22);
+            this.ageTxtBox.Size = new System.Drawing.Size(122, 20);
             this.ageTxtBox.TabIndex = 10;
             // 
             // heightTxtBox
             // 
             this.heightTxtBox.Location = new System.Drawing.Point(116, 19);
             this.heightTxtBox.Name = "heightTxtBox";
-            this.heightTxtBox.Size = new System.Drawing.Size(122, 22);
+            this.heightTxtBox.Size = new System.Drawing.Size(122, 20);
             this.heightTxtBox.TabIndex = 8;
             // 
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
             this.genderLabel.ForeColor = System.Drawing.Color.White;
-            this.genderLabel.Location = new System.Drawing.Point(12, 128);
+            this.genderLabel.Location = new System.Drawing.Point(28, 123);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(56, 17);
+            this.genderLabel.Size = new System.Drawing.Size(42, 13);
             this.genderLabel.TabIndex = 5;
             this.genderLabel.Text = "Gender";
             // 
@@ -152,9 +197,9 @@
             // 
             this.ageLabel.AutoSize = true;
             this.ageLabel.ForeColor = System.Drawing.Color.White;
-            this.ageLabel.Location = new System.Drawing.Point(12, 82);
+            this.ageLabel.Location = new System.Drawing.Point(28, 53);
             this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(33, 17);
+            this.ageLabel.Size = new System.Drawing.Size(26, 13);
             this.ageLabel.TabIndex = 3;
             this.ageLabel.Text = "Age";
             // 
@@ -162,53 +207,214 @@
             // 
             this.weightLabel.AutoSize = true;
             this.weightLabel.ForeColor = System.Drawing.Color.White;
-            this.weightLabel.Location = new System.Drawing.Point(12, 52);
+            this.weightLabel.Location = new System.Drawing.Point(27, 86);
             this.weightLabel.Name = "weightLabel";
-            this.weightLabel.Size = new System.Drawing.Size(52, 17);
+            this.weightLabel.Size = new System.Drawing.Size(59, 13);
             this.weightLabel.TabIndex = 1;
-            this.weightLabel.Text = "Weight";
+            this.weightLabel.Text = "Weight(kg)";
             // 
-            // heightLabel
+            // BiometricTableAdapter
             // 
-            this.heightLabel.AutoSize = true;
-            this.heightLabel.ForeColor = System.Drawing.Color.White;
-            this.heightLabel.Location = new System.Drawing.Point(12, 19);
-            this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(49, 17);
-            this.heightLabel.TabIndex = 18;
-            this.heightLabel.Text = "Height";
+            this.BiometricTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Ravie", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(693, 560);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 42);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // athleticCmbBox
+            // 
+            this.athleticCmbBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.athleticCmbBox.FormattingEnabled = true;
+            this.athleticCmbBox.Items.AddRange(new object[] {
+            "Not at all",
+            "Maybe a Little",
+            "A LOT!"});
+            this.athleticCmbBox.Location = new System.Drawing.Point(115, 159);
+            this.athleticCmbBox.Name = "athleticCmbBox";
+            this.athleticCmbBox.Size = new System.Drawing.Size(121, 21);
+            this.athleticCmbBox.TabIndex = 22;
+            this.athleticCmbBox.SelectedIndexChanged += new System.EventHandler(this.athleticCmbBox_SelectedIndexChanged);
+            // 
+            // isAthleticLabel
+            // 
+            this.isAthleticLabel.AutoSize = true;
+            this.isAthleticLabel.ForeColor = System.Drawing.Color.White;
+            this.isAthleticLabel.Location = new System.Drawing.Point(27, 167);
+            this.isAthleticLabel.Name = "isAthleticLabel";
+            this.isAthleticLabel.Size = new System.Drawing.Size(78, 13);
+            this.isAthleticLabel.TabIndex = 6;
+            this.isAthleticLabel.Text = "Athletic Much?";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userIDDataGridViewTextBoxColumn,
+            this.userNameDataGridViewTextBoxColumn,
+            this.userLastNameDataGridViewTextBoxColumn,
+            this.userPasswordDataGridViewTextBoxColumn,
+            this.ageDataGridViewTextBoxColumn,
+            this.heightDataGridViewTextBoxColumn,
+            this.weightDataGridViewTextBoxColumn,
+            this.isAthleticDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.bMRDataGridViewTextBoxColumn,
+            this.bMIDataGridViewTextBoxColumn,
+            this.userAliasDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.userBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 354);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 27;
+            // 
+            // fitnessDatabaseDataSet
+            // 
+            this.fitnessDatabaseDataSet.DataSetName = "FitnessDatabaseDataSet";
+            this.fitnessDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.fitnessDatabaseDataSet;
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "UserName";
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            // 
+            // userLastNameDataGridViewTextBoxColumn
+            // 
+            this.userLastNameDataGridViewTextBoxColumn.DataPropertyName = "UserLastName";
+            this.userLastNameDataGridViewTextBoxColumn.HeaderText = "UserLastName";
+            this.userLastNameDataGridViewTextBoxColumn.Name = "userLastNameDataGridViewTextBoxColumn";
+            // 
+            // userPasswordDataGridViewTextBoxColumn
+            // 
+            this.userPasswordDataGridViewTextBoxColumn.DataPropertyName = "UserPassword";
+            this.userPasswordDataGridViewTextBoxColumn.HeaderText = "UserPassword";
+            this.userPasswordDataGridViewTextBoxColumn.Name = "userPasswordDataGridViewTextBoxColumn";
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            // 
+            // heightDataGridViewTextBoxColumn
+            // 
+            this.heightDataGridViewTextBoxColumn.DataPropertyName = "Height";
+            this.heightDataGridViewTextBoxColumn.HeaderText = "Height";
+            this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
+            // 
+            // weightDataGridViewTextBoxColumn
+            // 
+            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
+            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
+            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            // 
+            // isAthleticDataGridViewTextBoxColumn
+            // 
+            this.isAthleticDataGridViewTextBoxColumn.DataPropertyName = "isAthletic";
+            this.isAthleticDataGridViewTextBoxColumn.HeaderText = "isAthletic";
+            this.isAthleticDataGridViewTextBoxColumn.Name = "isAthleticDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // bMRDataGridViewTextBoxColumn
+            // 
+            this.bMRDataGridViewTextBoxColumn.DataPropertyName = "BMR";
+            this.bMRDataGridViewTextBoxColumn.HeaderText = "BMR";
+            this.bMRDataGridViewTextBoxColumn.Name = "bMRDataGridViewTextBoxColumn";
+            // 
+            // bMIDataGridViewTextBoxColumn
+            // 
+            this.bMIDataGridViewTextBoxColumn.DataPropertyName = "BMI";
+            this.bMIDataGridViewTextBoxColumn.HeaderText = "BMI";
+            this.bMIDataGridViewTextBoxColumn.Name = "bMIDataGridViewTextBoxColumn";
+            // 
+            // userAliasDataGridViewTextBoxColumn
+            // 
+            this.userAliasDataGridViewTextBoxColumn.DataPropertyName = "UserAlias";
+            this.userAliasDataGridViewTextBoxColumn.HeaderText = "UserAlias";
+            this.userAliasDataGridViewTextBoxColumn.Name = "userAliasDataGridViewTextBoxColumn";
             // 
             // PersonalData
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(247)))), ((int)(((byte)(219)))));
-            this.ClientSize = new System.Drawing.Size(340, 322);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(829, 600);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.PersonalDataPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonalData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PersonalData";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.PersonalData_Load);
+            this.PersonalDataPanel.ResumeLayout(false);
+            this.PersonalDataPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton genderRadionBtnFemale;
-        private System.Windows.Forms.RadioButton genderRadioBtnMale;
+        private System.Windows.Forms.Panel PersonalDataPanel;
         private System.Windows.Forms.TextBox ageTxtBox;
         private System.Windows.Forms.TextBox heightTxtBox;
         private System.Windows.Forms.Label genderLabel;
         private System.Windows.Forms.Label ageLabel;
         private System.Windows.Forms.Label weightLabel;
-        private System.Windows.Forms.Button submitBtn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label heightLabel;
+        private FitnessDatabaseDataSetTableAdapters.UserTableAdapter BiometricTableAdapter;
+        private System.Windows.Forms.TextBox weightTxtBox;
+        private System.Windows.Forms.ComboBox GenderComboBox;
+        private System.Windows.Forms.Label BmrValue;
+        private System.Windows.Forms.Label BmiValue;
+        private System.Windows.Forms.Label BmrLabel;
+        private System.Windows.Forms.Label BmiLabel;
+        private System.Windows.Forms.Button SubmitBtn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label isAthleticLabel;
+        private System.Windows.Forms.ComboBox athleticCmbBox;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private FitnessDatabaseDataSet fitnessDatabaseDataSet;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userLastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userPasswordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn heightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isAthleticDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bMRDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bMIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userAliasDataGridViewTextBoxColumn;
     }
 }
