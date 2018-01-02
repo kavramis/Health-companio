@@ -20,9 +20,9 @@ namespace HealthCompanion_version1._0 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FitnessDatabaseDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FitnessDatabaseDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FitnessDatabaseDataSet : global::System.Data.DataSet {
+    public partial class FitnessDatabaseDataSet1 : global::System.Data.DataSet {
         
         private DietPlanDataTable tableDietPlan;
         
@@ -66,7 +66,7 @@ namespace HealthCompanion_version1._0 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public FitnessDatabaseDataSet() {
+        public FitnessDatabaseDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -77,7 +77,7 @@ namespace HealthCompanion_version1._0 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected FitnessDatabaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FitnessDatabaseDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -280,7 +280,7 @@ namespace HealthCompanion_version1._0 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FitnessDatabaseDataSet cln = ((FitnessDatabaseDataSet)(base.Clone()));
+            FitnessDatabaseDataSet1 cln = ((FitnessDatabaseDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -442,9 +442,9 @@ namespace HealthCompanion_version1._0 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FitnessDatabaseDataSet";
+            this.DataSetName = "FitnessDatabaseDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FitnessDatabaseDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FitnessDatabaseDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDietPlan = new DietPlanDataTable();
@@ -576,7 +576,7 @@ namespace HealthCompanion_version1._0 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+            FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -923,7 +923,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1238,7 +1238,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1602,7 +1602,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1907,7 +1907,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2270,7 +2270,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2585,7 +2585,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2888,7 +2888,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3309,7 +3309,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3607,7 +3607,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3905,7 +3905,7 @@ namespace HealthCompanion_version1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FitnessDatabaseDataSet ds = new FitnessDatabaseDataSet();
+                FitnessDatabaseDataSet1 ds = new FitnessDatabaseDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5864,7 +5864,7 @@ namespace HealthCompanion_version1._0 {
         }
     }
 }
-namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
+namespace HealthCompanion_version1._0.FitnessDatabaseDataSet1TableAdapters {
     
     
     /// <summary>
@@ -6066,7 +6066,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.DietPlanDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.DietPlanDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6079,9 +6079,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.DietPlanDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.DietPlanDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.DietPlanDataTable dataTable = new FitnessDatabaseDataSet.DietPlanDataTable();
+            FitnessDatabaseDataSet1.DietPlanDataTable dataTable = new FitnessDatabaseDataSet1.DietPlanDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6089,14 +6089,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.DietPlanDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.DietPlanDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "DietPlan");
         }
         
@@ -6484,7 +6484,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.DietPlanFoodDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.DietPlanFoodDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6497,9 +6497,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.DietPlanFoodDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.DietPlanFoodDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.DietPlanFoodDataTable dataTable = new FitnessDatabaseDataSet.DietPlanFoodDataTable();
+            FitnessDatabaseDataSet1.DietPlanFoodDataTable dataTable = new FitnessDatabaseDataSet1.DietPlanFoodDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6507,14 +6507,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.DietPlanFoodDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.DietPlanFoodDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "DietPlanFood");
         }
         
@@ -6848,7 +6848,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.ExerciseDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.ExerciseDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6861,9 +6861,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.ExerciseDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.ExerciseDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.ExerciseDataTable dataTable = new FitnessDatabaseDataSet.ExerciseDataTable();
+            FitnessDatabaseDataSet1.ExerciseDataTable dataTable = new FitnessDatabaseDataSet1.ExerciseDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6871,14 +6871,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.ExerciseDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.ExerciseDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Exercise");
         }
         
@@ -7276,7 +7276,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.FoodsDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.FoodsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7289,9 +7289,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.FoodsDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.FoodsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.FoodsDataTable dataTable = new FitnessDatabaseDataSet.FoodsDataTable();
+            FitnessDatabaseDataSet1.FoodsDataTable dataTable = new FitnessDatabaseDataSet1.FoodsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7299,14 +7299,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.FoodsDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.FoodsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Foods");
         }
         
@@ -7660,7 +7660,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.GoalsDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.GoalsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7673,9 +7673,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.GoalsDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.GoalsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.GoalsDataTable dataTable = new FitnessDatabaseDataSet.GoalsDataTable();
+            FitnessDatabaseDataSet1.GoalsDataTable dataTable = new FitnessDatabaseDataSet1.GoalsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7683,14 +7683,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.GoalsDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.GoalsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Goals");
         }
         
@@ -8082,7 +8082,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.RoutineExerciseDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.RoutineExerciseDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8095,9 +8095,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.RoutineExerciseDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.RoutineExerciseDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.RoutineExerciseDataTable dataTable = new FitnessDatabaseDataSet.RoutineExerciseDataTable();
+            FitnessDatabaseDataSet1.RoutineExerciseDataTable dataTable = new FitnessDatabaseDataSet1.RoutineExerciseDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8105,14 +8105,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.RoutineExerciseDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.RoutineExerciseDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "RoutineExercise");
         }
         
@@ -8485,7 +8485,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.RoutinesDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.RoutinesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8498,9 +8498,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.RoutinesDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.RoutinesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.RoutinesDataTable dataTable = new FitnessDatabaseDataSet.RoutinesDataTable();
+            FitnessDatabaseDataSet1.RoutinesDataTable dataTable = new FitnessDatabaseDataSet1.RoutinesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8508,14 +8508,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.RoutinesDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.RoutinesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "Routines");
         }
         
@@ -8918,46 +8918,19 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[4];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT UserID, UserName, UserLastName, UserPassword, Age, Height, Weight, isAthle" +
                 "tic, Gender, BMR, BMI, UserAlias FROM [User]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        COUNT(*) AS Expr1\r\nFROM            [User]\r\nWHERE        (UserAlias " +
-                "= ?) AND (UserPassword = ?)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserAlias", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserPassword", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserPassword", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT COUNT(*) FROM [User] WHERE UserAlias = ?";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserAlias", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE       [User]\r\nSET                Age = ?, Height = ?, Weight = ?, isAthlet" +
-                "ic = ?, Gender = ?, BMR = ?, BMI = ?\r\nWHERE        (UserAlias = ?) AND (UserPass" +
-                "word = ?)";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Age", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Age", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Height", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Height", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Weight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weight", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("isAthletic", global::System.Data.OleDb.OleDbType.WChar, 15, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "isAthletic", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gender", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BMR", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(7)), ((byte)(0)), "BMR", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BMI", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMI", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserAlias", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Original, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserPassword", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserPassword", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.UserDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.UserDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8970,9 +8943,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.UserDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.UserDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.UserDataTable dataTable = new FitnessDatabaseDataSet.UserDataTable();
+            FitnessDatabaseDataSet1.UserDataTable dataTable = new FitnessDatabaseDataSet1.UserDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8980,14 +8953,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.UserDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.UserDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "User");
         }
         
@@ -9279,131 +9252,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> checkLogin(string UserAlias, string UserPassword) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
-            if ((UserAlias == null)) {
-                throw new global::System.ArgumentNullException("UserAlias");
-            }
-            else {
-                command.Parameters[0].Value = ((string)(UserAlias));
-            }
-            if ((UserPassword == null)) {
-                throw new global::System.ArgumentNullException("UserPassword");
-            }
-            else {
-                command.Parameters[1].Value = ((string)(UserPassword));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            object returnValue;
-            try {
-                returnValue = command.ExecuteScalar();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
-            }
-            else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> checkRegister(string UserAlias) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
-            if ((UserAlias == null)) {
-                throw new global::System.ArgumentNullException("UserAlias");
-            }
-            else {
-                command.Parameters[0].Value = ((string)(UserAlias));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            object returnValue;
-            try {
-                returnValue = command.ExecuteScalar();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
-            }
-            else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UpdateBiometrics(int Age, int Height, int Weight, string isAthletic, string Gender, decimal BMR, int BMI, string Original_UserAlias, string Original_UserPassword) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[3];
-            command.Parameters[0].Value = ((int)(Age));
-            command.Parameters[1].Value = ((int)(Height));
-            command.Parameters[2].Value = ((int)(Weight));
-            if ((isAthletic == null)) {
-                throw new global::System.ArgumentNullException("isAthletic");
-            }
-            else {
-                command.Parameters[3].Value = ((string)(isAthletic));
-            }
-            if ((Gender == null)) {
-                throw new global::System.ArgumentNullException("Gender");
-            }
-            else {
-                command.Parameters[4].Value = ((string)(Gender));
-            }
-            command.Parameters[5].Value = ((decimal)(BMR));
-            command.Parameters[6].Value = ((int)(BMI));
-            if ((Original_UserAlias == null)) {
-                throw new global::System.ArgumentNullException("Original_UserAlias");
-            }
-            else {
-                command.Parameters[7].Value = ((string)(Original_UserAlias));
-            }
-            if ((Original_UserPassword == null)) {
-                throw new global::System.ArgumentNullException("Original_UserPassword");
-            }
-            else {
-                command.Parameters[8].Value = ((string)(Original_UserPassword));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
     }
     
     /// <summary>
@@ -9581,7 +9429,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.UserDietPlanDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.UserDietPlanDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9594,9 +9442,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.UserDietPlanDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.UserDietPlanDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.UserDietPlanDataTable dataTable = new FitnessDatabaseDataSet.UserDietPlanDataTable();
+            FitnessDatabaseDataSet1.UserDietPlanDataTable dataTable = new FitnessDatabaseDataSet1.UserDietPlanDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9604,14 +9452,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.UserDietPlanDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.UserDietPlanDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "UserDietPlan");
         }
         
@@ -9909,7 +9757,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FitnessDatabaseDataSet.UserRoutineDataTable dataTable) {
+        public virtual int Fill(FitnessDatabaseDataSet1.UserRoutineDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9922,9 +9770,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FitnessDatabaseDataSet.UserRoutineDataTable GetData() {
+        public virtual FitnessDatabaseDataSet1.UserRoutineDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FitnessDatabaseDataSet.UserRoutineDataTable dataTable = new FitnessDatabaseDataSet.UserRoutineDataTable();
+            FitnessDatabaseDataSet1.UserRoutineDataTable dataTable = new FitnessDatabaseDataSet1.UserRoutineDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9932,14 +9780,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet.UserRoutineDataTable dataTable) {
+        public virtual int Update(FitnessDatabaseDataSet1.UserRoutineDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FitnessDatabaseDataSet dataSet) {
+        public virtual int Update(FitnessDatabaseDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "UserRoutine");
         }
         
@@ -10380,7 +10228,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(FitnessDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FitnessDatabaseDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dietPlanTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.DietPlan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -10480,7 +10328,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(FitnessDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FitnessDatabaseDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dietPlanTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.DietPlan.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -10570,7 +10418,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(FitnessDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FitnessDatabaseDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._userRoutineTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.UserRoutine.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -10684,7 +10532,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(FitnessDatabaseDataSet dataSet) {
+        public virtual int UpdateAll(FitnessDatabaseDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

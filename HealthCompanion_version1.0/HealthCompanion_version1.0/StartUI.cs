@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.OleDb;
 
 namespace HealthCompanion_version1._0
 {
     public partial class StartUI : Form
     {
-
+        
         private int count = 0;
         public StartUI()
         {
@@ -105,30 +107,35 @@ namespace HealthCompanion_version1._0
             {
                 return;
             }
-            if (userTableAdapter1.checkRegister(userTxtBox.Text).Value == 1)
-            {
-                createMsg.Text = "There is already a user with this Username try again";
-                unameMsg.Text = "*****";
-            }
-            else
-            {
-                userTableAdapter1.Insert(nameTxtBox.Text, lnameTxtBox.Text, cpassTxtBox.Text, 0, 0, 0, "", "", 0, 0, userTxtBox.Text);
+            if(LoginUserTableAdapter.checkRegister(userTxtBox.Text).Value == 1)
+              {
+                  createMsg.Text = "There is already a user with this Username try again";
+                  unameMsg.Text = "*****";
+              }
+              else
+              {
+                  LoginUserTableAdapter.Insert(nameTxtBox.Text,lnameTxtBox.Text,cpassTxtBox.Text,0,0,0,"","",0,0,userTxtBox.Text);               
                 createMsg.Text = "Succesfull Register... Welcome to Health Companion";
-
-            }
+              }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             errorMsg.Text = "";
-            if (userTableAdapter1.checkLogin(loginUserTxtBox.Text, loginPassTxtBox.Text).Value == 1)
-            {
-                // do things
-            }
-            else
-            {
-                errorMsg.Text = "Wrong Username or Password. \nPlease try again!";
-            }
+            if (LoginUserTableAdapter.checkLogin(loginUserTxtBox.Text,loginPassTxtBox.Text).Value == 1)
+             {
+                UserClass.Name = loginUserTxtBox.Text;
+                UserClass.Password = loginPassTxtBox.Text;
+                PersonalData pd = new PersonalData();
+                pd.Show();
+                this.Hide();
+             }
+             else
+             {
+                 errorMsg.Text = "Wrong Username or Password. \nPlease try again!";
+             }
         }
+
+        
     }
 }
