@@ -15,7 +15,6 @@ namespace HealthCompanion_version1._0
         public PersonalData()
         {
             InitializeComponent();
-
             athleticCmbBox.Text = athleticCmbBox.Items[0].ToString();
             heightLabel.BackColor = System.Drawing.Color.Transparent;
             weightLabel.BackColor = System.Drawing.Color.Transparent;
@@ -67,21 +66,16 @@ namespace HealthCompanion_version1._0
 
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
-            BiometricTableAdapter.Update(fitnessDatabaseDataSet.User);
-            BiometricTableAdapter.UpdateBiometrics(int.Parse(ageTxtBox.Text),int.Parse(heightTxtBox.Text),int.Parse(weightTxtBox.Text),athleticCmbBox.Text,GenderComboBox.Text,decimal.Parse(BmrValue.Text),int.Parse(BmiValue.Text), UserClass.Name.ToString(), UserClass.Password.ToString());
-            
-        }
-
-        private void athleticCmbBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PersonalData_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'fitnessDatabaseDataSet.User' table. You can move, or remove it, as needed.
-            this.BiometricTableAdapter.Fill(this.fitnessDatabaseDataSet.User);
-
+            if(heightTxtBox.Text == "" || ageTxtBox.Text == "" || weightTxtBox.Text == "" || BmiValue.Text =="" || GenderComboBox.Text == "" || athleticCmbBox.Text == "")
+            {
+                MessageBox.Show("Fill all the fields to update your data", "Update Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            this.BiometricTableAdapter.UpdateBiometrics(int.Parse(ageTxtBox.Text),int.Parse(heightTxtBox.Text),int.Parse(weightTxtBox.Text),
+                athleticCmbBox.Text.ToString(),GenderComboBox.Text.ToString(),decimal.Parse(BmrValue.Text),
+                (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
+            MessageBox.Show("Succesfull update");
         }
     }
 }
