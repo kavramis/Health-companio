@@ -43,14 +43,21 @@ namespace HealthCompanion_version1._0
 
             double bmr;
             double bmi;
-            if (GenderComboBox.SelectedIndex == 0)
-            {//Men bmr
-                bmr = 66 + (13.7 * double.Parse(weightTxtBox.Text)) + (5 * int.Parse(heightTxtBox.Text)) - (6.8 * int.Parse(ageTxtBox.Text));
+            try
+            {
+                if (GenderComboBox.SelectedIndex == 0)
+                {//Men bmr
+                    bmr = 66 + (13.7 * double.Parse(weightTxtBox.Text)) + (5 * int.Parse(heightTxtBox.Text)) - (6.8 * int.Parse(ageTxtBox.Text));
 
-            }
-            else
-            {//Women bmr
-                bmr = 655 + (9.6 * double.Parse(weightTxtBox.Text)) + (1.8 * int.Parse(heightTxtBox.Text)) - (4.7 * int.Parse(ageTxtBox.Text));
+                }
+                else
+                {//Women bmr
+                    bmr = 655 + (9.6 * double.Parse(weightTxtBox.Text)) + (1.8 * int.Parse(heightTxtBox.Text)) - (4.7 * int.Parse(ageTxtBox.Text));
+                }
+            }catch(Exception s)
+            {
+                MessageBox.Show("Wrong Format", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             bmi = double.Parse(weightTxtBox.Text) / Math.Pow((double.Parse(heightTxtBox.Text) / 100), 2);
             BmiValue.Text = "" + bmi;

@@ -79,7 +79,7 @@
             this.isAthleticLabel.ForeColor = System.Drawing.Color.White;
             this.isAthleticLabel.Location = new System.Drawing.Point(27, 167);
             this.isAthleticLabel.Name = "isAthleticLabel";
-            this.isAthleticLabel.Size = new System.Drawing.Size(78, 13);
+            this.isAthleticLabel.Size = new System.Drawing.Size(100, 17);
             this.isAthleticLabel.TabIndex = 6;
             this.isAthleticLabel.Text = "Athletic Much?";
             // 
@@ -93,7 +93,7 @@
             "A LOT!"});
             this.athleticCmbBox.Location = new System.Drawing.Point(115, 159);
             this.athleticCmbBox.Name = "athleticCmbBox";
-            this.athleticCmbBox.Size = new System.Drawing.Size(121, 21);
+            this.athleticCmbBox.Size = new System.Drawing.Size(121, 24);
             this.athleticCmbBox.TabIndex = 22;
             // 
             // SubmitBtn
@@ -112,7 +112,7 @@
             this.BmrValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BmrValue.Location = new System.Drawing.Point(329, 49);
             this.BmrValue.Name = "BmrValue";
-            this.BmrValue.Size = new System.Drawing.Size(0, 16);
+            this.BmrValue.Size = new System.Drawing.Size(0, 20);
             this.BmrValue.TabIndex = 25;
             // 
             // BmiValue
@@ -121,7 +121,7 @@
             this.BmiValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BmiValue.Location = new System.Drawing.Point(329, 22);
             this.BmiValue.Name = "BmiValue";
-            this.BmiValue.Size = new System.Drawing.Size(0, 16);
+            this.BmiValue.Size = new System.Drawing.Size(0, 20);
             this.BmiValue.TabIndex = 24;
             // 
             // BmrLabel
@@ -130,7 +130,7 @@
             this.BmrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.BmrLabel.Location = new System.Drawing.Point(269, 50);
             this.BmrLabel.Name = "BmrLabel";
-            this.BmrLabel.Size = new System.Drawing.Size(45, 16);
+            this.BmrLabel.Size = new System.Drawing.Size(56, 20);
             this.BmrLabel.TabIndex = 23;
             this.BmrLabel.Text = "BMR:";
             // 
@@ -152,14 +152,15 @@
             "Female"});
             this.GenderComboBox.Location = new System.Drawing.Point(116, 120);
             this.GenderComboBox.Name = "GenderComboBox";
-            this.GenderComboBox.Size = new System.Drawing.Size(121, 21);
+            this.GenderComboBox.Size = new System.Drawing.Size(121, 24);
             this.GenderComboBox.TabIndex = 21;
+            this.GenderComboBox.SelectedIndexChanged += new System.EventHandler(this.GenderComboBox_SelectedIndexChanged);
             // 
             // weightTxtBox
             // 
             this.weightTxtBox.Location = new System.Drawing.Point(115, 86);
             this.weightTxtBox.Name = "weightTxtBox";
-            this.weightTxtBox.Size = new System.Drawing.Size(122, 20);
+            this.weightTxtBox.Size = new System.Drawing.Size(122, 22);
             this.weightTxtBox.TabIndex = 20;
             // 
             // heightLabel
@@ -168,7 +169,7 @@
             this.heightLabel.ForeColor = System.Drawing.Color.White;
             this.heightLabel.Location = new System.Drawing.Point(28, 24);
             this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(58, 13);
+            this.heightLabel.Size = new System.Drawing.Size(77, 17);
             this.heightLabel.TabIndex = 18;
             this.heightLabel.Text = "Height(cm)";
             // 
@@ -176,14 +177,14 @@
             // 
             this.ageTxtBox.Location = new System.Drawing.Point(116, 53);
             this.ageTxtBox.Name = "ageTxtBox";
-            this.ageTxtBox.Size = new System.Drawing.Size(122, 20);
+            this.ageTxtBox.Size = new System.Drawing.Size(122, 22);
             this.ageTxtBox.TabIndex = 10;
             // 
             // heightTxtBox
             // 
             this.heightTxtBox.Location = new System.Drawing.Point(116, 19);
             this.heightTxtBox.Name = "heightTxtBox";
-            this.heightTxtBox.Size = new System.Drawing.Size(122, 20);
+            this.heightTxtBox.Size = new System.Drawing.Size(122, 22);
             this.heightTxtBox.TabIndex = 8;
             // 
             // genderLabel
@@ -192,7 +193,7 @@
             this.genderLabel.ForeColor = System.Drawing.Color.White;
             this.genderLabel.Location = new System.Drawing.Point(28, 123);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(42, 13);
+            this.genderLabel.Size = new System.Drawing.Size(56, 17);
             this.genderLabel.TabIndex = 5;
             this.genderLabel.Text = "Gender";
             // 
@@ -202,7 +203,7 @@
             this.ageLabel.ForeColor = System.Drawing.Color.White;
             this.ageLabel.Location = new System.Drawing.Point(28, 53);
             this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(26, 13);
+            this.ageLabel.Size = new System.Drawing.Size(33, 17);
             this.ageLabel.TabIndex = 3;
             this.ageLabel.Text = "Age";
             // 
@@ -212,7 +213,7 @@
             this.weightLabel.ForeColor = System.Drawing.Color.White;
             this.weightLabel.Location = new System.Drawing.Point(27, 86);
             this.weightLabel.Name = "weightLabel";
-            this.weightLabel.Size = new System.Drawing.Size(59, 13);
+            this.weightLabel.Size = new System.Drawing.Size(77, 17);
             this.weightLabel.TabIndex = 1;
             this.weightLabel.Text = "Weight(kg)";
             // 
@@ -245,7 +246,7 @@
             this.button1.Location = new System.Drawing.Point(503, 53);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(315, 43);
+            this.button1.Size = new System.Drawing.Size(394, 50);
             this.button1.TabIndex = 6;
             this.button1.Text = "Workout Selection";
             this.button1.UseVisualStyleBackColor = false;
