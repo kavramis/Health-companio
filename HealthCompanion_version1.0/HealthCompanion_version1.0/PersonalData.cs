@@ -40,6 +40,7 @@ namespace HealthCompanion_version1._0
             }
 
 
+
             double bmr;
             double bmi;
             if (GenderComboBox.SelectedIndex == 0)
@@ -66,12 +67,13 @@ namespace HealthCompanion_version1._0
 
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
-            if(heightTxtBox.Text == "" || ageTxtBox.Text == "" || weightTxtBox.Text == "" || BmiValue.Text =="" || GenderComboBox.Text == "" || athleticCmbBox.Text == "")
+            if(heightTxtBox.Text == "" || ageTxtBox.Text == "" || weightTxtBox.Text == "" || GenderComboBox.Text == "" || athleticCmbBox.Text == "")
             {
                 MessageBox.Show("Fill all the fields to update your data", "Update Error",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            GenderComboBox_SelectedIndexChanged(this,e);
             this.BiometricTableAdapter.UpdateBiometrics(int.Parse(ageTxtBox.Text),int.Parse(heightTxtBox.Text),int.Parse(weightTxtBox.Text),
                 athleticCmbBox.Text.ToString(),GenderComboBox.Text.ToString(),decimal.Parse(BmrValue.Text),
                 (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
