@@ -89,7 +89,6 @@ namespace HealthCompanion_version1._0
                 MessageBox.Show("Succesfull update", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }catch(Exception s)
             {
-                MessageBox.Show("Wrong Format", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
