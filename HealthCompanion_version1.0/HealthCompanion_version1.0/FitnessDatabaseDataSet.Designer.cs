@@ -661,14 +661,6 @@ namespace HealthCompanion_version1._0 {
             
             private global::System.Data.DataColumn columnMealsPerDay;
             
-            private global::System.Data.DataColumn columnDietPlanName;
-            
-            private global::System.Data.DataColumn columnDietType;
-            
-            private global::System.Data.DataColumn columnDaily_Calories;
-            
-            private global::System.Data.DataColumn columnTips;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DietPlanDataTable() {
@@ -720,38 +712,6 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DietPlanNameColumn {
-                get {
-                    return this.columnDietPlanName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DietTypeColumn {
-                get {
-                    return this.columnDietType;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Daily_CaloriesColumn {
-                get {
-                    return this.columnDaily_Calories;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TipsColumn {
-                get {
-                    return this.columnTips;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -787,15 +747,11 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DietPlanRow AddDietPlanRow(string DietPlanID, int MealsPerDay, string DietPlanName, string DietType, int Daily_Calories, string Tips) {
+            public DietPlanRow AddDietPlanRow(string DietPlanID, int MealsPerDay) {
                 DietPlanRow rowDietPlanRow = ((DietPlanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DietPlanID,
-                        MealsPerDay,
-                        DietPlanName,
-                        DietType,
-                        Daily_Calories,
-                        Tips};
+                        MealsPerDay};
                 rowDietPlanRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDietPlanRow);
                 return rowDietPlanRow;
@@ -827,10 +783,6 @@ namespace HealthCompanion_version1._0 {
             internal void InitVars() {
                 this.columnDietPlanID = base.Columns["DietPlanID"];
                 this.columnMealsPerDay = base.Columns["MealsPerDay"];
-                this.columnDietPlanName = base.Columns["DietPlanName"];
-                this.columnDietType = base.Columns["DietType"];
-                this.columnDaily_Calories = base.Columns["Daily Calories"];
-                this.columnTips = base.Columns["Tips"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -840,22 +792,11 @@ namespace HealthCompanion_version1._0 {
                 base.Columns.Add(this.columnDietPlanID);
                 this.columnMealsPerDay = new global::System.Data.DataColumn("MealsPerDay", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMealsPerDay);
-                this.columnDietPlanName = new global::System.Data.DataColumn("DietPlanName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDietPlanName);
-                this.columnDietType = new global::System.Data.DataColumn("DietType", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDietType);
-                this.columnDaily_Calories = new global::System.Data.DataColumn("Daily Calories", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDaily_Calories);
-                this.columnTips = new global::System.Data.DataColumn("Tips", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTips);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnDietPlanID}, true));
                 this.columnDietPlanID.AllowDBNull = false;
                 this.columnDietPlanID.Unique = true;
                 this.columnDietPlanID.MaxLength = 255;
-                this.columnDietPlanName.MaxLength = 255;
-                this.columnDietType.MaxLength = 255;
-                this.columnTips.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1985,10 +1926,6 @@ namespace HealthCompanion_version1._0 {
             
             private global::System.Data.DataColumn columnWorkoutTime;
             
-            private global::System.Data.DataColumn columnDateEnd;
-            
-            private global::System.Data.DataColumn columnStatus;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public GoalsDataTable() {
@@ -2072,22 +2009,6 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DateEndColumn {
-                get {
-                    return this.columnDateEnd;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn StatusColumn {
-                get {
-                    return this.columnStatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2123,7 +2044,7 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public GoalsRow AddGoalsRow(UserRow parentUserRowByUserGoals, string Description, int TrainingTime, int TrainingDays, System.DateTime DateStart, int WorkoutTime, System.DateTime DateEnd, string Status) {
+            public GoalsRow AddGoalsRow(UserRow parentUserRowByUserGoals, string Description, int TrainingTime, int TrainingDays, System.DateTime DateStart, int WorkoutTime) {
                 GoalsRow rowGoalsRow = ((GoalsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2131,9 +2052,7 @@ namespace HealthCompanion_version1._0 {
                         TrainingTime,
                         TrainingDays,
                         DateStart,
-                        WorkoutTime,
-                        DateEnd,
-                        Status};
+                        WorkoutTime};
                 if ((parentUserRowByUserGoals != null)) {
                     columnValuesArray[0] = parentUserRowByUserGoals[0];
                 }
@@ -2144,10 +2063,10 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public GoalsRow FindByUserIDDateStart(int UserID, System.DateTime DateStart) {
+            public GoalsRow FindByUserIDWorkoutTime(int UserID, int WorkoutTime) {
                 return ((GoalsRow)(this.Rows.Find(new object[] {
                             UserID,
-                            DateStart})));
+                            WorkoutTime})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2173,8 +2092,6 @@ namespace HealthCompanion_version1._0 {
                 this.columnTrainingDays = base.Columns["TrainingDays"];
                 this.columnDateStart = base.Columns["DateStart"];
                 this.columnWorkoutTime = base.Columns["WorkoutTime"];
-                this.columnDateEnd = base.Columns["DateEnd"];
-                this.columnStatus = base.Columns["Status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2192,17 +2109,12 @@ namespace HealthCompanion_version1._0 {
                 base.Columns.Add(this.columnDateStart);
                 this.columnWorkoutTime = new global::System.Data.DataColumn("WorkoutTime", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWorkoutTime);
-                this.columnDateEnd = new global::System.Data.DataColumn("DateEnd", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDateEnd);
-                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserID,
-                                this.columnDateStart}, true));
+                                this.columnWorkoutTime}, true));
                 this.columnUserID.AllowDBNull = false;
                 this.columnDescription.MaxLength = 255;
-                this.columnDateStart.AllowDBNull = false;
-                this.columnStatus.MaxLength = 255;
+                this.columnWorkoutTime.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2657,8 +2569,6 @@ namespace HealthCompanion_version1._0 {
             
             private global::System.Data.DataColumn columnDifficulty;
             
-            private global::System.Data.DataColumn columnTips;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public RoutinesDataTable() {
@@ -2718,14 +2628,6 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TipsColumn {
-                get {
-                    return this.columnTips;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2761,13 +2663,12 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public RoutinesRow AddRoutinesRow(string RoutineName, int DaysPerWeek, string Difficulty, string Tips) {
+            public RoutinesRow AddRoutinesRow(string RoutineName, int DaysPerWeek, string Difficulty) {
                 RoutinesRow rowRoutinesRow = ((RoutinesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RoutineName,
                         DaysPerWeek,
-                        Difficulty,
-                        Tips};
+                        Difficulty};
                 rowRoutinesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRoutinesRow);
                 return rowRoutinesRow;
@@ -2800,7 +2701,6 @@ namespace HealthCompanion_version1._0 {
                 this.columnRoutineName = base.Columns["RoutineName"];
                 this.columnDaysPerWeek = base.Columns["DaysPerWeek"];
                 this.columnDifficulty = base.Columns["Difficulty"];
-                this.columnTips = base.Columns["Tips"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2812,15 +2712,12 @@ namespace HealthCompanion_version1._0 {
                 base.Columns.Add(this.columnDaysPerWeek);
                 this.columnDifficulty = new global::System.Data.DataColumn("Difficulty", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDifficulty);
-                this.columnTips = new global::System.Data.DataColumn("Tips", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTips);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnRoutineName}, true));
                 this.columnRoutineName.AllowDBNull = false;
                 this.columnRoutineName.Unique = true;
                 this.columnRoutineName.MaxLength = 255;
                 this.columnDifficulty.MaxLength = 255;
-                this.columnTips.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2972,12 +2869,6 @@ namespace HealthCompanion_version1._0 {
             
             private global::System.Data.DataColumn columnGender;
             
-            private global::System.Data.DataColumn columnBMR;
-            
-            private global::System.Data.DataColumn columnBMI;
-            
-            private global::System.Data.DataColumn columnUserAlias;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public UserDataTable() {
@@ -3085,30 +2976,6 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn BMRColumn {
-                get {
-                    return this.columnBMR;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn BMIColumn {
-                get {
-                    return this.columnBMI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn UserAliasColumn {
-                get {
-                    return this.columnUserAlias;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3144,7 +3011,7 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public UserRow AddUserRow(string UserName, string UserLastName, string UserPassword, int Age, int Height, int Weight, string isAthletic, string Gender, float BMR, int BMI, string UserAlias) {
+            public UserRow AddUserRow(string UserName, string UserLastName, string UserPassword, int Age, int Height, int Weight, string isAthletic, string Gender) {
                 UserRow rowUserRow = ((UserRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3155,10 +3022,7 @@ namespace HealthCompanion_version1._0 {
                         Height,
                         Weight,
                         isAthletic,
-                        Gender,
-                        BMR,
-                        BMI,
-                        UserAlias};
+                        Gender};
                 rowUserRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUserRow);
                 return rowUserRow;
@@ -3197,9 +3061,6 @@ namespace HealthCompanion_version1._0 {
                 this.columnWeight = base.Columns["Weight"];
                 this.columnisAthletic = base.Columns["isAthletic"];
                 this.columnGender = base.Columns["Gender"];
-                this.columnBMR = base.Columns["BMR"];
-                this.columnBMI = base.Columns["BMI"];
-                this.columnUserAlias = base.Columns["UserAlias"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3223,12 +3084,6 @@ namespace HealthCompanion_version1._0 {
                 base.Columns.Add(this.columnisAthletic);
                 this.columnGender = new global::System.Data.DataColumn("Gender", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGender);
-                this.columnBMR = new global::System.Data.DataColumn("BMR", typeof(float), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBMR);
-                this.columnBMI = new global::System.Data.DataColumn("BMI", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBMI);
-                this.columnUserAlias = new global::System.Data.DataColumn("UserAlias", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUserAlias);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserID}, true));
                 this.columnUserID.AutoIncrement = true;
@@ -3241,7 +3096,6 @@ namespace HealthCompanion_version1._0 {
                 this.columnUserPassword.MaxLength = 255;
                 this.columnisAthletic.MaxLength = 15;
                 this.columnGender.MaxLength = 255;
-                this.columnUserAlias.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4007,70 +3861,6 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string DietPlanName {
-                get {
-                    try {
-                        return ((string)(this[this.tableDietPlan.DietPlanNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DietPlanName\' in table \'DietPlan\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDietPlan.DietPlanNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string DietType {
-                get {
-                    try {
-                        return ((string)(this[this.tableDietPlan.DietTypeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DietType\' in table \'DietPlan\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDietPlan.DietTypeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Daily_Calories {
-                get {
-                    try {
-                        return ((int)(this[this.tableDietPlan.Daily_CaloriesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Daily Calories\' in table \'DietPlan\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDietPlan.Daily_CaloriesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Tips {
-                get {
-                    try {
-                        return ((string)(this[this.tableDietPlan.TipsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tips\' in table \'DietPlan\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDietPlan.TipsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsMealsPerDayNull() {
                 return this.IsNull(this.tableDietPlan.MealsPerDayColumn);
             }
@@ -4079,54 +3869,6 @@ namespace HealthCompanion_version1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetMealsPerDayNull() {
                 this[this.tableDietPlan.MealsPerDayColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDietPlanNameNull() {
-                return this.IsNull(this.tableDietPlan.DietPlanNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDietPlanNameNull() {
-                this[this.tableDietPlan.DietPlanNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDietTypeNull() {
-                return this.IsNull(this.tableDietPlan.DietTypeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDietTypeNull() {
-                this[this.tableDietPlan.DietTypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDaily_CaloriesNull() {
-                return this.IsNull(this.tableDietPlan.Daily_CaloriesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDaily_CaloriesNull() {
-                this[this.tableDietPlan.Daily_CaloriesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTipsNull() {
-                return this.IsNull(this.tableDietPlan.TipsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTipsNull() {
-                this[this.tableDietPlan.TipsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4664,7 +4406,12 @@ namespace HealthCompanion_version1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DateStart {
                 get {
-                    return ((global::System.DateTime)(this[this.tableGoals.DateStartColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGoals.DateStartColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateStart\' in table \'Goals\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableGoals.DateStartColumn] = value;
@@ -4675,47 +4422,10 @@ namespace HealthCompanion_version1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int WorkoutTime {
                 get {
-                    try {
-                        return ((int)(this[this.tableGoals.WorkoutTimeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'WorkoutTime\' in table \'Goals\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableGoals.WorkoutTimeColumn]));
                 }
                 set {
                     this[this.tableGoals.WorkoutTimeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime DateEnd {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableGoals.DateEndColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateEnd\' in table \'Goals\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGoals.DateEndColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Status {
-                get {
-                    try {
-                        return ((string)(this[this.tableGoals.StatusColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'Goals\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGoals.StatusColumn] = value;
                 }
             }
             
@@ -4768,38 +4478,14 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsWorkoutTimeNull() {
-                return this.IsNull(this.tableGoals.WorkoutTimeColumn);
+            public bool IsDateStartNull() {
+                return this.IsNull(this.tableGoals.DateStartColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetWorkoutTimeNull() {
-                this[this.tableGoals.WorkoutTimeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDateEndNull() {
-                return this.IsNull(this.tableGoals.DateEndColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDateEndNull() {
-                this[this.tableGoals.DateEndColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsStatusNull() {
-                return this.IsNull(this.tableGoals.StatusColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetStatusNull() {
-                this[this.tableGoals.StatusColumn] = global::System.Convert.DBNull;
+            public void SetDateStartNull() {
+                this[this.tableGoals.DateStartColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4943,22 +4629,6 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Tips {
-                get {
-                    try {
-                        return ((string)(this[this.tableRoutines.TipsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tips\' in table \'Routines\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableRoutines.TipsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDaysPerWeekNull() {
                 return this.IsNull(this.tableRoutines.DaysPerWeekColumn);
             }
@@ -4979,18 +4649,6 @@ namespace HealthCompanion_version1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDifficultyNull() {
                 this[this.tableRoutines.DifficultyColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTipsNull() {
-                return this.IsNull(this.tableRoutines.TipsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTipsNull() {
-                this[this.tableRoutines.TipsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5171,54 +4829,6 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public float BMR {
-                get {
-                    try {
-                        return ((float)(this[this.tableUser.BMRColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BMR\' in table \'User\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUser.BMRColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int BMI {
-                get {
-                    try {
-                        return ((int)(this[this.tableUser.BMIColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BMI\' in table \'User\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUser.BMIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string UserAlias {
-                get {
-                    try {
-                        return ((string)(this[this.tableUser.UserAliasColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'UserAlias\' in table \'User\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUser.UserAliasColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsUserNameNull() {
                 return this.IsNull(this.tableUser.UserNameColumn);
             }
@@ -5311,42 +4921,6 @@ namespace HealthCompanion_version1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetGenderNull() {
                 this[this.tableUser.GenderColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsBMRNull() {
-                return this.IsNull(this.tableUser.BMRColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetBMRNull() {
-                this[this.tableUser.BMRColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsBMINull() {
-                return this.IsNull(this.tableUser.BMIColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetBMINull() {
-                this[this.tableUser.BMIColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsUserAliasNull() {
-                return this.IsNull(this.tableUser.UserAliasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetUserAliasNull() {
-                this[this.tableUser.UserAliasColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5990,58 +5564,31 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             tableMapping.DataSetTable = "DietPlan";
             tableMapping.ColumnMappings.Add("DietPlanID", "DietPlanID");
             tableMapping.ColumnMappings.Add("MealsPerDay", "MealsPerDay");
-            tableMapping.ColumnMappings.Add("DietPlanName", "DietPlanName");
-            tableMapping.ColumnMappings.Add("DietType", "DietType");
-            tableMapping.ColumnMappings.Add("Daily Calories", "Daily Calories");
-            tableMapping.ColumnMappings.Add("Tips", "Tips");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `DietPlan` WHERE ((`DietPlanID` = ?) AND ((? = 1 AND `MealsPerDay` IS NULL) OR (`MealsPerDay` = ?)) AND ((? = 1 AND `DietPlanName` IS NULL) OR (`DietPlanName` = ?)) AND ((? = 1 AND `DietType` IS NULL) OR (`DietType` = ?)) AND ((? = 1 AND `Daily Calories` IS NULL) OR (`Daily Calories` = ?)) AND ((? = 1 AND `Tips` IS NULL) OR (`Tips` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `DietPlan` WHERE ((`DietPlanID` = ?) AND ((? = 1 AND `MealsPerDay` IS" +
+                " NULL) OR (`MealsPerDay` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DietPlanID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_MealsPerDay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MealsPerDay", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_MealsPerDay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MealsPerDay", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DietPlanName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanName", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DietPlanName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanName", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DietType", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietType", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DietType", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietType", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Daily_Calories", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Daily Calories", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Daily_Calories", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Daily Calories", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Tips", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Tips", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `DietPlan` (`DietPlanID`, `MealsPerDay`, `DietPlanName`, `DietType`, " +
-                "`Daily Calories`, `Tips`) VALUES (?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `DietPlan` (`DietPlanID`, `MealsPerDay`) VALUES (?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DietPlanID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MealsPerDay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MealsPerDay", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DietPlanName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanName", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DietType", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietType", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Daily_Calories", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Daily Calories", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Tips", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `DietPlan` SET `DietPlanID` = ?, `MealsPerDay` = ?, `DietPlanName` = ?, `DietType` = ?, `Daily Calories` = ?, `Tips` = ? WHERE ((`DietPlanID` = ?) AND ((? = 1 AND `MealsPerDay` IS NULL) OR (`MealsPerDay` = ?)) AND ((? = 1 AND `DietPlanName` IS NULL) OR (`DietPlanName` = ?)) AND ((? = 1 AND `DietType` IS NULL) OR (`DietType` = ?)) AND ((? = 1 AND `Daily Calories` IS NULL) OR (`Daily Calories` = ?)) AND ((? = 1 AND `Tips` IS NULL) OR (`Tips` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `DietPlan` SET `DietPlanID` = ?, `MealsPerDay` = ? WHERE ((`DietPlanID` = " +
+                "?) AND ((? = 1 AND `MealsPerDay` IS NULL) OR (`MealsPerDay` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DietPlanID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MealsPerDay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MealsPerDay", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DietPlanName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanName", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DietType", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietType", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Daily_Calories", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Daily Calories", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Tips", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DietPlanID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_MealsPerDay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MealsPerDay", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_MealsPerDay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MealsPerDay", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DietPlanName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanName", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DietPlanName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietPlanName", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DietType", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietType", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DietType", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DietType", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Daily_Calories", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Daily Calories", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Daily_Calories", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Daily Calories", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Tips", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Tips", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6057,8 +5604,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DietPlanID, MealsPerDay, DietPlanName, DietType, [Daily Calories], Tips FR" +
-                "OM DietPlan";
+            this._commandCollection[0].CommandText = "SELECT DietPlanID, MealsPerDay FROM DietPlan";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6119,7 +5665,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_DietPlanID, int Original_MealsPerDay, string Original_DietPlanName, string Original_DietType, int Original_Daily_Calories, string Original_Tips) {
+        public virtual int Delete(string Original_DietPlanID, int Original_MealsPerDay) {
             if ((Original_DietPlanID == null)) {
                 throw new global::System.ArgumentNullException("Original_DietPlanID");
             }
@@ -6128,30 +5674,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             }
             this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_MealsPerDay));
-            if ((Original_DietPlanName == null)) {
-                throw new global::System.ArgumentNullException("Original_DietPlanName");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_DietPlanName));
-            }
-            if ((Original_DietType == null)) {
-                throw new global::System.ArgumentNullException("Original_DietType");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_DietType));
-            }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Daily_Calories));
-            if ((Original_Tips == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Tips));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6172,7 +5694,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string DietPlanID, int MealsPerDay, string DietPlanName, string DietType, int Daily_Calories, string Tips) {
+        public virtual int Insert(string DietPlanID, int MealsPerDay) {
             if ((DietPlanID == null)) {
                 throw new global::System.ArgumentNullException("DietPlanID");
             }
@@ -6180,25 +5702,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(DietPlanID));
             }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(MealsPerDay));
-            if ((DietPlanName == null)) {
-                throw new global::System.ArgumentNullException("DietPlanName");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(DietPlanName));
-            }
-            if ((DietType == null)) {
-                throw new global::System.ArgumentNullException("DietType");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(DietType));
-            }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Daily_Calories));
-            if ((Tips == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Tips));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6219,7 +5722,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DietPlanID, int MealsPerDay, string DietPlanName, string DietType, int Daily_Calories, string Tips, string Original_DietPlanID, int Original_MealsPerDay, string Original_DietPlanName, string Original_DietType, int Original_Daily_Calories, string Original_Tips) {
+        public virtual int Update(string DietPlanID, int MealsPerDay, string Original_DietPlanID, int Original_MealsPerDay) {
             if ((DietPlanID == null)) {
                 throw new global::System.ArgumentNullException("DietPlanID");
             }
@@ -6227,57 +5730,14 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(DietPlanID));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(MealsPerDay));
-            if ((DietPlanName == null)) {
-                throw new global::System.ArgumentNullException("DietPlanName");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(DietPlanName));
-            }
-            if ((DietType == null)) {
-                throw new global::System.ArgumentNullException("DietType");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(DietType));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Daily_Calories));
-            if ((Tips == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Tips));
-            }
             if ((Original_DietPlanID == null)) {
                 throw new global::System.ArgumentNullException("Original_DietPlanID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DietPlanID));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_DietPlanID));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_MealsPerDay));
-            if ((Original_DietPlanName == null)) {
-                throw new global::System.ArgumentNullException("Original_DietPlanName");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_DietPlanName));
-            }
-            if ((Original_DietType == null)) {
-                throw new global::System.ArgumentNullException("Original_DietType");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_DietType));
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_Daily_Calories));
-            if ((Original_Tips == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Tips));
-            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_MealsPerDay));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6298,8 +5758,8 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int MealsPerDay, string DietPlanName, string DietType, int Daily_Calories, string Tips, string Original_DietPlanID, int Original_MealsPerDay, string Original_DietPlanName, string Original_DietType, int Original_Daily_Calories, string Original_Tips) {
-            return this.Update(Original_DietPlanID, MealsPerDay, DietPlanName, DietType, Daily_Calories, Tips, Original_DietPlanID, Original_MealsPerDay, Original_DietPlanName, Original_DietType, Original_Daily_Calories, Original_Tips);
+        public virtual int Update(int MealsPerDay, string Original_DietPlanID, int Original_MealsPerDay) {
+            return this.Update(Original_DietPlanID, MealsPerDay, Original_DietPlanID, Original_MealsPerDay);
         }
     }
     
@@ -6925,8 +6385,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_MuscleGroup));
             }
             if ((Original_ExTip == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ExTip");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
@@ -6976,7 +6435,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(MuscleGroup));
             }
             if ((ExTip == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ExTip");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ExTip));
@@ -7029,7 +6488,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(MuscleGroup));
             }
             if ((ExTip == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ExTip");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(ExTip));
@@ -7065,8 +6524,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_MuscleGroup));
             }
             if ((Original_ExTip == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ExTip");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
@@ -7576,12 +7034,10 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TrainingDays", "TrainingDays");
             tableMapping.ColumnMappings.Add("DateStart", "DateStart");
             tableMapping.ColumnMappings.Add("WorkoutTime", "WorkoutTime");
-            tableMapping.ColumnMappings.Add("DateEnd", "DateEnd");
-            tableMapping.ColumnMappings.Add("Status", "Status");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Goals` WHERE ((`UserID` = ?) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)) AND ((? = 1 AND `TrainingTime` IS NULL) OR (`TrainingTime` = ?)) AND ((? = 1 AND `TrainingDays` IS NULL) OR (`TrainingDays` = ?)) AND (`DateStart` = ?) AND ((? = 1 AND `WorkoutTime` IS NULL) OR (`WorkoutTime` = ?)) AND ((? = 1 AND `DateEnd` IS NULL) OR (`DateEnd` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Goals` WHERE ((`UserID` = ?) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)) AND ((? = 1 AND `TrainingTime` IS NULL) OR (`TrainingTime` = ?)) AND ((? = 1 AND `TrainingDays` IS NULL) OR (`TrainingDays` = ?)) AND ((? = 1 AND `DateStart` IS NULL) OR (`DateStart` = ?)) AND (`WorkoutTime` = ?))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, true, null));
@@ -7590,17 +7046,13 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TrainingTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TrainingTime", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TrainingDays", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TrainingDays", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TrainingDays", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TrainingDays", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateStart", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateStart", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateStart", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateStart", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_WorkoutTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WorkoutTime", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_WorkoutTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WorkoutTime", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateEnd", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnd", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateEnd", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnd", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Status", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `Goals` (`UserID`, `Description`, `TrainingTime`, `TrainingDays`, `Da" +
-                "teStart`, `WorkoutTime`, `DateEnd`, `Status`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                "teStart`, `WorkoutTime`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
@@ -7608,11 +7060,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TrainingDays", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TrainingDays", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateStart", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateStart", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WorkoutTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WorkoutTime", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateEnd", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnd", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Goals` SET `UserID` = ?, `Description` = ?, `TrainingTime` = ?, `TrainingDays` = ?, `DateStart` = ?, `WorkoutTime` = ?, `DateEnd` = ?, `Status` = ? WHERE ((`UserID` = ?) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)) AND ((? = 1 AND `TrainingTime` IS NULL) OR (`TrainingTime` = ?)) AND ((? = 1 AND `TrainingDays` IS NULL) OR (`TrainingDays` = ?)) AND (`DateStart` = ?) AND ((? = 1 AND `WorkoutTime` IS NULL) OR (`WorkoutTime` = ?)) AND ((? = 1 AND `DateEnd` IS NULL) OR (`DateEnd` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Goals` SET `UserID` = ?, `Description` = ?, `TrainingTime` = ?, `TrainingDays` = ?, `DateStart` = ?, `WorkoutTime` = ? WHERE ((`UserID` = ?) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)) AND ((? = 1 AND `TrainingTime` IS NULL) OR (`TrainingTime` = ?)) AND ((? = 1 AND `TrainingDays` IS NULL) OR (`TrainingDays` = ?)) AND ((? = 1 AND `DateStart` IS NULL) OR (`DateStart` = ?)) AND (`WorkoutTime` = ?))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
@@ -7620,8 +7070,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TrainingDays", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TrainingDays", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateStart", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateStart", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WorkoutTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WorkoutTime", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateEnd", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnd", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, false, null));
@@ -7629,13 +7077,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TrainingTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TrainingTime", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TrainingDays", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TrainingDays", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TrainingDays", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TrainingDays", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateStart", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateStart", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateStart", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateStart", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_WorkoutTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WorkoutTime", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_WorkoutTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "WorkoutTime", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateEnd", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnd", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateEnd", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateEnd", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Status", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7651,8 +7095,8 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT UserID, Description, TrainingTime, TrainingDays, DateStart, WorkoutTime, D" +
-                "ateEnd, Status FROM Goals";
+            this._commandCollection[0].CommandText = "SELECT UserID, Description, TrainingTime, TrainingDays, DateStart, WorkoutTime FR" +
+                "OM Goals";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7713,7 +7157,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_UserID, string Original_Description, int Original_TrainingTime, int Original_TrainingDays, System.DateTime Original_DateStart, int Original_WorkoutTime, System.DateTime Original_DateEnd, string Original_Status) {
+        public virtual int Delete(global::System.Nullable<int> Original_UserID, string Original_Description, int Original_TrainingTime, int Original_TrainingDays, System.DateTime Original_DateStart, int Original_WorkoutTime) {
             if ((Original_UserID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_UserID.Value));
             }
@@ -7731,18 +7175,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_TrainingTime));
             this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
             this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_TrainingDays));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_DateStart));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_DateStart));
             this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_WorkoutTime));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((System.DateTime)(Original_DateEnd));
-            if ((Original_Status == null)) {
-                throw new global::System.ArgumentNullException("Original_Status");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_Status));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7763,7 +7198,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> UserID, string Description, int TrainingTime, int TrainingDays, System.DateTime DateStart, int WorkoutTime, System.DateTime DateEnd, string Status) {
+        public virtual int Insert(global::System.Nullable<int> UserID, string Description, int TrainingTime, int TrainingDays, System.DateTime DateStart, int WorkoutTime) {
             if ((UserID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(UserID.Value));
             }
@@ -7780,13 +7215,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(TrainingDays));
             this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(DateStart));
             this.Adapter.InsertCommand.Parameters[5].Value = ((int)(WorkoutTime));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(DateEnd));
-            if ((Status == null)) {
-                throw new global::System.ArgumentNullException("Status");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Status));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7807,23 +7235,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    global::System.Nullable<int> UserID, 
-                    string Description, 
-                    int TrainingTime, 
-                    int TrainingDays, 
-                    System.DateTime DateStart, 
-                    int WorkoutTime, 
-                    System.DateTime DateEnd, 
-                    string Status, 
-                    global::System.Nullable<int> Original_UserID, 
-                    string Original_Description, 
-                    int Original_TrainingTime, 
-                    int Original_TrainingDays, 
-                    System.DateTime Original_DateStart, 
-                    int Original_WorkoutTime, 
-                    System.DateTime Original_DateEnd, 
-                    string Original_Status) {
+        public virtual int Update(global::System.Nullable<int> UserID, string Description, int TrainingTime, int TrainingDays, System.DateTime DateStart, int WorkoutTime, global::System.Nullable<int> Original_UserID, string Original_Description, int Original_TrainingTime, int Original_TrainingDays, System.DateTime Original_DateStart, int Original_WorkoutTime) {
             if ((UserID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(UserID.Value));
             }
@@ -7840,42 +7252,26 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(TrainingDays));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(DateStart));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(WorkoutTime));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(DateEnd));
-            if ((Status == null)) {
-                throw new global::System.ArgumentNullException("Status");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Status));
-            }
             if ((Original_UserID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_UserID.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_UserID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((Original_Description == null)) {
                 throw new global::System.ArgumentNullException("Original_Description");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Description));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Description));
             }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_TrainingTime));
             this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_TrainingTime));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_TrainingDays));
             this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_TrainingDays));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_DateStart));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_WorkoutTime));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_DateEnd));
-            if ((Original_Status == null)) {
-                throw new global::System.ArgumentNullException("Original_Status");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Status));
-            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_DateStart));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_WorkoutTime));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7896,8 +7292,8 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Description, int TrainingTime, int TrainingDays, int WorkoutTime, System.DateTime DateEnd, string Status, global::System.Nullable<int> Original_UserID, string Original_Description, int Original_TrainingTime, int Original_TrainingDays, System.DateTime Original_DateStart, int Original_WorkoutTime, System.DateTime Original_DateEnd, string Original_Status) {
-            return this.Update(Original_UserID, Description, TrainingTime, TrainingDays, Original_DateStart, WorkoutTime, DateEnd, Status, Original_UserID, Original_Description, Original_TrainingTime, Original_TrainingDays, Original_DateStart, Original_WorkoutTime, Original_DateEnd, Original_Status);
+        public virtual int Update(string Description, int TrainingTime, int TrainingDays, System.DateTime DateStart, global::System.Nullable<int> Original_UserID, string Original_Description, int Original_TrainingTime, int Original_TrainingDays, System.DateTime Original_DateStart, int Original_WorkoutTime) {
+            return this.Update(Original_UserID, Description, TrainingTime, TrainingDays, DateStart, Original_WorkoutTime, Original_UserID, Original_Description, Original_TrainingTime, Original_TrainingDays, Original_DateStart, Original_WorkoutTime);
         }
     }
     
@@ -8423,45 +7819,40 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("RoutineName", "RoutineName");
             tableMapping.ColumnMappings.Add("DaysPerWeek", "DaysPerWeek");
             tableMapping.ColumnMappings.Add("Difficulty", "Difficulty");
-            tableMapping.ColumnMappings.Add("Tips", "Tips");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM `Routines` WHERE ((`RoutineName` = ?) AND ((? = 1 AND `DaysPerWeek` I" +
                 "S NULL) OR (`DaysPerWeek` = ?)) AND ((? = 1 AND `Difficulty` IS NULL) OR (`Diffi" +
-                "culty` = ?)) AND ((? = 1 AND `Tips` IS NULL) OR (`Tips` = ?)))";
+                "culty` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RoutineName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoutineName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DaysPerWeek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DaysPerWeek", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DaysPerWeek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DaysPerWeek", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Difficulty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Difficulty", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Difficulty", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Difficulty", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Tips", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Tips", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Routines` (`RoutineName`, `DaysPerWeek`, `Difficulty`, `Tips`) VALUE" +
-                "S (?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Routines` (`RoutineName`, `DaysPerWeek`, `Difficulty`) VALUES (?, ?," +
+                " ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RoutineName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoutineName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DaysPerWeek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DaysPerWeek", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Difficulty", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Difficulty", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Tips", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Routines` SET `RoutineName` = ?, `DaysPerWeek` = ?, `Difficulty` = ?, `Tips` = ? WHERE ((`RoutineName` = ?) AND ((? = 1 AND `DaysPerWeek` IS NULL) OR (`DaysPerWeek` = ?)) AND ((? = 1 AND `Difficulty` IS NULL) OR (`Difficulty` = ?)) AND ((? = 1 AND `Tips` IS NULL) OR (`Tips` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Routines` SET `RoutineName` = ?, `DaysPerWeek` = ?, `Difficulty` = ? WHER" +
+                "E ((`RoutineName` = ?) AND ((? = 1 AND `DaysPerWeek` IS NULL) OR (`DaysPerWeek` " +
+                "= ?)) AND ((? = 1 AND `Difficulty` IS NULL) OR (`Difficulty` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RoutineName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoutineName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DaysPerWeek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DaysPerWeek", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Difficulty", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Difficulty", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Tips", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RoutineName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoutineName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DaysPerWeek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DaysPerWeek", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DaysPerWeek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DaysPerWeek", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Difficulty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Difficulty", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Difficulty", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Difficulty", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Tips", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Tips", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tips", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8477,7 +7868,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT RoutineName, DaysPerWeek, Difficulty, Tips FROM Routines";
+            this._commandCollection[0].CommandText = "SELECT RoutineName, DaysPerWeek, Difficulty FROM Routines";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8538,7 +7929,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_RoutineName, int Original_DaysPerWeek, string Original_Difficulty, string Original_Tips) {
+        public virtual int Delete(string Original_RoutineName, int Original_DaysPerWeek, string Original_Difficulty) {
             if ((Original_RoutineName == null)) {
                 throw new global::System.ArgumentNullException("Original_RoutineName");
             }
@@ -8553,14 +7944,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Difficulty));
-            }
-            if ((Original_Tips == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Tips));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8582,7 +7965,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string RoutineName, int DaysPerWeek, string Difficulty, string Tips) {
+        public virtual int Insert(string RoutineName, int DaysPerWeek, string Difficulty) {
             if ((RoutineName == null)) {
                 throw new global::System.ArgumentNullException("RoutineName");
             }
@@ -8595,12 +7978,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Difficulty));
-            }
-            if ((Tips == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Tips));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8622,7 +7999,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string RoutineName, int DaysPerWeek, string Difficulty, string Tips, string Original_RoutineName, int Original_DaysPerWeek, string Original_Difficulty, string Original_Tips) {
+        public virtual int Update(string RoutineName, int DaysPerWeek, string Difficulty, string Original_RoutineName, int Original_DaysPerWeek, string Original_Difficulty) {
             if ((RoutineName == null)) {
                 throw new global::System.ArgumentNullException("RoutineName");
             }
@@ -8636,34 +8013,20 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Difficulty));
             }
-            if ((Tips == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Tips));
-            }
             if ((Original_RoutineName == null)) {
                 throw new global::System.ArgumentNullException("Original_RoutineName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_RoutineName));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_RoutineName));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_DaysPerWeek));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_DaysPerWeek));
             if ((Original_Difficulty == null)) {
                 throw new global::System.ArgumentNullException("Original_Difficulty");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Difficulty));
-            }
-            if ((Original_Tips == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Tips));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Difficulty));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8685,8 +8048,8 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int DaysPerWeek, string Difficulty, string Tips, string Original_RoutineName, int Original_DaysPerWeek, string Original_Difficulty, string Original_Tips) {
-            return this.Update(Original_RoutineName, DaysPerWeek, Difficulty, Tips, Original_RoutineName, Original_DaysPerWeek, Original_Difficulty, Original_Tips);
+        public virtual int Update(int DaysPerWeek, string Difficulty, string Original_RoutineName, int Original_DaysPerWeek, string Original_Difficulty) {
+            return this.Update(Original_RoutineName, DaysPerWeek, Difficulty, Original_RoutineName, Original_DaysPerWeek, Original_Difficulty);
         }
     }
     
@@ -8820,13 +8183,10 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Weight", "Weight");
             tableMapping.ColumnMappings.Add("isAthletic", "isAthletic");
             tableMapping.ColumnMappings.Add("Gender", "Gender");
-            tableMapping.ColumnMappings.Add("BMR", "BMR");
-            tableMapping.ColumnMappings.Add("BMI", "BMI");
-            tableMapping.ColumnMappings.Add("UserAlias", "UserAlias");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `User` WHERE ((`UserID` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `UserLastName` IS NULL) OR (`UserLastName` = ?)) AND ((? = 1 AND `UserPassword` IS NULL) OR (`UserPassword` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `Height` IS NULL) OR (`Height` = ?)) AND ((? = 1 AND `Weight` IS NULL) OR (`Weight` = ?)) AND ((? = 1 AND `isAthletic` IS NULL) OR (`isAthletic` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)) AND ((? = 1 AND `BMR` IS NULL) OR (`BMR` = ?)) AND ((? = 1 AND `BMI` IS NULL) OR (`BMI` = ?)) AND ((? = 1 AND `UserAlias` IS NULL) OR (`UserAlias` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `User` WHERE ((`UserID` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `UserLastName` IS NULL) OR (`UserLastName` = ?)) AND ((? = 1 AND `UserPassword` IS NULL) OR (`UserPassword` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `Height` IS NULL) OR (`Height` = ?)) AND ((? = 1 AND `Weight` IS NULL) OR (`Weight` = ?)) AND ((? = 1 AND `isAthletic` IS NULL) OR (`isAthletic` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_UserName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserName", global::System.Data.DataRowVersion.Original, true, null));
@@ -8845,17 +8205,10 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_isAthletic", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "isAthletic", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Gender", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_BMR", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMR", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_BMR", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMR", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_BMI", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMI", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_BMI", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMI", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_UserAlias", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserAlias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `User` (`UserName`, `UserLastName`, `UserPassword`, `Age`, `Height`, " +
-                "`Weight`, `isAthletic`, `Gender`, `BMR`, `BMI`, `UserAlias`) VALUES (?, ?, ?, ?," +
-                " ?, ?, ?, ?, ?, ?, ?)";
+                "`Weight`, `isAthletic`, `Gender`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserLastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserLastName", global::System.Data.DataRowVersion.Current, false, null));
@@ -8865,12 +8218,9 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Weight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weight", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("isAthletic", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "isAthletic", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BMR", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMR", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BMI", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMI", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserAlias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `User` SET `UserName` = ?, `UserLastName` = ?, `UserPassword` = ?, `Age` = ?, `Height` = ?, `Weight` = ?, `isAthletic` = ?, `Gender` = ?, `BMR` = ?, `BMI` = ?, `UserAlias` = ? WHERE ((`UserID` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `UserLastName` IS NULL) OR (`UserLastName` = ?)) AND ((? = 1 AND `UserPassword` IS NULL) OR (`UserPassword` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `Height` IS NULL) OR (`Height` = ?)) AND ((? = 1 AND `Weight` IS NULL) OR (`Weight` = ?)) AND ((? = 1 AND `isAthletic` IS NULL) OR (`isAthletic` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)) AND ((? = 1 AND `BMR` IS NULL) OR (`BMR` = ?)) AND ((? = 1 AND `BMI` IS NULL) OR (`BMI` = ?)) AND ((? = 1 AND `UserAlias` IS NULL) OR (`UserAlias` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `User` SET `UserName` = ?, `UserLastName` = ?, `UserPassword` = ?, `Age` = ?, `Height` = ?, `Weight` = ?, `isAthletic` = ?, `Gender` = ? WHERE ((`UserID` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `UserLastName` IS NULL) OR (`UserLastName` = ?)) AND ((? = 1 AND `UserPassword` IS NULL) OR (`UserPassword` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `Height` IS NULL) OR (`Height` = ?)) AND ((? = 1 AND `Weight` IS NULL) OR (`Weight` = ?)) AND ((? = 1 AND `isAthletic` IS NULL) OR (`isAthletic` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserLastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserLastName", global::System.Data.DataRowVersion.Current, false, null));
@@ -8880,9 +8230,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Weight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weight", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("isAthletic", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "isAthletic", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BMR", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMR", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BMI", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMI", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserAlias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_UserName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserName", global::System.Data.DataRowVersion.Original, false, null));
@@ -8900,12 +8247,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_isAthletic", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "isAthletic", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Gender", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Gender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_BMR", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMR", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_BMR", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMR", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_BMI", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMI", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_BMI", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMI", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_UserAlias", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserAlias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8918,39 +8259,12 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[4];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT UserID, UserName, UserLastName, UserPassword, Age, Height, Weight, isAthle" +
-                "tic, Gender, BMR, BMI, UserAlias FROM [User]";
+                "tic, Gender FROM [User]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        COUNT(*) AS Expr1\r\nFROM            [User]\r\nWHERE        (UserAlias " +
-                "= ?) AND (UserPassword = ?)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserAlias", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserPassword", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserPassword", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT COUNT(*) FROM [User] WHERE UserAlias = ?";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserAlias", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE       [User]\r\nSET                Age = ?, Height = ?, Weight = ?, isAthlet" +
-                "ic = ?, Gender = ?, BMR = ?, BMI = ?\r\nWHERE        (UserAlias = ?) AND (UserPass" +
-                "word = ?)";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Age", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Age", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Height", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Height", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Weight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weight", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("isAthletic", global::System.Data.OleDb.OleDbType.WChar, 15, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "isAthletic", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gender", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BMR", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(7)), ((byte)(0)), "BMR", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BMI", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BMI", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserAlias", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserAlias", global::System.Data.DataRowVersion.Original, false, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UserPassword", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserPassword", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9010,7 +8324,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_UserID, string Original_UserName, string Original_UserLastName, string Original_UserPassword, int Original_Age, int Original_Height, int Original_Weight, string Original_isAthletic, string Original_Gender, float Original_BMR, int Original_BMI, string Original_UserAlias) {
+        public virtual int Delete(int Original_UserID, string Original_UserName, string Original_UserLastName, string Original_UserPassword, int Original_Age, int Original_Height, int Original_Weight, string Original_isAthletic, string Original_Gender) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_UserID));
             if ((Original_UserName == null)) {
                 throw new global::System.ArgumentNullException("Original_UserName");
@@ -9053,17 +8367,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Gender));
             }
-            this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[18].Value = ((float)(Original_BMR));
-            this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_BMI));
-            if ((Original_UserAlias == null)) {
-                throw new global::System.ArgumentNullException("Original_UserAlias");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_UserAlias));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9084,7 +8387,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string UserName, string UserLastName, string UserPassword, int Age, int Height, int Weight, string isAthletic, string Gender, float BMR, int BMI, string UserAlias) {
+        public virtual int Insert(string UserName, string UserLastName, string UserPassword, int Age, int Height, int Weight, string isAthletic, string Gender) {
             if ((UserName == null)) {
                 throw new global::System.ArgumentNullException("UserName");
             }
@@ -9118,14 +8421,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Gender));
             }
-            this.Adapter.InsertCommand.Parameters[8].Value = ((float)(BMR));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(BMI));
-            if ((UserAlias == null)) {
-                throw new global::System.ArgumentNullException("UserAlias");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(UserAlias));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9155,9 +8450,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                     int Weight, 
                     string isAthletic, 
                     string Gender, 
-                    float BMR, 
-                    int BMI, 
-                    string UserAlias, 
                     int Original_UserID, 
                     string Original_UserName, 
                     string Original_UserLastName, 
@@ -9166,10 +8458,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                     int Original_Height, 
                     int Original_Weight, 
                     string Original_isAthletic, 
-                    string Original_Gender, 
-                    float Original_BMR, 
-                    int Original_BMI, 
-                    string Original_UserAlias) {
+                    string Original_Gender) {
             if ((UserName == null)) {
                 throw new global::System.ArgumentNullException("UserName");
             }
@@ -9203,66 +8492,47 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Gender));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((float)(BMR));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(BMI));
-            if ((UserAlias == null)) {
-                throw new global::System.ArgumentNullException("UserAlias");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(UserAlias));
-            }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_UserID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_UserID));
             if ((Original_UserName == null)) {
                 throw new global::System.ArgumentNullException("Original_UserName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_UserName));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_UserName));
             }
             if ((Original_UserLastName == null)) {
                 throw new global::System.ArgumentNullException("Original_UserLastName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_UserLastName));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_UserLastName));
             }
             if ((Original_UserPassword == null)) {
                 throw new global::System.ArgumentNullException("Original_UserPassword");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_UserPassword));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_UserPassword));
             }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Age));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_Height));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_Weight));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Age));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_Height));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Weight));
             if ((Original_isAthletic == null)) {
                 throw new global::System.ArgumentNullException("Original_isAthletic");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_isAthletic));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_isAthletic));
             }
             if ((Original_Gender == null)) {
                 throw new global::System.ArgumentNullException("Original_Gender");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Gender));
-            }
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((float)(Original_BMR));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_BMI));
-            if ((Original_UserAlias == null)) {
-                throw new global::System.ArgumentNullException("Original_UserAlias");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_UserAlias));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Gender));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9278,131 +8548,6 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> checkLogin(string UserAlias, string UserPassword) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
-            if ((UserAlias == null)) {
-                throw new global::System.ArgumentNullException("UserAlias");
-            }
-            else {
-                command.Parameters[0].Value = ((string)(UserAlias));
-            }
-            if ((UserPassword == null)) {
-                throw new global::System.ArgumentNullException("UserPassword");
-            }
-            else {
-                command.Parameters[1].Value = ((string)(UserPassword));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            object returnValue;
-            try {
-                returnValue = command.ExecuteScalar();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
-            }
-            else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> checkRegister(string UserAlias) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
-            if ((UserAlias == null)) {
-                throw new global::System.ArgumentNullException("UserAlias");
-            }
-            else {
-                command.Parameters[0].Value = ((string)(UserAlias));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            object returnValue;
-            try {
-                returnValue = command.ExecuteScalar();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
-            }
-            else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UpdateBiometrics(int Age, int Height, int Weight, string isAthletic, string Gender, decimal BMR, int BMI, string Original_UserAlias, string Original_UserPassword) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[3];
-            command.Parameters[0].Value = ((int)(Age));
-            command.Parameters[1].Value = ((int)(Height));
-            command.Parameters[2].Value = ((int)(Weight));
-            if ((isAthletic == null)) {
-                throw new global::System.ArgumentNullException("isAthletic");
-            }
-            else {
-                command.Parameters[3].Value = ((string)(isAthletic));
-            }
-            if ((Gender == null)) {
-                throw new global::System.ArgumentNullException("Gender");
-            }
-            else {
-                command.Parameters[4].Value = ((string)(Gender));
-            }
-            command.Parameters[5].Value = ((decimal)(BMR));
-            command.Parameters[6].Value = ((int)(BMI));
-            if ((Original_UserAlias == null)) {
-                throw new global::System.ArgumentNullException("Original_UserAlias");
-            }
-            else {
-                command.Parameters[7].Value = ((string)(Original_UserAlias));
-            }
-            if ((Original_UserPassword == null)) {
-                throw new global::System.ArgumentNullException("Original_UserPassword");
-            }
-            else {
-                command.Parameters[8].Value = ((string)(Original_UserPassword));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
         }
     }
     
