@@ -15,12 +15,20 @@ namespace HealthCompanion_version1._0
         public TrainningForm()
         {
             InitializeComponent();
-            comboBox1.Text = comboBox1.Items[0].ToString();
-            comboBox2.Text = comboBox2.Items[0].ToString();
+            fitnessGoalsCmbBox.Text = fitnessGoalsCmbBox.Items[0].ToString();
+            trainingTimeCmbBox.Text = trainingTimeCmbBox.Items[0].ToString();
             comboBox3.Text = comboBox3.Items[0].ToString();
             comboBox4.Text = comboBox4.Items[0].ToString();
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
+            DateTime endDate = DateTime.Now.AddMonths(int.Parse(trainingTimeCmbBox.Text));
+            goalsTableAdapter1.Insert(n, fitnessGoalsCmbBox.Text, int.Parse(trainingTimeCmbBox.Text), int.Parse(TrainingDaysDd.Value.ToString()), DateTime.Now, int.Parse(trainingTimeCmbBox.Text), endDate, "incomplete");
+            RoutineMenu rm = new RoutineMenu();
+            rm.Show();
+           
+        }
     }
 }

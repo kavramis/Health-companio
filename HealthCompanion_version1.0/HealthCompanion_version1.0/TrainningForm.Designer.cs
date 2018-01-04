@@ -30,7 +30,7 @@
         {
             this.fitnessLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.fitnessGoalsCmbBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -38,14 +38,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.ProgramDurationDd = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.trainingTimeCmbBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.TrainingDaysDd = new System.Windows.Forms.NumericUpDown();
+            this.goalsTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter();
+            this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProgramDurationDd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TrainingDaysDd)).BeginInit();
             this.SuspendLayout();
             // 
             // fitnessLabel
@@ -66,17 +68,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Training Days";
             // 
-            // comboBox1
+            // fitnessGoalsCmbBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.fitnessGoalsCmbBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.fitnessGoalsCmbBox.FormattingEnabled = true;
+            this.fitnessGoalsCmbBox.Items.AddRange(new object[] {
             "Weight Loss",
             "Increase Muscles"});
-            this.comboBox1.Location = new System.Drawing.Point(166, 8);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 21);
-            this.comboBox1.TabIndex = 2;
+            this.fitnessGoalsCmbBox.Location = new System.Drawing.Point(166, 8);
+            this.fitnessGoalsCmbBox.Name = "fitnessGoalsCmbBox";
+            this.fitnessGoalsCmbBox.Size = new System.Drawing.Size(154, 21);
+            this.fitnessGoalsCmbBox.TabIndex = 2;
             // 
             // panel1
             // 
@@ -86,13 +88,13 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.numericUpDown2);
+            this.panel1.Controls.Add(this.ProgramDurationDd);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.trainingTimeCmbBox);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Controls.Add(this.TrainingDaysDd);
             this.panel1.Controls.Add(this.fitnessLabel);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.fitnessGoalsCmbBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -149,6 +151,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Create Training Program";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -159,23 +162,23 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "months";
             // 
-            // numericUpDown2
+            // ProgramDurationDd
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(166, 154);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.ProgramDurationDd.Location = new System.Drawing.Point(166, 154);
+            this.ProgramDurationDd.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.ProgramDurationDd.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(154, 20);
-            this.numericUpDown2.TabIndex = 7;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.ProgramDurationDd.Name = "ProgramDurationDd";
+            this.ProgramDurationDd.Size = new System.Drawing.Size(154, 20);
+            this.ProgramDurationDd.TabIndex = 7;
+            this.ProgramDurationDd.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -190,48 +193,57 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Program Duration";
             // 
-            // comboBox2
+            // trainingTimeCmbBox
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "20-45 Minutes",
-            "45-90 Minutes"});
-            this.comboBox2.Location = new System.Drawing.Point(166, 102);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(154, 21);
-            this.comboBox2.TabIndex = 5;
+            this.trainingTimeCmbBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.trainingTimeCmbBox.FormattingEnabled = true;
+            this.trainingTimeCmbBox.Items.AddRange(new object[] {
+            "20",
+            "45",
+            "90"});
+            this.trainingTimeCmbBox.Location = new System.Drawing.Point(166, 102);
+            this.trainingTimeCmbBox.Name = "trainingTimeCmbBox";
+            this.trainingTimeCmbBox.Size = new System.Drawing.Size(154, 21);
+            this.trainingTimeCmbBox.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(114, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Training Time";
+            this.label1.Text = "Training Time(Minutes)";
             // 
-            // numericUpDown1
+            // TrainingDaysDd
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(166, 54);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.TrainingDaysDd.Location = new System.Drawing.Point(166, 54);
+            this.TrainingDaysDd.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.TrainingDaysDd.Minimum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(154, 20);
-            this.numericUpDown1.TabIndex = 3;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.TrainingDaysDd.Name = "TrainingDaysDd";
+            this.TrainingDaysDd.Size = new System.Drawing.Size(154, 20);
+            this.TrainingDaysDd.TabIndex = 3;
+            this.TrainingDaysDd.Value = new decimal(new int[] {
             3,
             0,
             0,
             0});
+            // 
+            // goalsTableAdapter1
+            // 
+            this.goalsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // userTableAdapter1
+            // 
+            this.userTableAdapter1.ClearBeforeFill = true;
             // 
             // TrainningForm
             // 
@@ -244,8 +256,8 @@
             this.Text = "TrainningForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProgramDurationDd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TrainingDaysDd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -254,18 +266,20 @@
 
         private System.Windows.Forms.Label fitnessLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox fitnessGoalsCmbBox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox trainingTimeCmbBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown TrainingDaysDd;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown ProgramDurationDd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter goalsTableAdapter1;
+        private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
     }
 }
