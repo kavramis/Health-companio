@@ -35,7 +35,7 @@ namespace HealthCompanion_version1._0
             BmrValue.Text = "";
             if (heightTxtBox.Text == "" || ageTxtBox.Text == "" || weightTxtBox.Text == "")
             {
-                MessageBox.Show("Please Fill All Required Fields");
+                MessageBox.Show("Please Fill All Required Fields","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
 
@@ -77,7 +77,7 @@ namespace HealthCompanion_version1._0
             this.BiometricTableAdapter.UpdateBiometrics(int.Parse(ageTxtBox.Text),int.Parse(heightTxtBox.Text),int.Parse(weightTxtBox.Text),
                 athleticCmbBox.Text.ToString(),GenderComboBox.Text.ToString(),decimal.Parse(BmrValue.Text),
                 (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
-            MessageBox.Show("Succesfull update");
+            MessageBox.Show("Succesfull update","Update",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }
