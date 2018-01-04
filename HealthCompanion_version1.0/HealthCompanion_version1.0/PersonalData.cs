@@ -79,5 +79,12 @@ namespace HealthCompanion_version1._0
                 (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
             MessageBox.Show("Succesfull update");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TrainningForm trf = new TrainningForm();
+            trf.Show();
+            this.Hide();
+        }
     }
 }
