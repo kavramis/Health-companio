@@ -74,6 +74,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoutineMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoutineMenu.Designer.cs">
+      <DependentUpon>RoutineMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,12 +111,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RoutineMenu.resx">
+      <DependentUpon>RoutineMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartUI.resx">
       <DependentUpon>StartUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainningForm.resx">
       <DependentUpon>TrainningForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="FitnessDatabaseDataSet.xsc">
       <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
     </None>
