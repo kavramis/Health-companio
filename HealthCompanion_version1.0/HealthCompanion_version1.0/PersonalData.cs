@@ -81,10 +81,17 @@ namespace HealthCompanion_version1._0
                 return;
             }
             GenderComboBox_SelectedIndexChanged(this,e);
-            this.BiometricTableAdapter.UpdateBiometrics(int.Parse(ageTxtBox.Text),int.Parse(heightTxtBox.Text),int.Parse(weightTxtBox.Text),
-                athleticCmbBox.Text.ToString(),GenderComboBox.Text.ToString(),decimal.Parse(BmrValue.Text),
-                (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
-            MessageBox.Show("Succesfull update","Update",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            try
+            {
+                this.BiometricTableAdapter.UpdateBiometrics(int.Parse(ageTxtBox.Text), int.Parse(heightTxtBox.Text), int.Parse(weightTxtBox.Text),
+                    athleticCmbBox.Text.ToString(), GenderComboBox.Text.ToString(), decimal.Parse(BmrValue.Text),
+                    (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
+                MessageBox.Show("Succesfull update", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }catch(Exception s)
+            {
+                MessageBox.Show("Wrong Format", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
