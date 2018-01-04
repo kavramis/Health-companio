@@ -120,7 +120,6 @@
     <EmbeddedResource Include="TrainningForm.resx">
       <DependentUpon>TrainningForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="FitnessDatabaseDataSet.xsc">
       <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
     </None>

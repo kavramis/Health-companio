@@ -82,9 +82,9 @@
             this.panel1.Controls.Add(this.LoginPanel);
             this.panel1.Controls.Add(this.RegisterPanel);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(419, 2);
+            this.panel1.Location = new System.Drawing.Point(389, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(763, 657);
+            this.panel1.Size = new System.Drawing.Size(668, 657);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -93,7 +93,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Ravie", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(538, 603);
+            this.button2.Location = new System.Drawing.Point(490, 593);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 42);
@@ -111,7 +111,7 @@
             this.label2.Location = new System.Drawing.Point(37, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(473, 79);
+            this.label2.Size = new System.Drawing.Size(589, 97);
             this.label2.TabIndex = 3;
             this.label2.Text = "Health Companion";
             // 
@@ -138,7 +138,7 @@
             this.errorMsg.ForeColor = System.Drawing.Color.Red;
             this.errorMsg.Location = new System.Drawing.Point(5, 126);
             this.errorMsg.Name = "errorMsg";
-            this.errorMsg.Size = new System.Drawing.Size(0, 14);
+            this.errorMsg.Size = new System.Drawing.Size(0, 16);
             this.errorMsg.TabIndex = 6;
             // 
             // loginPassTxtBox
@@ -148,7 +148,7 @@
             this.loginPassTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.loginPassTxtBox.Name = "loginPassTxtBox";
             this.loginPassTxtBox.PasswordChar = '*';
-            this.loginPassTxtBox.Size = new System.Drawing.Size(148, 24);
+            this.loginPassTxtBox.Size = new System.Drawing.Size(148, 28);
             this.loginPassTxtBox.TabIndex = 5;
             this.loginPassTxtBox.Text = "Password";
             this.loginPassTxtBox.Enter += new System.EventHandler(this.loginPassTxtBox_Enter);
@@ -160,7 +160,7 @@
             this.loginUserTxtBox.Location = new System.Drawing.Point(153, 15);
             this.loginUserTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.loginUserTxtBox.Name = "loginUserTxtBox";
-            this.loginUserTxtBox.Size = new System.Drawing.Size(148, 24);
+            this.loginUserTxtBox.Size = new System.Drawing.Size(148, 28);
             this.loginUserTxtBox.TabIndex = 4;
             this.loginUserTxtBox.Text = "Username";
             this.loginUserTxtBox.Enter += new System.EventHandler(this.loginUserTxtBox_Enter);
@@ -184,7 +184,7 @@
             this.checkBox1.Location = new System.Drawing.Point(8, 85);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(101, 22);
+            this.checkBox1.Size = new System.Drawing.Size(127, 28);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Remember";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -195,7 +195,7 @@
             this.label9.Location = new System.Drawing.Point(5, 54);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 18);
+            this.label9.Size = new System.Drawing.Size(92, 24);
             this.label9.TabIndex = 1;
             this.label9.Text = "Password";
             // 
@@ -205,7 +205,7 @@
             this.label8.Location = new System.Drawing.Point(5, 19);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 18);
+            this.label8.Size = new System.Drawing.Size(97, 24);
             this.label8.TabIndex = 0;
             this.label8.Text = "Username";
             // 
@@ -231,7 +231,7 @@
             this.RegisterPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.RegisterPanel.Location = new System.Drawing.Point(95, 137);
             this.RegisterPanel.Name = "RegisterPanel";
-            this.RegisterPanel.Size = new System.Drawing.Size(579, 272);
+            this.RegisterPanel.Size = new System.Drawing.Size(531, 272);
             this.RegisterPanel.TabIndex = 1;
             // 
             // passMsg
@@ -241,7 +241,7 @@
             this.passMsg.ForeColor = System.Drawing.Color.Red;
             this.passMsg.Location = new System.Drawing.Point(306, 137);
             this.passMsg.Name = "passMsg";
-            this.passMsg.Size = new System.Drawing.Size(0, 13);
+            this.passMsg.Size = new System.Drawing.Size(0, 17);
             this.passMsg.TabIndex = 18;
             // 
             // createMsg
@@ -252,7 +252,7 @@
             this.createMsg.ForeColor = System.Drawing.Color.Red;
             this.createMsg.Location = new System.Drawing.Point(5, 196);
             this.createMsg.Name = "createMsg";
-            this.createMsg.Size = new System.Drawing.Size(0, 14);
+            this.createMsg.Size = new System.Drawing.Size(0, 16);
             this.createMsg.TabIndex = 17;
             // 
             // cpassMsg
@@ -262,7 +262,7 @@
             this.cpassMsg.ForeColor = System.Drawing.Color.Red;
             this.cpassMsg.Location = new System.Drawing.Point(306, 171);
             this.cpassMsg.Name = "cpassMsg";
-            this.cpassMsg.Size = new System.Drawing.Size(0, 13);
+            this.cpassMsg.Size = new System.Drawing.Size(0, 17);
             this.cpassMsg.TabIndex = 16;
             // 
             // unameMsg
@@ -273,7 +273,7 @@
             this.unameMsg.ForeColor = System.Drawing.Color.Red;
             this.unameMsg.Location = new System.Drawing.Point(306, 101);
             this.unameMsg.Name = "unameMsg";
-            this.unameMsg.Size = new System.Drawing.Size(0, 13);
+            this.unameMsg.Size = new System.Drawing.Size(0, 17);
             this.unameMsg.TabIndex = 15;
             // 
             // lnameMsg
@@ -284,7 +284,7 @@
             this.lnameMsg.ForeColor = System.Drawing.Color.Red;
             this.lnameMsg.Location = new System.Drawing.Point(309, 61);
             this.lnameMsg.Name = "lnameMsg";
-            this.lnameMsg.Size = new System.Drawing.Size(0, 13);
+            this.lnameMsg.Size = new System.Drawing.Size(0, 17);
             this.lnameMsg.TabIndex = 14;
             // 
             // nameMsg
@@ -295,7 +295,7 @@
             this.nameMsg.ForeColor = System.Drawing.Color.Red;
             this.nameMsg.Location = new System.Drawing.Point(306, 22);
             this.nameMsg.Name = "nameMsg";
-            this.nameMsg.Size = new System.Drawing.Size(0, 13);
+            this.nameMsg.Size = new System.Drawing.Size(0, 17);
             this.nameMsg.TabIndex = 13;
             // 
             // cpassTxtBox
@@ -304,7 +304,7 @@
             this.cpassTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.cpassTxtBox.Name = "cpassTxtBox";
             this.cpassTxtBox.PasswordChar = '*';
-            this.cpassTxtBox.Size = new System.Drawing.Size(148, 24);
+            this.cpassTxtBox.Size = new System.Drawing.Size(148, 28);
             this.cpassTxtBox.TabIndex = 12;
             // 
             // passTxtBox
@@ -313,7 +313,7 @@
             this.passTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.passTxtBox.Name = "passTxtBox";
             this.passTxtBox.PasswordChar = '*';
-            this.passTxtBox.Size = new System.Drawing.Size(148, 24);
+            this.passTxtBox.Size = new System.Drawing.Size(148, 28);
             this.passTxtBox.TabIndex = 11;
             // 
             // userTxtBox
@@ -321,7 +321,7 @@
             this.userTxtBox.Location = new System.Drawing.Point(152, 90);
             this.userTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.userTxtBox.Name = "userTxtBox";
-            this.userTxtBox.Size = new System.Drawing.Size(148, 24);
+            this.userTxtBox.Size = new System.Drawing.Size(148, 28);
             this.userTxtBox.TabIndex = 10;
             // 
             // lnameTxtBox
@@ -329,7 +329,7 @@
             this.lnameTxtBox.Location = new System.Drawing.Point(153, 50);
             this.lnameTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.lnameTxtBox.Name = "lnameTxtBox";
-            this.lnameTxtBox.Size = new System.Drawing.Size(148, 24);
+            this.lnameTxtBox.Size = new System.Drawing.Size(148, 28);
             this.lnameTxtBox.TabIndex = 8;
             // 
             // nameTxtBox
@@ -337,7 +337,7 @@
             this.nameTxtBox.Location = new System.Drawing.Point(153, 11);
             this.nameTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.nameTxtBox.Name = "nameTxtBox";
-            this.nameTxtBox.Size = new System.Drawing.Size(148, 24);
+            this.nameTxtBox.Size = new System.Drawing.Size(148, 28);
             this.nameTxtBox.TabIndex = 7;
             // 
             // Create
@@ -357,7 +357,7 @@
             this.label7.Location = new System.Drawing.Point(5, 164);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 18);
+            this.label7.Size = new System.Drawing.Size(162, 24);
             this.label7.TabIndex = 5;
             this.label7.Text = "Confirm Password";
             // 
@@ -367,7 +367,7 @@
             this.label6.Location = new System.Drawing.Point(5, 129);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 18);
+            this.label6.Size = new System.Drawing.Size(92, 24);
             this.label6.TabIndex = 4;
             this.label6.Text = "Password";
             // 
@@ -377,7 +377,7 @@
             this.label5.Location = new System.Drawing.Point(5, 90);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 18);
+            this.label5.Size = new System.Drawing.Size(97, 24);
             this.label5.TabIndex = 3;
             this.label5.Text = "Username";
             // 
@@ -387,7 +387,7 @@
             this.label3.Location = new System.Drawing.Point(4, 54);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 18);
+            this.label3.Size = new System.Drawing.Size(99, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "Last Name";
             // 
@@ -396,7 +396,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(5, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
+            this.label1.Size = new System.Drawing.Size(61, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
@@ -444,7 +444,7 @@
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(-93, 2);
+            this.panel2.Location = new System.Drawing.Point(-123, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(506, 680);
             this.panel2.TabIndex = 1;
@@ -466,7 +466,7 @@
             // StartUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1099, 649);
+            this.ClientSize = new System.Drawing.Size(1038, 649);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

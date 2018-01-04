@@ -24,11 +24,11 @@ namespace HealthCompanion_version1._0
         private void button1_Click(object sender, EventArgs e)
         {
             int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
-            DateTime endDate = DateTime.Now.AddMonths(int.Parse(trainingTimeCmbBox.Text));
-            goalsTableAdapter1.Insert(n, fitnessGoalsCmbBox.Text, int.Parse(trainingTimeCmbBox.Text), int.Parse(TrainingDaysDd.Value.ToString()), DateTime.Now, int.Parse(trainingTimeCmbBox.Text), endDate, "incomplete");
+            DateTime dateStart = DateTime.Now;
+            goalsTableAdapter1.Insert(n, fitnessGoalsCmbBox.Text, int.Parse(trainingTimeCmbBox.Text), (int)TrainingDaysDd.Value, dateStart, (int)ProgramDurationDd.Value, dateStart.AddMonths((int)ProgramDurationDd.Value), "Incomplete");
             RoutineMenu rm = new RoutineMenu();
             rm.Show();
-           
+
         }
     }
 }
