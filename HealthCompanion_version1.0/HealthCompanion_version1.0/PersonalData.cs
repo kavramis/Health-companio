@@ -29,28 +29,7 @@ namespace HealthCompanion_version1._0
 
         
 
-        
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void SubmitBtn_Click(object sender, EventArgs e)
-        {
-            if(heightTxtBox.Text == "" || ageTxtBox.Text == "" || weightTxtBox.Text == "" || BmiValue.Text =="" || GenderComboBox.Text == "" || athleticCmbBox.Text == "")
-            {
-                MessageBox.Show("Fill all the fields to update your data", "Update Error",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            this.BiometricTableAdapter.UpdateBiometrics(int.Parse(ageTxtBox.Text),int.Parse(heightTxtBox.Text),int.Parse(weightTxtBox.Text),
-                athleticCmbBox.Text.ToString(),GenderComboBox.Text.ToString(),decimal.Parse(BmrValue.Text),
-                (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
-            MessageBox.Show("Succesfull update");
-        }
-
-        private void GenderComboBox_DropDownClosed(object sender, EventArgs e)
+        private void GenderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             BmiValue.Text = "";
             BmrValue.Text = "";
@@ -59,6 +38,7 @@ namespace HealthCompanion_version1._0
                 MessageBox.Show("Please Fill All Required Fields");
                 return;
             }
+
 
 
             double bmr;
@@ -75,6 +55,29 @@ namespace HealthCompanion_version1._0
             bmi = double.Parse(weightTxtBox.Text) / Math.Pow((double.Parse(heightTxtBox.Text) / 100), 2);
             BmiValue.Text = "" + bmi;
             BmrValue.Text = "" + bmr;
+
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void SubmitBtn_Click(object sender, EventArgs e)
+        {
+            if(heightTxtBox.Text == "" || ageTxtBox.Text == "" || weightTxtBox.Text == "" || GenderComboBox.Text == "" || athleticCmbBox.Text == "")
+            {
+                MessageBox.Show("Fill all the fields to update your data", "Update Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            GenderComboBox_SelectedIndexChanged(this,e);
+            this.BiometricTableAdapter.UpdateBiometrics(int.Parse(ageTxtBox.Text),int.Parse(heightTxtBox.Text),int.Parse(weightTxtBox.Text),
+                athleticCmbBox.Text.ToString(),GenderComboBox.Text.ToString(),decimal.Parse(BmrValue.Text),
+                (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
+            MessageBox.Show("Succesfull update");
         }
     }
 }
