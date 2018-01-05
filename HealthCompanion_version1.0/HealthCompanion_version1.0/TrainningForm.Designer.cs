@@ -32,10 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.fitnessGoalsCmbBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.ProgramDurationDd = new System.Windows.Forms.NumericUpDown();
@@ -82,10 +78,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.ProgramDurationDd);
@@ -100,48 +92,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(455, 488);
             this.panel1.TabIndex = 3;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Calisthenics",
-            "Gym Workout"});
-            this.comboBox4.Location = new System.Drawing.Point(166, 249);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(154, 21);
-            this.comboBox4.TabIndex = 13;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Home/Outdoors",
-            "Gym"});
-            this.comboBox3.Location = new System.Drawing.Point(166, 202);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(154, 21);
-            this.comboBox3.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 256);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Training Type";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 209);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Training Place";
             // 
             // button1
             // 
@@ -275,10 +225,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown ProgramDurationDd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter goalsTableAdapter1;
         private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
     }
