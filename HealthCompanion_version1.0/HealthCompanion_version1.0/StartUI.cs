@@ -114,7 +114,7 @@ namespace HealthCompanion_version1._0
               }
               else
               {
-                  LoginUserTableAdapter.Insert(nameTxtBox.Text,lnameTxtBox.Text,cpassTxtBox.Text,0,0,0,"","",0,0,userTxtBox.Text);               
+                  LoginUserTableAdapter.Insert(nameTxtBox.Text,lnameTxtBox.Text,cpassTxtBox.Text,0,0,0,"","",0,0,userTxtBox.Text,0);               
                 createMsg.Text = "Succesfull Register... Welcome to Health Companion";
               }
         }
