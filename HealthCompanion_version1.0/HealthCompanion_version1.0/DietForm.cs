@@ -37,9 +37,18 @@ namespace HealthCompanion_version1._0
         private void DietForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fitnessDatabaseDataSet.DietPlan' table. You can move, or remove it, as needed.
-            this.dietPlanTableAdapter.FillMyDiet(fitnessDatabaseDataSet.DietPlan, int.Parse(BmrValue.Text), int.Parse(BmrValue.Text));
+            this.dietPlanTableAdapter.FillMyDiet(fitnessDatabaseDataSet.DietPlan,(int) Math.Round(decimal.Parse(BmrValue.Text)), (int)Math.Round(decimal.Parse(BmrValue.Text)));
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int g = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
+            int n = dataGridView1.CurrentRow.Index;
+            DataTable Goals = goalsTableAdapter1.GetUserPrefs(g);
+            userDietPlanTableAdapter1.Insert(g, dataGridView1.Rows[n].Cells[0].Value.ToString(), Convert.ToDateTime(Goals.Rows[0]["DateStart"].ToString()));
+            MessageBox.Show("Complete");
         }
     }
 }

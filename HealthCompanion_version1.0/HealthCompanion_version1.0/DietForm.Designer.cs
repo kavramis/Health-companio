@@ -46,10 +46,13 @@
             this.tipsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dietPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fitnessDatabaseDataSet = new HealthCompanion_version1._0.FitnessDatabaseDataSet();
-            this.dietPlanTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.DietPlanTableAdapter();
             this.goalsTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter();
             this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
             this.quickTipTxtBox = new System.Windows.Forms.RichTextBox();
+            this.dietPlanTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.DietPlanTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.userDietPlanTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserDietPlanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
@@ -183,10 +186,6 @@
             this.fitnessDatabaseDataSet.DataSetName = "FitnessDatabaseDataSet";
             this.fitnessDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dietPlanTableAdapter
-            // 
-            this.dietPlanTableAdapter.ClearBeforeFill = true;
-            // 
             // goalsTableAdapter1
             // 
             this.goalsTableAdapter1.ClearBeforeFill = true;
@@ -204,10 +203,39 @@
             this.quickTipTxtBox.TabIndex = 9;
             this.quickTipTxtBox.Text = "";
             // 
+            // dietPlanTableAdapter
+            // 
+            this.dietPlanTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(621, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(216, 38);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Insert my diet program";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.Location = new System.Drawing.Point(622, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 75);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Select a program from Table and click Insert";
+            // 
+            // userDietPlanTableAdapter1
+            // 
+            this.userDietPlanTableAdapter1.ClearBeforeFill = true;
+            // 
             // DietForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(849, 454);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.quickTipTxtBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.GuideLine);
@@ -254,5 +282,8 @@
         private FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter goalsTableAdapter1;
         private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
         private System.Windows.Forms.RichTextBox quickTipTxtBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private FitnessDatabaseDataSetTableAdapters.UserDietPlanTableAdapter userDietPlanTableAdapter1;
     }
 }
