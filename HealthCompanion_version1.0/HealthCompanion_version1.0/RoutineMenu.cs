@@ -70,5 +70,17 @@ namespace HealthCompanion_version1._0
             int n = dataGridView1.CurrentRow.Index;
             userRoutineTableAdapter1.Insert(Convert.ToDateTime(Goals.Rows[0]["DateStart"].ToString()), int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString()), dataGridView1.Rows[n].Cells[0].Value.ToString());
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MoveToDietForm_Click(object sender, EventArgs e)
+        {
+            DietForm df = new DietForm();
+            df.Show();
+            this.Hide();
+        }
     }
 }
