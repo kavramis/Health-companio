@@ -15,7 +15,13 @@ namespace HealthCompanion_version1._0
         public FinalForm()
         {
             InitializeComponent();
-            toolStripLabel1.Text += " USER";
+           
+            
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -34,8 +34,7 @@
             this.BmrValue = new System.Windows.Forms.Label();
             this.CaloriesPD = new System.Windows.Forms.Label();
             this.FitGoal = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fitnessGoalTxtBox = new System.Windows.Forms.TextBox();
             this.Tip = new System.Windows.Forms.Label();
             this.GuideLine = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -50,6 +49,7 @@
             this.dietPlanTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.DietPlanTableAdapter();
             this.goalsTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter();
             this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+            this.quickTipTxtBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
@@ -82,7 +82,7 @@
             // 
             this.CaloriesPD.Location = new System.Drawing.Point(272, 9);
             this.CaloriesPD.Name = "CaloriesPD";
-            this.CaloriesPD.Size = new System.Drawing.Size(99, 18);
+            this.CaloriesPD.Size = new System.Drawing.Size(116, 18);
             this.CaloriesPD.TabIndex = 2;
             this.CaloriesPD.Text = "Calories Per Day";
             // 
@@ -91,29 +91,23 @@
             this.FitGoal.AutoSize = true;
             this.FitGoal.Location = new System.Drawing.Point(96, 60);
             this.FitGoal.Name = "FitGoal";
-            this.FitGoal.Size = new System.Drawing.Size(65, 13);
+            this.FitGoal.Size = new System.Drawing.Size(87, 17);
             this.FitGoal.TabIndex = 3;
             this.FitGoal.Text = "Fitness Goal";
             // 
-            // textBox1
+            // fitnessGoalTxtBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(177, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 20);
-            this.textBox2.TabIndex = 5;
+            this.fitnessGoalTxtBox.Enabled = false;
+            this.fitnessGoalTxtBox.Location = new System.Drawing.Point(177, 57);
+            this.fitnessGoalTxtBox.Name = "fitnessGoalTxtBox";
+            this.fitnessGoalTxtBox.Size = new System.Drawing.Size(138, 22);
+            this.fitnessGoalTxtBox.TabIndex = 4;
             // 
             // Tip
             // 
             this.Tip.Location = new System.Drawing.Point(96, 108);
             this.Tip.Name = "Tip";
-            this.Tip.Size = new System.Drawing.Size(69, 17);
+            this.Tip.Size = new System.Drawing.Size(75, 17);
             this.Tip.TabIndex = 6;
             this.Tip.Text = "Quick Tip:";
             // 
@@ -121,7 +115,7 @@
             // 
             this.GuideLine.Location = new System.Drawing.Point(82, 334);
             this.GuideLine.Name = "GuideLine";
-            this.GuideLine.Size = new System.Drawing.Size(593, 20);
+            this.GuideLine.Size = new System.Drawing.Size(629, 22);
             this.GuideLine.TabIndex = 7;
             this.GuideLine.Text = "You can view the details of your selected,\r\nyou can also swap meals based on your" +
     " needs and  preferences\r\nin in your profile tab";
@@ -201,15 +195,24 @@
             // 
             this.userTableAdapter1.ClearBeforeFill = true;
             // 
+            // quickTipTxtBox
+            // 
+            this.quickTipTxtBox.Enabled = false;
+            this.quickTipTxtBox.Location = new System.Drawing.Point(178, 108);
+            this.quickTipTxtBox.Name = "quickTipTxtBox";
+            this.quickTipTxtBox.Size = new System.Drawing.Size(210, 48);
+            this.quickTipTxtBox.TabIndex = 9;
+            this.quickTipTxtBox.Text = "";
+            // 
             // DietForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(849, 454);
+            this.Controls.Add(this.quickTipTxtBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.GuideLine);
             this.Controls.Add(this.Tip);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.fitnessGoalTxtBox);
             this.Controls.Add(this.FitGoal);
             this.Controls.Add(this.CaloriesPD);
             this.Controls.Add(this.BmrValue);
@@ -235,8 +238,7 @@
         private System.Windows.Forms.Label BmrValue;
         private System.Windows.Forms.Label CaloriesPD;
         private System.Windows.Forms.Label FitGoal;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox fitnessGoalTxtBox;
         private System.Windows.Forms.Label Tip;
         private System.Windows.Forms.TextBox GuideLine;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -251,5 +253,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tipsDataGridViewTextBoxColumn;
         private FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter goalsTableAdapter1;
         private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
+        private System.Windows.Forms.RichTextBox quickTipTxtBox;
     }
 }

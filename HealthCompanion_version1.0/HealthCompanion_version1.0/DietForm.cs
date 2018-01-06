@@ -21,7 +21,15 @@ namespace HealthCompanion_version1._0
             User = userTableAdapter1.GetDataUserBMR(n);
             currentUserBmr = User.Rows[0]["BMR"].ToString();
             BmrValue.Text = currentUserBmr;
-
+            fitnessGoalTxtBox.Text = goalsTableAdapter1.GetUserPrefs(n).Rows[0]["Description"].ToString();
+            if(fitnessGoalTxtBox.Text.Equals("Weight Loss"))
+            {
+                quickTipTxtBox.Text = "Your daily diet should be \nabout 200 calories below your BMR";
+            }
+            else
+            {
+                quickTipTxtBox.Text = "Your daily diet should be \nabout 200 calories above your BMR";
+            }
         }
 
         
@@ -29,8 +37,9 @@ namespace HealthCompanion_version1._0
         private void DietForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fitnessDatabaseDataSet.DietPlan' table. You can move, or remove it, as needed.
-            this.dietPlanTableAdapter.Fill(this.fitnessDatabaseDataSet.DietPlan);
-            
+            this.dietPlanTableAdapter.FillMyDiet(fitnessDatabaseDataSet.DietPlan, int.Parse(BmrValue.Text), int.Parse(BmrValue.Text));
+
+
         }
     }
 }
