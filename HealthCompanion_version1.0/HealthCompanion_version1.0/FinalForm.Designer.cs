@@ -41,7 +41,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.exerciseTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.ExerciseTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -227,10 +226,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "HC";
             // 
-            // exerciseTableAdapter1
-            // 
-            this.exerciseTableAdapter1.ClearBeforeFill = true;
-            // 
             // FinalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -261,6 +256,5 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button9;
-        private FitnessDatabaseDataSetTableAdapters.ExerciseTableAdapter exerciseTableAdapter1;
     }
 }
