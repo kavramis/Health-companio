@@ -76,6 +76,7 @@ namespace HealthCompanion_version1._0
                     athleticCmbBox.Text.ToString(), GenderComboBox.Text.ToString(), decimal.Parse(BmrValue.Text),
                     (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
                 MessageBox.Show("Succesfull update", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                button1.Enabled = true;
             }
             catch (Exception s)
             {

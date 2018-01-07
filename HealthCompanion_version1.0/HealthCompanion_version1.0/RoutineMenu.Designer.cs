@@ -243,6 +243,7 @@
             // MoveToDietForm
             // 
             this.MoveToDietForm.BackColor = System.Drawing.Color.Transparent;
+            this.MoveToDietForm.Enabled = false;
             this.MoveToDietForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MoveToDietForm.Location = new System.Drawing.Point(595, 601);
             this.MoveToDietForm.Margin = new System.Windows.Forms.Padding(4);
