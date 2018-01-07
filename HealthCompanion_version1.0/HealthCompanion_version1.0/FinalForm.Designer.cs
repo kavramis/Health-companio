@@ -46,6 +46,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.exNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.muscleGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exTipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exImgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exRepsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exSetsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exerciseRoutineExerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.routineExerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fitnessDatabaseDataSet = new HealthCompanion_version1._0.FitnessDatabaseDataSet();
@@ -98,12 +104,6 @@
             this.bMIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.progressPointsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goalsTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter();
-            this.exNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.muscleGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exTipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exImgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exRepsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exSetsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -313,7 +313,7 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Location = new System.Drawing.Point(306, 135);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(522, 616);
+            this.panel3.Size = new System.Drawing.Size(444, 616);
             this.panel3.TabIndex = 4;
             // 
             // button8
@@ -343,6 +343,45 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(519, 150);
             this.dataGridView2.TabIndex = 1;
+            // 
+            // exNameDataGridViewTextBoxColumn
+            // 
+            this.exNameDataGridViewTextBoxColumn.DataPropertyName = "Ex_Name";
+            this.exNameDataGridViewTextBoxColumn.HeaderText = "Ex_Name";
+            this.exNameDataGridViewTextBoxColumn.Name = "exNameDataGridViewTextBoxColumn";
+            // 
+            // muscleGroupDataGridViewTextBoxColumn
+            // 
+            this.muscleGroupDataGridViewTextBoxColumn.DataPropertyName = "MuscleGroup";
+            this.muscleGroupDataGridViewTextBoxColumn.HeaderText = "MuscleGroup";
+            this.muscleGroupDataGridViewTextBoxColumn.Name = "muscleGroupDataGridViewTextBoxColumn";
+            // 
+            // exTipDataGridViewTextBoxColumn
+            // 
+            this.exTipDataGridViewTextBoxColumn.DataPropertyName = "ExTip";
+            this.exTipDataGridViewTextBoxColumn.HeaderText = "ExTip";
+            this.exTipDataGridViewTextBoxColumn.Name = "exTipDataGridViewTextBoxColumn";
+            // 
+            // exImgDataGridViewTextBoxColumn
+            // 
+            this.exImgDataGridViewTextBoxColumn.DataPropertyName = "ExImg";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exImgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.exImgDataGridViewTextBoxColumn.HeaderText = "ExImg";
+            this.exImgDataGridViewTextBoxColumn.Name = "exImgDataGridViewTextBoxColumn";
+            this.exImgDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // exRepsDataGridViewTextBoxColumn
+            // 
+            this.exRepsDataGridViewTextBoxColumn.DataPropertyName = "ExReps";
+            this.exRepsDataGridViewTextBoxColumn.HeaderText = "ExReps";
+            this.exRepsDataGridViewTextBoxColumn.Name = "exRepsDataGridViewTextBoxColumn";
+            // 
+            // exSetsDataGridViewTextBoxColumn
+            // 
+            this.exSetsDataGridViewTextBoxColumn.DataPropertyName = "ExSets";
+            this.exSetsDataGridViewTextBoxColumn.HeaderText = "ExSets";
+            this.exSetsDataGridViewTextBoxColumn.Name = "exSetsDataGridViewTextBoxColumn";
             // 
             // exerciseRoutineExerciseBindingSource
             // 
@@ -402,7 +441,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HealthCompanion_version1._0.Properties.Resources.Wide_Push_Ups;
-            this.pictureBox1.Location = new System.Drawing.Point(1267, 144);
+            this.pictureBox1.Location = new System.Drawing.Point(1194, 144);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(400, 400);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -429,7 +468,7 @@
             // 
             this.panel4.Controls.Add(this.dataGridView4);
             this.panel4.Controls.Add(this.dataGridView3);
-            this.panel4.Location = new System.Drawing.Point(829, 135);
+            this.panel4.Location = new System.Drawing.Point(756, 144);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(432, 471);
             this.panel4.TabIndex = 5;
@@ -701,50 +740,11 @@
             // 
             this.goalsTableAdapter.ClearBeforeFill = true;
             // 
-            // exNameDataGridViewTextBoxColumn
-            // 
-            this.exNameDataGridViewTextBoxColumn.DataPropertyName = "Ex_Name";
-            this.exNameDataGridViewTextBoxColumn.HeaderText = "Ex_Name";
-            this.exNameDataGridViewTextBoxColumn.Name = "exNameDataGridViewTextBoxColumn";
-            // 
-            // muscleGroupDataGridViewTextBoxColumn
-            // 
-            this.muscleGroupDataGridViewTextBoxColumn.DataPropertyName = "MuscleGroup";
-            this.muscleGroupDataGridViewTextBoxColumn.HeaderText = "MuscleGroup";
-            this.muscleGroupDataGridViewTextBoxColumn.Name = "muscleGroupDataGridViewTextBoxColumn";
-            // 
-            // exTipDataGridViewTextBoxColumn
-            // 
-            this.exTipDataGridViewTextBoxColumn.DataPropertyName = "ExTip";
-            this.exTipDataGridViewTextBoxColumn.HeaderText = "ExTip";
-            this.exTipDataGridViewTextBoxColumn.Name = "exTipDataGridViewTextBoxColumn";
-            // 
-            // exImgDataGridViewTextBoxColumn
-            // 
-            this.exImgDataGridViewTextBoxColumn.DataPropertyName = "ExImg";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exImgDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.exImgDataGridViewTextBoxColumn.HeaderText = "ExImg";
-            this.exImgDataGridViewTextBoxColumn.Name = "exImgDataGridViewTextBoxColumn";
-            this.exImgDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // exRepsDataGridViewTextBoxColumn
-            // 
-            this.exRepsDataGridViewTextBoxColumn.DataPropertyName = "ExReps";
-            this.exRepsDataGridViewTextBoxColumn.HeaderText = "ExReps";
-            this.exRepsDataGridViewTextBoxColumn.Name = "exRepsDataGridViewTextBoxColumn";
-            // 
-            // exSetsDataGridViewTextBoxColumn
-            // 
-            this.exSetsDataGridViewTextBoxColumn.DataPropertyName = "ExSets";
-            this.exSetsDataGridViewTextBoxColumn.HeaderText = "ExSets";
-            this.exSetsDataGridViewTextBoxColumn.Name = "exSetsDataGridViewTextBoxColumn";
-            // 
             // FinalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1887, 781);
+            this.ClientSize = new System.Drawing.Size(1692, 781);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
