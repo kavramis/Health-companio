@@ -33,7 +33,11 @@ namespace HealthCompanion_version1._0
             int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
             String s = userRoutineTableAdapter1.GetDataUserID(n).Rows[0]["RoutineName"].ToString();
             this.routineExerciseTableAdapter.FillRoutineName(this.fitnessDatabaseDataSet.RoutineExercise, s);
-           
+            byte[] imageBytes = (byte[])dataGridView2.Rows[0].Cells["ExImg"].Value;
+            MemoryStream ms = new MemoryStream();
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            Bitmap bmp = new Bitmap(ms);
+            pictureBox1.Image = bmp;
 
 
         }
