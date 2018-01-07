@@ -42,13 +42,15 @@ namespace HealthCompanion_version1._0
             int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
             String s = userRoutineTableAdapter1.GetDataUserID(n).Rows[0]["RoutineName"].ToString();
             this.routineExerciseTableAdapter.FillRoutineName(this.fitnessDatabaseDataSet.RoutineExercise, s);
-             String imgFile = dataGridView2.Rows[0].Cells[3].Value.ToString();
-            
+            String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
+            pictureBox1.Image = new Bitmap(path);
 
-          
 
-                
-            
+
+
+
+
 
 
         }
@@ -65,7 +67,7 @@ namespace HealthCompanion_version1._0
             pictureBox1.Image = new Bitmap(path);
         }
 
-       
+      
     }
    
 }
