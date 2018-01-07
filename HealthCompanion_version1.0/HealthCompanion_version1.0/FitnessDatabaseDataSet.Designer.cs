@@ -2980,8 +2980,6 @@ namespace HealthCompanion_version1._0 {
             
             private global::System.Data.DataColumn columnProgressPoints;
             
-            private global::System.Data.DataColumn columnProgressPoints1;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public UserDataTable() {
@@ -3121,14 +3119,6 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ProgressPoints1Column {
-                get {
-                    return this.columnProgressPoints1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3164,7 +3154,7 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public UserRow AddUserRow(string UserName, string UserLastName, string UserPassword, int Age, int Height, int Weight, string isAthletic, string Gender, float BMR, int BMI, string UserAlias, short ProgressPoints, int ProgressPoints1) {
+            public UserRow AddUserRow(string UserName, string UserLastName, string UserPassword, int Age, int Height, int Weight, string isAthletic, string Gender, float BMR, int BMI, string UserAlias, int ProgressPoints) {
                 UserRow rowUserRow = ((UserRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3179,8 +3169,7 @@ namespace HealthCompanion_version1._0 {
                         BMR,
                         BMI,
                         UserAlias,
-                        ProgressPoints,
-                        ProgressPoints1};
+                        ProgressPoints};
                 rowUserRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUserRow);
                 return rowUserRow;
@@ -3223,7 +3212,6 @@ namespace HealthCompanion_version1._0 {
                 this.columnBMI = base.Columns["BMI"];
                 this.columnUserAlias = base.Columns["UserAlias"];
                 this.columnProgressPoints = base.Columns["ProgressPoints"];
-                this.columnProgressPoints1 = base.Columns["ProgressPoints1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3253,10 +3241,8 @@ namespace HealthCompanion_version1._0 {
                 base.Columns.Add(this.columnBMI);
                 this.columnUserAlias = new global::System.Data.DataColumn("UserAlias", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUserAlias);
-                this.columnProgressPoints = new global::System.Data.DataColumn("ProgressPoints", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnProgressPoints = new global::System.Data.DataColumn("ProgressPoints", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProgressPoints);
-                this.columnProgressPoints1 = new global::System.Data.DataColumn("ProgressPoints1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProgressPoints1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserID}, true));
                 this.columnUserID.AutoIncrement = true;
@@ -3270,7 +3256,6 @@ namespace HealthCompanion_version1._0 {
                 this.columnisAthletic.MaxLength = 15;
                 this.columnGender.MaxLength = 255;
                 this.columnUserAlias.MaxLength = 255;
-                this.columnProgressPoints1.Caption = "ProgressPoints";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5248,10 +5233,10 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public short ProgressPoints {
+            public int ProgressPoints {
                 get {
                     try {
-                        return ((short)(this[this.tableUser.ProgressPointsColumn]));
+                        return ((int)(this[this.tableUser.ProgressPointsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ProgressPoints\' in table \'User\' is DBNull.", e);
@@ -5259,22 +5244,6 @@ namespace HealthCompanion_version1._0 {
                 }
                 set {
                     this[this.tableUser.ProgressPointsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ProgressPoints1 {
-                get {
-                    try {
-                        return ((int)(this[this.tableUser.ProgressPoints1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ProgressPoints1\' in table \'User\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUser.ProgressPoints1Column] = value;
                 }
             }
             
@@ -5420,18 +5389,6 @@ namespace HealthCompanion_version1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetProgressPointsNull() {
                 this[this.tableUser.ProgressPointsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsProgressPoints1Null() {
-                return this.IsNull(this.tableUser.ProgressPoints1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetProgressPoints1Null() {
-                this[this.tableUser.ProgressPoints1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9179,7 +9136,7 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("BMR", "BMR");
             tableMapping.ColumnMappings.Add("BMI", "BMI");
             tableMapping.ColumnMappings.Add("UserAlias", "UserAlias");
-            tableMapping.ColumnMappings.Add("ProgressPoints", "ProgressPoints1");
+            tableMapping.ColumnMappings.Add("ProgressPoints", "ProgressPoints");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -9284,8 +9241,8 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[6];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        UserID, UserName, UserLastName, UserPassword, Age, Height, Weight, " +
-                "isAthletic, Gender, BMR, BMI, UserAlias, ProgressPoints\r\nFROM            [User]";
+            this._commandCollection[0].CommandText = "SELECT UserID, UserName, UserLastName, UserPassword, Age, Height, Weight, isAthle" +
+                "tic, Gender, BMR, BMI, UserAlias, ProgressPoints FROM [User]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
