@@ -82,5 +82,11 @@ namespace HealthCompanion_version1._0
             df.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FinalForm ff = new FinalForm();
+            ff.Show();
+        }
     }
 }

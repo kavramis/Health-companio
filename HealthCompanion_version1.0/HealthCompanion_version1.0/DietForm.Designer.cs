@@ -109,7 +109,7 @@
             this.FitGoal.ForeColor = System.Drawing.Color.White;
             this.FitGoal.Location = new System.Drawing.Point(396, 141);
             this.FitGoal.Name = "FitGoal";
-            this.FitGoal.Size = new System.Drawing.Size(87, 17);
+            this.FitGoal.Size = new System.Drawing.Size(65, 13);
             this.FitGoal.TabIndex = 3;
             this.FitGoal.Text = "Fitness Goal";
             // 
@@ -118,7 +118,7 @@
             this.fitnessGoalTxtBox.Enabled = false;
             this.fitnessGoalTxtBox.Location = new System.Drawing.Point(477, 138);
             this.fitnessGoalTxtBox.Name = "fitnessGoalTxtBox";
-            this.fitnessGoalTxtBox.Size = new System.Drawing.Size(138, 22);
+            this.fitnessGoalTxtBox.Size = new System.Drawing.Size(138, 20);
             this.fitnessGoalTxtBox.TabIndex = 4;
             // 
             // Tip
@@ -135,7 +135,7 @@
             // 
             this.GuideLine.Location = new System.Drawing.Point(382, 415);
             this.GuideLine.Name = "GuideLine";
-            this.GuideLine.Size = new System.Drawing.Size(629, 22);
+            this.GuideLine.Size = new System.Drawing.Size(629, 20);
             this.GuideLine.TabIndex = 7;
             this.GuideLine.Text = "You can view the details of your selected,\r\nyou can also swap meals based on your" +
     " needs and  preferences\r\nin in your profile tab";
@@ -347,6 +347,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -414,7 +415,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(25, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 18);
+            this.label4.Size = new System.Drawing.Size(112, 15);
             this.label4.TabIndex = 1;
             this.label4.Text = "Health Companion";
             // 
@@ -426,7 +427,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 91);
+            this.label3.Size = new System.Drawing.Size(126, 73);
             this.label3.TabIndex = 0;
             this.label3.Text = "HC";
             // 
