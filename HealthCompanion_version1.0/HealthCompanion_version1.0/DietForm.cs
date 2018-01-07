@@ -50,5 +50,12 @@ namespace HealthCompanion_version1._0
             userDietPlanTableAdapter1.Insert(g, dataGridView1.Rows[n].Cells[0].Value.ToString(), Convert.ToDateTime(Goals.Rows[0]["DateStart"].ToString()));
             MessageBox.Show("Complete");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FinalForm ff = new FinalForm();
+            ff.Show();
+            this.Hide();
+        }
     }
 }
