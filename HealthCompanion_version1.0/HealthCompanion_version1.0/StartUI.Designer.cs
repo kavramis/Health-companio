@@ -82,9 +82,9 @@
             this.panel1.Controls.Add(this.LoginPanel);
             this.panel1.Controls.Add(this.RegisterPanel);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(389, 2);
+            this.panel1.Location = new System.Drawing.Point(467, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(668, 657);
+            this.panel1.Size = new System.Drawing.Size(629, 657);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -93,7 +93,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Ravie", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(490, 593);
+            this.button2.Location = new System.Drawing.Point(424, 593);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 42);
@@ -446,15 +446,15 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(-123, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(506, 680);
+            this.panel2.Size = new System.Drawing.Size(587, 680);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(129, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(503, 657);
+            this.pictureBox1.Size = new System.Drawing.Size(455, 657);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
