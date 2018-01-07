@@ -64,6 +64,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LoginUserTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+            this.goalsTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter();
+            this.userDietPlanTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserDietPlanTableAdapter();
+            this.userRoutineTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserRoutineTableAdapter();
             this.panel1.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             this.RegisterPanel.SuspendLayout();
@@ -463,6 +466,18 @@
             // 
             this.LoginUserTableAdapter.ClearBeforeFill = true;
             // 
+            // goalsTableAdapter1
+            // 
+            this.goalsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // userDietPlanTableAdapter1
+            // 
+            this.userDietPlanTableAdapter1.ClearBeforeFill = true;
+            // 
+            // userRoutineTableAdapter1
+            // 
+            this.userRoutineTableAdapter1.ClearBeforeFill = true;
+            // 
             // StartUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -524,5 +539,8 @@
         private System.Windows.Forms.Label createMsg;
         private System.Windows.Forms.Label passMsg;
         private FitnessDatabaseDataSetTableAdapters.UserTableAdapter LoginUserTableAdapter;
+        private FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter goalsTableAdapter1;
+        private FitnessDatabaseDataSetTableAdapters.UserDietPlanTableAdapter userDietPlanTableAdapter1;
+        private FitnessDatabaseDataSetTableAdapters.UserRoutineTableAdapter userRoutineTableAdapter1;
     }
 }

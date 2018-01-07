@@ -16,8 +16,8 @@ namespace HealthCompanion_version1._0
         public FinalForm()
         {
             InitializeComponent();
-           
-            
+
+
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -32,7 +32,10 @@ namespace HealthCompanion_version1._0
             // TODO: This line of code loads data into the 'fitnessDatabaseDataSet.RoutineExercise' table. You can move, or remove it, as needed.
             int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
             String s = userRoutineTableAdapter1.GetDataUserID(n).Rows[0]["RoutineName"].ToString();
-            this.routineExerciseTableAdapter.FillRoutineName(this.fitnessDatabaseDataSet.RoutineExercise,s);
+            this.routineExerciseTableAdapter.FillRoutineName(this.fitnessDatabaseDataSet.RoutineExercise, s);
+           
+
+
         }
     }
 }
