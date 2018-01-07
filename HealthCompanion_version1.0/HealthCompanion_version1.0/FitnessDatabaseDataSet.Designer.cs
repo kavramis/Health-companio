@@ -46,11 +46,7 @@ namespace HealthCompanion_version1._0 {
         
         private global::System.Data.DataRelation relationDietPlanDietPlanFood;
         
-        private global::System.Data.DataRelation relationFoodsDietPlanFood;
-        
         private global::System.Data.DataRelation relationUserGoals;
-        
-        private global::System.Data.DataRelation relationExerciseRoutineExercise;
         
         private global::System.Data.DataRelation relationRoutinesRoutineExercise;
         
@@ -61,6 +57,10 @@ namespace HealthCompanion_version1._0 {
         private global::System.Data.DataRelation relationRoutinesUserRoutine;
         
         private global::System.Data.DataRelation relationUserUserRoutine;
+        
+        private global::System.Data.DataRelation relationExerciseRoutineExercise;
+        
+        private global::System.Data.DataRelation relationFoodsDietPlanFood;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -429,14 +429,14 @@ namespace HealthCompanion_version1._0 {
                 }
             }
             this.relationDietPlanDietPlanFood = this.Relations["DietPlanDietPlanFood"];
-            this.relationFoodsDietPlanFood = this.Relations["FoodsDietPlanFood"];
             this.relationUserGoals = this.Relations["UserGoals"];
-            this.relationExerciseRoutineExercise = this.Relations["ExerciseRoutineExercise"];
             this.relationRoutinesRoutineExercise = this.Relations["RoutinesRoutineExercise"];
             this.relationDietPlanUserDietPlan = this.Relations["DietPlanUserDietPlan"];
             this.relationUserUserDietPlan = this.Relations["UserUserDietPlan"];
             this.relationRoutinesUserRoutine = this.Relations["RoutinesUserRoutine"];
             this.relationUserUserRoutine = this.Relations["UserUserRoutine"];
+            this.relationExerciseRoutineExercise = this.Relations["ExerciseRoutineExercise"];
+            this.relationFoodsDietPlanFood = this.Relations["FoodsDietPlanFood"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -471,18 +471,10 @@ namespace HealthCompanion_version1._0 {
                         this.tableDietPlan.DietPlanIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableDietPlanFood.DietPlanIDColumn}, false);
             this.Relations.Add(this.relationDietPlanDietPlanFood);
-            this.relationFoodsDietPlanFood = new global::System.Data.DataRelation("FoodsDietPlanFood", new global::System.Data.DataColumn[] {
-                        this.tableFoods.FoodIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDietPlanFood.FoodIDColumn}, false);
-            this.Relations.Add(this.relationFoodsDietPlanFood);
             this.relationUserGoals = new global::System.Data.DataRelation("UserGoals", new global::System.Data.DataColumn[] {
                         this.tableUser.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableGoals.UserIDColumn}, false);
             this.Relations.Add(this.relationUserGoals);
-            this.relationExerciseRoutineExercise = new global::System.Data.DataRelation("ExerciseRoutineExercise", new global::System.Data.DataColumn[] {
-                        this.tableExercise.Ex_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRoutineExercise.ExIDColumn}, false);
-            this.Relations.Add(this.relationExerciseRoutineExercise);
             this.relationRoutinesRoutineExercise = new global::System.Data.DataRelation("RoutinesRoutineExercise", new global::System.Data.DataColumn[] {
                         this.tableRoutines.RoutineNameColumn}, new global::System.Data.DataColumn[] {
                         this.tableRoutineExercise.RoutineNameColumn}, false);
@@ -503,6 +495,14 @@ namespace HealthCompanion_version1._0 {
                         this.tableUser.UserIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableUserRoutine.UserIDColumn}, false);
             this.Relations.Add(this.relationUserUserRoutine);
+            this.relationExerciseRoutineExercise = new global::System.Data.DataRelation("ExerciseRoutineExercise", new global::System.Data.DataColumn[] {
+                        this.tableRoutineExercise.ExIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableExercise.Ex_IDColumn}, false);
+            this.Relations.Add(this.relationExerciseRoutineExercise);
+            this.relationFoodsDietPlanFood = new global::System.Data.DataRelation("FoodsDietPlanFood", new global::System.Data.DataColumn[] {
+                        this.tableDietPlanFood.FoodIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFoods.FoodIDColumn}, false);
+            this.Relations.Add(this.relationFoodsDietPlanFood);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1099,18 +1099,15 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DietPlanFoodRow AddDietPlanFoodRow(DietPlanRow parentDietPlanRowByDietPlanDietPlanFood, FoodsRow parentFoodsRowByFoodsDietPlanFood, int MealNumber, int MealDay) {
+            public DietPlanFoodRow AddDietPlanFoodRow(DietPlanRow parentDietPlanRowByDietPlanDietPlanFood, int FoodID, int MealNumber, int MealDay) {
                 DietPlanFoodRow rowDietPlanFoodRow = ((DietPlanFoodRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
+                        FoodID,
                         MealNumber,
                         MealDay};
                 if ((parentDietPlanRowByDietPlanDietPlanFood != null)) {
                     columnValuesArray[0] = parentDietPlanRowByDietPlanDietPlanFood[0];
-                }
-                if ((parentFoodsRowByFoodsDietPlanFood != null)) {
-                    columnValuesArray[1] = parentFoodsRowByFoodsDietPlanFood[0];
                 }
                 rowDietPlanFoodRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDietPlanFoodRow);
@@ -2446,18 +2443,15 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public RoutineExerciseRow AddRoutineExerciseRow(RoutinesRow parentRoutinesRowByRoutinesRoutineExercise, ExerciseRow parentExerciseRowByExerciseRoutineExercise, int ExNumber, int RoutineDay) {
+            public RoutineExerciseRow AddRoutineExerciseRow(RoutinesRow parentRoutinesRowByRoutinesRoutineExercise, int ExID, int ExNumber, int RoutineDay) {
                 RoutineExerciseRow rowRoutineExerciseRow = ((RoutineExerciseRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
+                        ExID,
                         ExNumber,
                         RoutineDay};
                 if ((parentRoutinesRowByRoutinesRoutineExercise != null)) {
                     columnValuesArray[0] = parentRoutinesRowByRoutinesRoutineExercise[0];
-                }
-                if ((parentExerciseRowByExerciseRoutineExercise != null)) {
-                    columnValuesArray[1] = parentExerciseRowByExerciseRoutineExercise[0];
                 }
                 rowRoutineExerciseRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRoutineExerciseRow);
@@ -4237,12 +4231,12 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public FoodsRow FoodsRow {
-                get {
-                    return ((FoodsRow)(this.GetParentRow(this.Table.ParentRelations["FoodsDietPlanFood"])));
+            public FoodsRow[] GetFoodsRows() {
+                if ((this.Table.ChildRelations["FoodsDietPlanFood"] == null)) {
+                    return new FoodsRow[0];
                 }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FoodsDietPlanFood"]);
+                else {
+                    return ((FoodsRow[])(base.GetChildRows(this.Table.ChildRelations["FoodsDietPlanFood"])));
                 }
             }
         }
@@ -4386,6 +4380,17 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public RoutineExerciseRow RoutineExerciseRow {
+                get {
+                    return ((RoutineExerciseRow)(this.GetParentRow(this.Table.ParentRelations["ExerciseRoutineExercise"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["ExerciseRoutineExercise"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsEx_NameNull() {
                 return this.IsNull(this.tableExercise.Ex_NameColumn);
             }
@@ -4467,17 +4472,6 @@ namespace HealthCompanion_version1._0 {
             public void SetExSetsNull() {
                 this[this.tableExercise.ExSetsColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public RoutineExerciseRow[] GetRoutineExerciseRows() {
-                if ((this.Table.ChildRelations["ExerciseRoutineExercise"] == null)) {
-                    return new RoutineExerciseRow[0];
-                }
-                else {
-                    return ((RoutineExerciseRow[])(base.GetChildRows(this.Table.ChildRelations["ExerciseRoutineExercise"])));
-                }
-            }
         }
         
         /// <summary>
@@ -4555,6 +4549,17 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public DietPlanFoodRow DietPlanFoodRow {
+                get {
+                    return ((DietPlanFoodRow)(this.GetParentRow(this.Table.ParentRelations["FoodsDietPlanFood"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FoodsDietPlanFood"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsSpecificationsNull() {
                 return this.IsNull(this.tableFoods.SpecificationsColumn);
             }
@@ -4587,17 +4592,6 @@ namespace HealthCompanion_version1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetTypeNull() {
                 this[this.tableFoods.TypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DietPlanFoodRow[] GetDietPlanFoodRows() {
-                if ((this.Table.ChildRelations["FoodsDietPlanFood"] == null)) {
-                    return new DietPlanFoodRow[0];
-                }
-                else {
-                    return ((DietPlanFoodRow[])(base.GetChildRows(this.Table.ChildRelations["FoodsDietPlanFood"])));
-                }
             }
         }
         
@@ -4877,23 +4871,23 @@ namespace HealthCompanion_version1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ExerciseRow ExerciseRow {
-                get {
-                    return ((ExerciseRow)(this.GetParentRow(this.Table.ParentRelations["ExerciseRoutineExercise"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["ExerciseRoutineExercise"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public RoutinesRow RoutinesRow {
                 get {
                     return ((RoutinesRow)(this.GetParentRow(this.Table.ParentRelations["RoutinesRoutineExercise"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["RoutinesRoutineExercise"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public ExerciseRow[] GetExerciseRows() {
+                if ((this.Table.ChildRelations["ExerciseRoutineExercise"] == null)) {
+                    return new ExerciseRow[0];
+                }
+                else {
+                    return ((ExerciseRow[])(base.GetChildRows(this.Table.ChildRelations["ExerciseRoutineExercise"])));
                 }
             }
         }
@@ -8288,11 +8282,17 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT RoutineName, ExID, ExNumber, RoutineDay FROM RoutineExercise";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT RoutineName, ExID, ExNumber, RoutineDay FROM [RoutineExercise] Where Routi" +
+                "neName = ?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RoutineName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoutineName", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8314,6 +8314,42 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual FitnessDatabaseDataSet.RoutineExerciseDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            FitnessDatabaseDataSet.RoutineExerciseDataTable dataTable = new FitnessDatabaseDataSet.RoutineExerciseDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillRoutineName(FitnessDatabaseDataSet.RoutineExerciseDataTable dataTable, string RoutineName) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((RoutineName == null)) {
+                throw new global::System.ArgumentNullException("RoutineName");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(RoutineName));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual FitnessDatabaseDataSet.RoutineExerciseDataTable GetRoutineName(string RoutineName) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((RoutineName == null)) {
+                throw new global::System.ArgumentNullException("RoutineName");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(RoutineName));
+            }
             FitnessDatabaseDataSet.RoutineExerciseDataTable dataTable = new FitnessDatabaseDataSet.RoutineExerciseDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -10361,11 +10397,16 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT DateStart, UserID, RoutineName FROM UserRoutine";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT DateStart, UserID, RoutineName FROM [UserRoutine] Where UserID =?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UserID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UserID", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10387,6 +10428,42 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual FitnessDatabaseDataSet.UserRoutineDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            FitnessDatabaseDataSet.UserRoutineDataTable dataTable = new FitnessDatabaseDataSet.UserRoutineDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillUserID(FitnessDatabaseDataSet.UserRoutineDataTable dataTable, global::System.Nullable<int> UserID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((UserID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(UserID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual FitnessDatabaseDataSet.UserRoutineDataTable GetDataUserID(global::System.Nullable<int> UserID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((UserID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(UserID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             FitnessDatabaseDataSet.UserRoutineDataTable dataTable = new FitnessDatabaseDataSet.UserRoutineDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -10854,6 +10931,42 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._routinesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Routines.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._routinesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._dietPlanFoodTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.DietPlanFood.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._dietPlanFoodTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._routineExerciseTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.RoutineExercise.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._routineExerciseTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._userTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._userTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._exerciseTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Exercise.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -10872,48 +10985,12 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._routinesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Routines.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._routinesTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._userTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._userTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._dietPlanFoodTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DietPlanFood.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._dietPlanFoodTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._goalsTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Goals.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._goalsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._routineExerciseTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.RoutineExercise.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._routineExerciseTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -10953,6 +11030,38 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._routinesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Routines.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._routinesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._dietPlanFoodTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.DietPlanFood.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._dietPlanFoodTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._routineExerciseTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.RoutineExercise.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._routineExerciseTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._userTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._userTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._exerciseTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Exercise.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -10969,43 +11078,11 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._routinesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Routines.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._routinesTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._userTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._userTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._dietPlanFoodTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DietPlanFood.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._dietPlanFoodTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._goalsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Goals.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._goalsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._routineExerciseTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.RoutineExercise.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._routineExerciseTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -11051,43 +11128,11 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._routineExerciseTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.RoutineExercise.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._routineExerciseTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._goalsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Goals.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._goalsTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._dietPlanFoodTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DietPlanFood.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._dietPlanFoodTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._userTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._userTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._routinesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Routines.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._routinesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -11104,6 +11149,38 @@ namespace HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._exerciseTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._userTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._userTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._routineExerciseTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.RoutineExercise.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._routineExerciseTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._dietPlanFoodTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DietPlanFood.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._dietPlanFoodTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._routinesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Routines.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._routinesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
