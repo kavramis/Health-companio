@@ -66,7 +66,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
+            this.finalFormDrive = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
@@ -435,22 +435,23 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "HC";
             // 
-            // button10
+            // finalFormDrive
             // 
-            this.button10.Location = new System.Drawing.Point(952, 394);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 24;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.finalFormDrive.Enabled = false;
+            this.finalFormDrive.Location = new System.Drawing.Point(935, 195);
+            this.finalFormDrive.Name = "finalFormDrive";
+            this.finalFormDrive.Size = new System.Drawing.Size(227, 46);
+            this.finalFormDrive.TabIndex = 24;
+            this.finalFormDrive.Text = "Register Done";
+            this.finalFormDrive.UseVisualStyleBackColor = true;
+            this.finalFormDrive.Click += new System.EventHandler(this.button10_Click);
             // 
             // DietForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1163, 687);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.finalFormDrive);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -515,6 +516,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button finalFormDrive;
     }
 }
