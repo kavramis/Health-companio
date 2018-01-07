@@ -120,6 +120,12 @@
   <metadata name="routinesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>511, 17</value>
   </metadata>
+  <metadata name="routinesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>511, 17</value>
+  </metadata>
+  <metadata name="fitnessDatabaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>331, 17</value>
+  </metadata>
   <metadata name="fitnessDatabaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>331, 17</value>
   </metadata>
@@ -134,6 +140,9 @@
   </metadata>
   <metadata name="userRoutineTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>890, 17</value>
+  </metadata>
+  <metadata name="button6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -277,6 +286,20 @@
         0r6KhB7lFzAaXX2Sm/8PMFZB4d9y6lHLV1kXPq6mXXskgIZ3KIIbjnDTC1BzmEwmTBm/YJQo+AU+WKOD
         g93Q3t72JvRPQD9MpRIjOB4VCrsb+BQoxk5GAnZNsdt5E768V5J/KFeS3xHqOUcv4SXmC21db8gx2mDK
         dEApnahmpDNGxX8rHb9ASnquZJmSe+XclBaU5B7ThkWWtH8BiDkBKKFr7l8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAAHQSURBVGhD7dnNK0RhFMfx+Wu8
+        bZStsPUHkGysRJJYycrSy14p2Vggb6VQwoaNjUjslIXyD9hYSON7ppk6jXPnMfPgdnh+9el2z8zz3Ptb
+        zW1uoVgs/gnm0CNz6JE59MgcemQOPTKHHplDj+rJALaxoWxhGrEZQ/Xecj6Mb88qpHq1O8TmDNbeh2g4
+        o1jEfPnYAckcrIsdITZrsPZegaQJC5B7kuMUgnmG3mwSkjyL9EPP3xDMBfSiIUjyLNILPb9HMKlIRFKR
+        WklFIpKK1Mop9KJQkT3EZhnW3llFbvApzWhDK1pwBb0oVOQcsk7WN0Kuvw9r76wiD5BrCrl32aPwDv2l
+        aqEiPymrSDXpUPq5tz6s8FCk9MjyogYWD0WkQyryG/5nkVc1sHgoIh3MDzQPRUShEz3oLruF/kKoyCW6
+        UFlfL1l7DGvvrCKPqKyXe5cOn3ICvShUZAexWYK1d1aRawRzAb0oVCQ9/aqkIrWSikQkFamVP1PkCXrR
+        BCR5FumDnpceSUKZxSbWy0f55ZXkWaQd8qpB7kmO8ud6w8njtcIBvj2D2IW8gKmQ8xnEZhzW3iP4WqzX
+        WB6ZQ4/MoUfm0CNz6JE59MgcemQO/SkWPgBPELd+0BLeIQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -51,6 +51,8 @@ namespace HealthCompanion_version1._0
 
 
 
+
+
         }
         
         
@@ -60,12 +62,20 @@ namespace HealthCompanion_version1._0
             //AN VRETHEI TROPOS NA FEROUME TO PATH APO TO PROPERTIES.RESOURCES GIA COMBINE ME TO imgFile tha einai idanikos
             //gia na leitourgisei to parakatw prepei na ginei copy o fakelos resources kai sto bin giati to Enviroment.CurreDirectory
             //epistrefei olo to path mexri to debug
-            String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();           
             String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);            
             pictureBox1.Image = new Bitmap(path);
         }
 
-       
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            //AN VRETHEI TROPOS NA FEROUME TO PATH APO TO PROPERTIES.RESOURCES GIA COMBINE ME TO imgFile tha einai idanikos
+            //gia na leitourgisei to parakatw prepei na ginei copy o fakelos resources kai sto bin giati to Enviroment.CurreDirectory
+            //epistrefei olo to path mexri to debug
+            String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
+            pictureBox1.Image = new Bitmap(path);
+        }
     }
    
 }
