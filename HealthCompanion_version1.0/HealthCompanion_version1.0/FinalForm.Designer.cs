@@ -44,16 +44,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.exerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fitnessDatabaseDataSet = new HealthCompanion_version1._0.FitnessDatabaseDataSet();
             this.routineNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.routineDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.routineExerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+            this.fitnessDatabaseDataSet = new HealthCompanion_version1._0.FitnessDatabaseDataSet();
             this.routineExerciseTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.RoutineExerciseTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.exerciseRoutineExerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.exerciseTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.ExerciseTableAdapter();
             this.exIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,14 +62,18 @@
             this.exImgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exRepsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exSetsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+            this.userRoutineTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserRoutineTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.routineExerciseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exerciseRoutineExerciseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -238,7 +241,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(25, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 15);
+            this.label4.Size = new System.Drawing.Size(136, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Health Companion";
             // 
@@ -250,17 +253,18 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 73);
+            this.label3.Size = new System.Drawing.Size(157, 91);
             this.label3.TabIndex = 0;
             this.label3.Text = "HC";
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(300, 0);
+            this.panel3.Location = new System.Drawing.Point(330, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(733, 606);
+            this.panel3.Size = new System.Drawing.Size(593, 553);
             this.panel3.TabIndex = 4;
             // 
             // dataGridView1
@@ -273,39 +277,11 @@
             this.exNumberDataGridViewTextBoxColumn,
             this.routineDayDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.routineExerciseBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 62);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 150);
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(499, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.exIDDataGridViewTextBoxColumn1,
-            this.exNameDataGridViewTextBoxColumn,
-            this.exTypeDataGridViewTextBoxColumn,
-            this.muscleGroupDataGridViewTextBoxColumn,
-            this.exTipDataGridViewTextBoxColumn,
-            this.exImgDataGridViewTextBoxColumn,
-            this.exRepsDataGridViewTextBoxColumn,
-            this.exSetsDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.exerciseBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 168);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(619, 150);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // exerciseBindingSource
-            // 
-            this.exerciseBindingSource.DataMember = "Exercise";
-            this.exerciseBindingSource.DataSource = this.fitnessDatabaseDataSet;
-            // 
-            // fitnessDatabaseDataSet
-            // 
-            this.fitnessDatabaseDataSet.DataSetName = "FitnessDatabaseDataSet";
-            this.fitnessDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // routineNameDataGridViewTextBoxColumn
             // 
@@ -336,13 +312,39 @@
             this.routineExerciseBindingSource.DataMember = "RoutineExercise";
             this.routineExerciseBindingSource.DataSource = this.fitnessDatabaseDataSet;
             // 
-            // userTableAdapter1
+            // fitnessDatabaseDataSet
             // 
-            this.userTableAdapter1.ClearBeforeFill = true;
+            this.fitnessDatabaseDataSet.DataSetName = "FitnessDatabaseDataSet";
+            this.fitnessDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // routineExerciseTableAdapter
             // 
             this.routineExerciseTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.exIDDataGridViewTextBoxColumn1,
+            this.exNameDataGridViewTextBoxColumn,
+            this.exTypeDataGridViewTextBoxColumn,
+            this.muscleGroupDataGridViewTextBoxColumn,
+            this.exTipDataGridViewTextBoxColumn,
+            this.exImgDataGridViewTextBoxColumn,
+            this.exRepsDataGridViewTextBoxColumn,
+            this.exSetsDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.exerciseRoutineExerciseBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(16, 236);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(574, 150);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // exerciseRoutineExerciseBindingSource
+            // 
+            this.exerciseRoutineExerciseBindingSource.DataMember = "ExerciseRoutineExercise";
+            this.exerciseRoutineExerciseBindingSource.DataSource = this.routineExerciseBindingSource;
             // 
             // exerciseTableAdapter
             // 
@@ -396,6 +398,22 @@
             this.exSetsDataGridViewTextBoxColumn.HeaderText = "ExSets";
             this.exSetsDataGridViewTextBoxColumn.Name = "exSetsDataGridViewTextBoxColumn";
             // 
+            // userTableAdapter1
+            // 
+            this.userTableAdapter1.ClearBeforeFill = true;
+            // 
+            // userRoutineTableAdapter1
+            // 
+            this.userRoutineTableAdapter1.ClearBeforeFill = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(16, 425);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(248, 78);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // FinalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -413,10 +431,11 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.routineExerciseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exerciseRoutineExerciseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,7 +455,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
         private FitnessDatabaseDataSet fitnessDatabaseDataSet;
         private System.Windows.Forms.BindingSource routineExerciseBindingSource;
         private FitnessDatabaseDataSetTableAdapters.RoutineExerciseTableAdapter routineExerciseTableAdapter;
@@ -445,7 +463,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn exNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn routineDayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.BindingSource exerciseBindingSource;
+        private System.Windows.Forms.BindingSource exerciseRoutineExerciseBindingSource;
         private FitnessDatabaseDataSetTableAdapters.ExerciseTableAdapter exerciseTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn exIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn exNameDataGridViewTextBoxColumn;
@@ -455,5 +473,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn exImgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn exRepsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn exSetsDataGridViewTextBoxColumn;
+        private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
+        private FitnessDatabaseDataSetTableAdapters.UserRoutineTableAdapter userRoutineTableAdapter1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

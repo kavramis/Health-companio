@@ -53,9 +53,8 @@ namespace HealthCompanion_version1._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FinalForm ff = new FinalForm();
-            ff.Show();
-            this.Hide();
+            FinalForm n = new FinalForm();
+            n.Show();
         }
     }
 }

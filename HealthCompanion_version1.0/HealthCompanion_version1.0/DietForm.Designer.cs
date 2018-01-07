@@ -95,7 +95,7 @@
             this.FitGoal.AutoSize = true;
             this.FitGoal.Location = new System.Drawing.Point(96, 60);
             this.FitGoal.Name = "FitGoal";
-            this.FitGoal.Size = new System.Drawing.Size(65, 13);
+            this.FitGoal.Size = new System.Drawing.Size(87, 17);
             this.FitGoal.TabIndex = 3;
             this.FitGoal.Text = "Fitness Goal";
             // 
@@ -104,7 +104,7 @@
             this.fitnessGoalTxtBox.Enabled = false;
             this.fitnessGoalTxtBox.Location = new System.Drawing.Point(177, 57);
             this.fitnessGoalTxtBox.Name = "fitnessGoalTxtBox";
-            this.fitnessGoalTxtBox.Size = new System.Drawing.Size(138, 20);
+            this.fitnessGoalTxtBox.Size = new System.Drawing.Size(138, 22);
             this.fitnessGoalTxtBox.TabIndex = 4;
             // 
             // Tip
@@ -119,7 +119,7 @@
             // 
             this.GuideLine.Location = new System.Drawing.Point(82, 334);
             this.GuideLine.Name = "GuideLine";
-            this.GuideLine.Size = new System.Drawing.Size(629, 20);
+            this.GuideLine.Size = new System.Drawing.Size(629, 22);
             this.GuideLine.TabIndex = 7;
             this.GuideLine.Text = "You can view the details of your selected,\r\nyou can also swap meals based on your" +
     " needs and  preferences\r\nin in your profile tab";
@@ -233,9 +233,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(626, 396);
+            this.button2.Location = new System.Drawing.Point(705, 391);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 23);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 23;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
