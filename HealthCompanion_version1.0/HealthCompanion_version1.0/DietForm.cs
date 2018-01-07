@@ -57,10 +57,10 @@ namespace HealthCompanion_version1._0
             n.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
-            FinalForm ff = new FinalForm();
-            ff.Show();
+            FinalForm s = new FinalForm();
+            s.Show();
         }
     }
 }

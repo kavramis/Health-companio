@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DietForm));
             this.BmrLabel = new System.Windows.Forms.Label();
             this.BmrValue = new System.Windows.Forms.Label();
@@ -65,6 +66,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
@@ -76,7 +78,7 @@
             // 
             this.BmrLabel.BackColor = System.Drawing.Color.Transparent;
             this.BmrLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.BmrLabel.Location = new System.Drawing.Point(393, 90);
+            this.BmrLabel.Location = new System.Drawing.Point(218, 9);
             this.BmrLabel.Name = "BmrLabel";
             this.BmrLabel.Size = new System.Drawing.Size(69, 18);
             this.BmrLabel.TabIndex = 0;
@@ -86,7 +88,7 @@
             // 
             this.BmrValue.BackColor = System.Drawing.Color.Transparent;
             this.BmrValue.ForeColor = System.Drawing.Color.White;
-            this.BmrValue.Location = new System.Drawing.Point(507, 90);
+            this.BmrValue.Location = new System.Drawing.Point(332, 9);
             this.BmrValue.Name = "BmrValue";
             this.BmrValue.Size = new System.Drawing.Size(69, 18);
             this.BmrValue.TabIndex = 1;
@@ -96,7 +98,7 @@
             // 
             this.CaloriesPD.BackColor = System.Drawing.Color.Transparent;
             this.CaloriesPD.ForeColor = System.Drawing.Color.White;
-            this.CaloriesPD.Location = new System.Drawing.Point(572, 90);
+            this.CaloriesPD.Location = new System.Drawing.Point(397, 9);
             this.CaloriesPD.Name = "CaloriesPD";
             this.CaloriesPD.Size = new System.Drawing.Size(116, 18);
             this.CaloriesPD.TabIndex = 2;
@@ -107,25 +109,25 @@
             this.FitGoal.AutoSize = true;
             this.FitGoal.BackColor = System.Drawing.Color.Transparent;
             this.FitGoal.ForeColor = System.Drawing.Color.White;
-            this.FitGoal.Location = new System.Drawing.Point(396, 141);
+            this.FitGoal.Location = new System.Drawing.Point(221, 60);
             this.FitGoal.Name = "FitGoal";
-            this.FitGoal.Size = new System.Drawing.Size(65, 13);
+            this.FitGoal.Size = new System.Drawing.Size(87, 17);
             this.FitGoal.TabIndex = 3;
             this.FitGoal.Text = "Fitness Goal";
             // 
             // fitnessGoalTxtBox
             // 
             this.fitnessGoalTxtBox.Enabled = false;
-            this.fitnessGoalTxtBox.Location = new System.Drawing.Point(477, 138);
+            this.fitnessGoalTxtBox.Location = new System.Drawing.Point(375, 57);
             this.fitnessGoalTxtBox.Name = "fitnessGoalTxtBox";
-            this.fitnessGoalTxtBox.Size = new System.Drawing.Size(138, 20);
+            this.fitnessGoalTxtBox.Size = new System.Drawing.Size(138, 22);
             this.fitnessGoalTxtBox.TabIndex = 4;
             // 
             // Tip
             // 
             this.Tip.BackColor = System.Drawing.Color.Transparent;
             this.Tip.ForeColor = System.Drawing.Color.White;
-            this.Tip.Location = new System.Drawing.Point(396, 189);
+            this.Tip.Location = new System.Drawing.Point(221, 108);
             this.Tip.Name = "Tip";
             this.Tip.Size = new System.Drawing.Size(75, 17);
             this.Tip.TabIndex = 6;
@@ -133,16 +135,19 @@
             // 
             // GuideLine
             // 
-            this.GuideLine.Location = new System.Drawing.Point(382, 415);
+            this.GuideLine.Location = new System.Drawing.Point(400, 509);
             this.GuideLine.Name = "GuideLine";
-            this.GuideLine.Size = new System.Drawing.Size(629, 20);
+            this.GuideLine.Size = new System.Drawing.Size(629, 22);
             this.GuideLine.TabIndex = 7;
             this.GuideLine.Text = "You can view the details of your selected,\r\nyou can also swap meals based on your" +
     " needs and  preferences\r\nin in your profile tab";
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Highlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dietPlanIDDataGridViewTextBoxColumn,
@@ -152,7 +157,7 @@
             this.dailyCaloriesDataGridViewTextBoxColumn,
             this.tipsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dietPlanBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(382, 259);
+            this.dataGridView1.Location = new System.Drawing.Point(400, 537);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(629, 150);
             this.dataGridView1.TabIndex = 8;
@@ -214,7 +219,7 @@
             // quickTipTxtBox
             // 
             this.quickTipTxtBox.Enabled = false;
-            this.quickTipTxtBox.Location = new System.Drawing.Point(478, 189);
+            this.quickTipTxtBox.Location = new System.Drawing.Point(303, 108);
             this.quickTipTxtBox.Name = "quickTipTxtBox";
             this.quickTipTxtBox.Size = new System.Drawing.Size(210, 48);
             this.quickTipTxtBox.TabIndex = 9;
@@ -226,9 +231,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(795, 90);
+            this.button1.Location = new System.Drawing.Point(935, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 38);
+            this.button1.Size = new System.Drawing.Size(227, 38);
             this.button1.TabIndex = 10;
             this.button1.Text = "Insert my diet program";
             this.button1.UseVisualStyleBackColor = true;
@@ -239,7 +244,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(796, 162);
+            this.label1.Location = new System.Drawing.Point(947, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 75);
             this.label1.TabIndex = 22;
@@ -264,7 +269,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(212, 608);
+            this.panel1.Size = new System.Drawing.Size(212, 687);
             this.panel1.TabIndex = 23;
             // 
             // button9
@@ -275,9 +280,9 @@
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(0, 512);
+            this.button9.Location = new System.Drawing.Point(0, 590);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(203, 94);
+            this.button9.Size = new System.Drawing.Size(212, 94);
             this.button9.TabIndex = 9;
             this.button9.Text = "Exit  ";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -347,7 +352,6 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -415,7 +419,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(25, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 15);
+            this.label4.Size = new System.Drawing.Size(136, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Health Companion";
             // 
@@ -427,15 +431,26 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 73);
+            this.label3.Size = new System.Drawing.Size(157, 91);
             this.label3.TabIndex = 0;
             this.label3.Text = "HC";
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(952, 394);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 24;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // DietForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1163, 608);
+            this.ClientSize = new System.Drawing.Size(1163, 687);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -500,5 +515,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button10;
     }
 }
