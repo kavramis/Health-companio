@@ -66,7 +66,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.exNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.routineDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button8 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.routineExerciseTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.RoutineExerciseTableAdapter();
             this.exerciseTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.ExerciseTableAdapter();
@@ -451,6 +450,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(284, 150);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // exNumberDataGridViewTextBoxColumn
             // 
@@ -463,16 +463,6 @@
             this.routineDayDataGridViewTextBoxColumn.DataPropertyName = "RoutineDay";
             this.routineDayDataGridViewTextBoxColumn.HeaderText = "RoutineDay";
             this.routineDayDataGridViewTextBoxColumn.Name = "routineDayDataGridViewTextBoxColumn";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(1038, 711);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // pictureBox1
             // 
@@ -527,7 +517,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1276, 736);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -588,7 +577,6 @@
         private System.Windows.Forms.BindingSource userBindingSource;
         private FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter goalsTableAdapter;
         private System.Windows.Forms.BindingSource userGoalsBindingSource;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn exNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn routineDayDataGridViewTextBoxColumn;
