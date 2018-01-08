@@ -152,7 +152,9 @@ namespace HealthCompanion_version1._0
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            FinalForm ff = new FinalForm();
+            ff.Show();
+            this.Show();
         }
     }
 }

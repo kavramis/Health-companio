@@ -47,6 +47,7 @@ namespace HealthCompanion_version1._0
             String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
             pictureBox1.Image = new Bitmap(path);
             s = path;
+            circularProgressBar1.Value =int.Parse(userTableAdapter1.GetDataUserBMR(n).Rows[0]["ProgressPoints"].ToString());
             
 
     }
@@ -108,7 +109,9 @@ namespace HealthCompanion_version1._0
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Progress pro = new Progress();
+            pro.Show();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
