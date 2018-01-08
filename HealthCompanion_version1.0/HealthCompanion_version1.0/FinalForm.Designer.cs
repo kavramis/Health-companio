@@ -267,7 +267,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(108, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 55);
+            this.label1.Size = new System.Drawing.Size(48, 44);
             this.label1.TabIndex = 3;
             this.label1.Text = "C";
             // 
@@ -288,7 +288,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(-5, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(217, 34);
+            this.label4.Size = new System.Drawing.Size(173, 26);
             this.label4.TabIndex = 1;
             this.label4.Text = "Health Companion";
             // 
