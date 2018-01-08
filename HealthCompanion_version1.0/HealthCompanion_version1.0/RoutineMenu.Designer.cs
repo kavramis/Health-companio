@@ -72,6 +72,7 @@
             // 
             // trainingTypeCmbBox
             // 
+            this.trainingTypeCmbBox.BackColor = System.Drawing.SystemColors.Window;
             this.trainingTypeCmbBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.trainingTypeCmbBox.FormattingEnabled = true;
             this.trainingTypeCmbBox.Items.AddRange(new object[] {
@@ -164,6 +165,7 @@
             // 
             // trainingPlaceCmbBox
             // 
+            this.trainingPlaceCmbBox.BackColor = System.Drawing.SystemColors.Window;
             this.trainingPlaceCmbBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.trainingPlaceCmbBox.FormattingEnabled = true;
             this.trainingPlaceCmbBox.Items.AddRange(new object[] {
@@ -184,7 +186,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(226, 9);
+            this.label5.Location = new System.Drawing.Point(219, 5);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 20);
@@ -221,7 +223,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(225, 394);
+            this.label1.Location = new System.Drawing.Point(225, 398);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(455, 35);
             this.label1.TabIndex = 21;
@@ -325,7 +327,7 @@
             this.button9.BackColor = System.Drawing.Color.DarkRed;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Ravie", 28.2F, System.Drawing.FontStyle.Bold);
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.Location = new System.Drawing.Point(0, 561);
