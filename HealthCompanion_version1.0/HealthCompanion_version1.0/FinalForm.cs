@@ -46,10 +46,10 @@ namespace HealthCompanion_version1._0
 
             String g = userDietPlanTableAdapter1.GetUserID(n).Rows[0]["DietPlanID"].ToString();
             this.dietPlanFoodTableAdapter.FillDietPlan(this.fitnessDatabaseDataSet.DietPlanFood, g);
-            // String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();
-            // String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
-            // pictureBox1.Image = new Bitmap(path);
-            // s = path;            
+            String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
+            pictureBox1.Image = new Bitmap(path);
+            s = path;            
             fname.Text = userTableAdapter1.GetDataUserBMR(n).Rows[0]["UserName"].ToString();
             lname.Text = userTableAdapter1.GetDataUserBMR(n).Rows[0]["UserLastName"].ToString();
             weight.Text = userTableAdapter1.GetDataUserBMR(n).Rows[0]["Weight"].ToString();

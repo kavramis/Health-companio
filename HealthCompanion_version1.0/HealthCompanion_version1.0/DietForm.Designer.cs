@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DietForm));
             this.BmrLabel = new System.Windows.Forms.Label();
             this.BmrValue = new System.Windows.Forms.Label();
@@ -137,7 +136,7 @@
             // 
             // GuideLine
             // 
-            this.GuideLine.Location = new System.Drawing.Point(303, 495);
+            this.GuideLine.Location = new System.Drawing.Point(304, 461);
             this.GuideLine.Name = "GuideLine";
             this.GuideLine.Size = new System.Drawing.Size(629, 22);
             this.GuideLine.TabIndex = 7;
@@ -146,8 +145,6 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -159,9 +156,9 @@
             this.dailyCaloriesDataGridViewTextBoxColumn,
             this.tipsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dietPlanBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(303, 523);
+            this.dataGridView1.Location = new System.Drawing.Point(301, 491);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(629, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(629, 184);
             this.dataGridView1.TabIndex = 8;
             // 
             // dietPlanIDDataGridViewTextBoxColumn

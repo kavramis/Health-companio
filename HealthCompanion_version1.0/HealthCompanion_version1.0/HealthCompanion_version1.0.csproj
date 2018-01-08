@@ -82,6 +82,9 @@
     <Compile Include="FinalForm.Designer.cs">
       <DependentUpon>FinalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FitnessDatabaseDataSet.cs">
+      <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FitnessDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
