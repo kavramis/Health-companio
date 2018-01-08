@@ -87,6 +87,62 @@ namespace HealthCompanion_version1._0
             }
         }
 
+        private void button14_Click(object sender, EventArgs e)
+        {
+            History h = new History();
+            h.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            StartUI sui = new StartUI();
+            UserClass.Name = "";
+            UserClass.Password = "";
+            sui.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DietForm df = new DietForm();
+            df.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RoutineMenu rm = new RoutineMenu();
+            rm.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PersonalData pd = new PersonalData();
+            pd.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TrainningForm tf = new TrainningForm();
+            tf.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Progress_Load(this, e);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FinalForm ff = new FinalForm();
+            ff.Show();
+            this.Hide();
+        }
+
         private void button11_Click(object sender, EventArgs e)
         {
             if (DateTime.Now.Date == end.Date)
@@ -100,6 +156,10 @@ namespace HealthCompanion_version1._0
                 TrainningForm tf = new TrainningForm();
                 tf.Show();
                 this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("You still have "+ (end.Date - DateTime.Now.Date).TotalDays + " days for training", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
     }

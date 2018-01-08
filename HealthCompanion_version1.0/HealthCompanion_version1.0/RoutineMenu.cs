@@ -85,10 +85,15 @@ namespace HealthCompanion_version1._0
                 MessageBox.Show("Successful Insert", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 saveProgram.Enabled = false;
                 MoveToDietForm.Enabled = true;
+                userTableAdapter1.updatePoints(0, g);
 
             }catch(Exception es)
             {
                 MessageBox.Show("Error with insert", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PersonalData pd = new PersonalData();
+                UserClass.firstTime = true;
+                pd.Show();
+                this.Hide();
             }
         }
 

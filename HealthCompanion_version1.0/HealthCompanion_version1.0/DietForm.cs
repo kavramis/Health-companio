@@ -63,9 +63,14 @@ namespace HealthCompanion_version1._0
                 MessageBox.Show("Complete with Registration", "Registration Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 finalFormDrive.Enabled = true;
                 button1.Enabled = false;
+                userTableAdapter1.updatePoints(0, g);
             }catch(Exception es)
             {
                 MessageBox.Show("Couldn't instert your diet plan", "Error Insert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PersonalData pd = new PersonalData();
+                UserClass.firstTime = true;
+                pd.Show();
+                this.Hide();
             }
         }
 
