@@ -82,10 +82,19 @@
     <Compile Include="FinalForm.Designer.cs">
       <DependentUpon>FinalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FitnessDatabaseDataSet.cs">
+      <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FitnessDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonalData.cs">
       <SubType>Form</SubType>
@@ -118,6 +127,12 @@
     <Compile Include="StartUI.Designer.cs">
       <DependentUpon>StartUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="SwapMeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SwapMeals.Designer.cs">
+      <DependentUpon>SwapMeals.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrainningForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FinalForm.resx">
       <DependentUpon>FinalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalData.resx">
       <DependentUpon>PersonalData.cs</DependentUpon>
@@ -147,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StartUI.resx">
       <DependentUpon>StartUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwapMeals.resx">
+      <DependentUpon>SwapMeals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainningForm.resx">
       <DependentUpon>TrainningForm.cs</DependentUpon>

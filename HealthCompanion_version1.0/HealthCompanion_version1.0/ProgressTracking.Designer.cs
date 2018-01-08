@@ -43,6 +43,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+            this.goalsTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter();
+            this.userDietPlanTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserDietPlanTableAdapter();
+            this.userRoutineTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserRoutineTableAdapter();
+            this.supposed = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -115,7 +126,7 @@
             this.button9.BackColor = System.Drawing.Color.DarkRed;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold);
+            this.button9.Font = new System.Drawing.Font("Ravie", 28.2F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.Location = new System.Drawing.Point(0, 523);
@@ -141,6 +152,7 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -157,6 +169,7 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -173,6 +186,7 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -190,6 +204,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -206,6 +221,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -222,6 +238,7 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button8
             // 
@@ -238,6 +255,7 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // circularProgressBar1
             // 
@@ -247,16 +265,16 @@
             this.circularProgressBar1.Font = new System.Drawing.Font("Monotype Corsiva", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularProgressBar1.ForeColor = System.Drawing.Color.Black;
             this.circularProgressBar1.InnerColor = System.Drawing.Color.Gray;
-            this.circularProgressBar1.InnerMargin = 2;
+            this.circularProgressBar1.InnerMargin = 5;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(449, 27);
+            this.circularProgressBar1.Location = new System.Drawing.Point(367, 27);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.SystemColors.Control;
             this.circularProgressBar1.OuterMargin = -25;
             this.circularProgressBar1.OuterWidth = 26;
             this.circularProgressBar1.ProgressColor = System.Drawing.Color.Red;
-            this.circularProgressBar1.ProgressWidth = 25;
+            this.circularProgressBar1.ProgressWidth = 15;
             this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.circularProgressBar1.Size = new System.Drawing.Size(396, 306);
             this.circularProgressBar1.StartAngle = 270;
@@ -271,17 +289,112 @@
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.Value = 90;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(419, 395);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 46);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Diet done";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(598, 395);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(133, 46);
+            this.button10.TabIndex = 29;
+            this.button10.Text = "Trainning done";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // userTableAdapter1
+            // 
+            this.userTableAdapter1.ClearBeforeFill = true;
+            // 
+            // goalsTableAdapter1
+            // 
+            this.goalsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // userDietPlanTableAdapter1
+            // 
+            this.userDietPlanTableAdapter1.ClearBeforeFill = true;
+            // 
+            // userRoutineTableAdapter1
+            // 
+            this.userRoutineTableAdapter1.ClearBeforeFill = true;
+            // 
+            // supposed
+            // 
+            this.supposed.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supposed.Location = new System.Drawing.Point(838, 64);
+            this.supposed.Name = "supposed";
+            this.supposed.Size = new System.Drawing.Size(153, 117);
+            this.supposed.TabIndex = 30;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(419, 460);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(133, 45);
+            this.button11.TabIndex = 31;
+            this.button11.Text = "Done with my program";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Red;
+            this.button12.Enabled = false;
+            this.button12.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button12.Location = new System.Drawing.Point(842, 252);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(149, 62);
+            this.button12.TabIndex = 32;
+            this.button12.Text = "Reset my programs";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(598, 462);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(133, 43);
+            this.button13.TabIndex = 33;
+            this.button13.Text = "Satisfied with program";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(516, 524);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(122, 43);
+            this.button14.TabIndex = 34;
+            this.button14.Text = "View my history";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // Progress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 618);
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.supposed);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.circularProgressBar1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Progress";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Progress";
+            this.Load += new System.EventHandler(this.Progress_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -306,5 +419,16 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button8;
         private CircularProgressBar.CircularProgressBar circularProgressBar1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button10;
+        private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
+        private FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter goalsTableAdapter1;
+        private FitnessDatabaseDataSetTableAdapters.UserDietPlanTableAdapter userDietPlanTableAdapter1;
+        private FitnessDatabaseDataSetTableAdapters.UserRoutineTableAdapter userRoutineTableAdapter1;
+        private System.Windows.Forms.Label supposed;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
     }
 }

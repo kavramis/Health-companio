@@ -11,6 +11,7 @@ namespace HealthCompanion_version1._0
         
         public static String Name;
         public static String Password;
+        public static bool firstTime = true;
 
     }
 }
