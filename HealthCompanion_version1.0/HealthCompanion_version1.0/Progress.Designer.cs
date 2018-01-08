@@ -115,7 +115,7 @@
             this.button9.BackColor = System.Drawing.Color.DarkRed;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold);
+            this.button9.Font = new System.Drawing.Font("Ravie", 28.2F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.Location = new System.Drawing.Point(0, 523);

@@ -236,7 +236,7 @@
             this.button1.BackColor = System.Drawing.Color.Maroon;
             this.button1.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(952, 635);
+            this.button1.Location = new System.Drawing.Point(952, 569);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(185, 38);
             this.button1.TabIndex = 10;
@@ -465,7 +465,7 @@
             this.finalFormDrive.Enabled = false;
             this.finalFormDrive.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.finalFormDrive.ForeColor = System.Drawing.Color.White;
-            this.finalFormDrive.Location = new System.Drawing.Point(952, 569);
+            this.finalFormDrive.Location = new System.Drawing.Point(952, 634);
             this.finalFormDrive.Name = "finalFormDrive";
             this.finalFormDrive.Size = new System.Drawing.Size(185, 40);
             this.finalFormDrive.TabIndex = 24;
