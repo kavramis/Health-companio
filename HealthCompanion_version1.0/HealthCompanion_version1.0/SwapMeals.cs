@@ -71,31 +71,46 @@ namespace HealthCompanion_version1._0
             DataRow d = dietPlanTableAdapter1.GetDataByNewMeals(g).Rows[0];
             if (userDietPlanTableAdapter1.checkForUpdate("User " + n + " Updated Plan") == 1)
             {
-                userDietPlanTableAdapter1.UpdateQuery("User " + n + " Updated Plan", n);
-                dietPlanTableAdapter1.updateMeal(int.Parse(d[1].ToString()), d[2].ToString(), d[3].ToString(), int.Parse(d[4].ToString()), "", "User " + n + " Updated Plan");
-                dietPlanFoodTableAdapter.DeleteQuery("User " + n + " Updated Plan");
-                foreach (DataRow dr in dt.Rows)
+                try
                 {
-                    dr.SetField<String>(0, "User " + n + " Updated Plan");
-                    dietPlanFoodTableAdapter.Insert(dr[0].ToString(), int.Parse(dr[1].ToString()), int.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()));
+                    userDietPlanTableAdapter1.UpdateQuery("User " + n + " Updated Plan", n);
+                    dietPlanTableAdapter1.updateMeal(int.Parse(d[1].ToString()), d[2].ToString(), d[3].ToString(), int.Parse(d[4].ToString()), "", "User " + n + " Updated Plan");
+                    dietPlanFoodTableAdapter.DeleteQuery("User " + n + " Updated Plan");
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        dr.SetField<String>(0, "User " + n + " Updated Plan");
+                        dietPlanFoodTableAdapter.Insert(dr[0].ToString(), int.Parse(dr[1].ToString()), int.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()));
+                    }
+                    MessageBox.Show("Updated custom diet program", "Updated", MessageBoxButtons.OK);
                 }
-                MessageBox.Show("Updated custom diet program", "Updated", MessageBoxButtons.OK);
-
+                catch (Exception es) { MessageBox.Show("Something Went Wrong","Error",MessageBoxButtons.OK,MessageBoxIcon.Hand); }
             }
             else
             {
-                dietPlanTableAdapter1.Insert("User " + n + " Updated Plan", int.Parse(d[1].ToString()), d[2].ToString(), d[3].ToString(), int.Parse(d[4].ToString()), "");
-                userDietPlanTableAdapter1.UpdateQuery("User " + n + " Updated Plan", n);
-                foreach (DataRow dr in dt.Rows)
+                try
                 {
-                    dr.SetField<String>(0, "User " + n + " Updated Plan");
-                    dietPlanFoodTableAdapter.Insert(dr[0].ToString(), int.Parse(dr[1].ToString()), int.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()));
+                    dietPlanTableAdapter1.Insert("User " + n + " Updated Plan", int.Parse(d[1].ToString()), d[2].ToString(), d[3].ToString(), int.Parse(d[4].ToString()), "");
+                    userDietPlanTableAdapter1.UpdateQuery("User " + n + " Updated Plan", n);
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        dr.SetField<String>(0, "User " + n + " Updated Plan");
+                        dietPlanFoodTableAdapter.Insert(dr[0].ToString(), int.Parse(dr[1].ToString()), int.Parse(dr[2].ToString()), int.Parse(dr[3].ToString()));
 
+                    }
+                    userDietPlanTableAdapter1.UpdateQuery("User " + n + " Updated Plan", n);
+
+                    MessageBox.Show("Created custom diet program", "Created", MessageBoxButtons.OK);
                 }
-                userDietPlanTableAdapter1.UpdateQuery("User " + n + " Updated Plan", n);
-                MessageBox.Show("Created custom diet program", "Created", MessageBoxButtons.OK);
+                catch (Exception es) { MessageBox.Show("Something Went Wrong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand); }
 
             }
+        }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            FinalForm ff = new FinalForm();
+            ff.Show();
+            this.Hide();
         }
     }
 }

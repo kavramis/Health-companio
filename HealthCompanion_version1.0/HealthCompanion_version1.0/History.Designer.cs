@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fitnessDatabaseDataSet = new HealthCompanion_version1._0.FitnessDatabaseDataSet();
-            this.goalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goalsTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trainingTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,10 +38,14 @@
             this.workoutTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateEndDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fitnessDatabaseDataSet = new HealthCompanion_version1._0.FitnessDatabaseDataSet();
+            this.goalsTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.GoalsTableAdapter();
             this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
+            this.ReturnBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goalsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -61,25 +62,12 @@
             this.dateEndDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.goalsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(163, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(121, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(849, 511);
+            this.dataGridView1.Size = new System.Drawing.Size(637, 252);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // fitnessDatabaseDataSet
-            // 
-            this.fitnessDatabaseDataSet.DataSetName = "FitnessDatabaseDataSet";
-            this.fitnessDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // goalsBindingSource
-            // 
-            this.goalsBindingSource.DataMember = "Goals";
-            this.goalsBindingSource.DataSource = this.fitnessDatabaseDataSet;
-            // 
-            // goalsTableAdapter
-            // 
-            this.goalsTableAdapter.ClearBeforeFill = true;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
@@ -129,24 +117,50 @@
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
+            // goalsBindingSource
+            // 
+            this.goalsBindingSource.DataMember = "Goals";
+            this.goalsBindingSource.DataSource = this.fitnessDatabaseDataSet;
+            // 
+            // fitnessDatabaseDataSet
+            // 
+            this.fitnessDatabaseDataSet.DataSetName = "FitnessDatabaseDataSet";
+            this.fitnessDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // goalsTableAdapter
+            // 
+            this.goalsTableAdapter.ClearBeforeFill = true;
+            // 
             // userTableAdapter1
             // 
             this.userTableAdapter1.ClearBeforeFill = true;
             // 
+            // ReturnBtn
+            // 
+            this.ReturnBtn.Location = new System.Drawing.Point(683, 369);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(75, 66);
+            this.ReturnBtn.TabIndex = 1;
+            this.ReturnBtn.Text = "Return";
+            this.ReturnBtn.UseVisualStyleBackColor = true;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
+            // 
             // History
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 535);
+            this.ClientSize = new System.Drawing.Size(759, 435);
+            this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "History";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "History";
             this.Load += new System.EventHandler(this.History_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goalsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -166,5 +180,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateEndDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private FitnessDatabaseDataSetTableAdapters.UserTableAdapter userTableAdapter1;
+        private System.Windows.Forms.Button ReturnBtn;
     }
 }

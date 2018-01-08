@@ -30,13 +30,22 @@ namespace HealthCompanion_version1._0
 
         private void Progress_Load(object sender, EventArgs e)
         {
-            circularProgressBar1.Value = int.Parse(userTableAdapter1.GetDataUserBMR(id).Rows[0]["ProgressPoints"].ToString());
-            supposed.Text ="Supposed point : "+(DateTime.Now.Date - start.Date).TotalDays * 2;
-            circularProgressBar1.SuperscriptText = userTableAdapter1.GetDataUserBMR(id).Rows[0]["ProgressPoints"].ToString();
-            if ((DateTime.Now.Date - start.Date).TotalDays * 2 >= 8)
+            try
             {
-                button12.Enabled = true;
+                circularProgressBar1.Value = int.Parse(userTableAdapter1.GetDataUserBMR(id).Rows[0]["ProgressPoints"].ToString());
+                supposed.Text = "Supposed points : " + (DateTime.Now.Date - start.Date).TotalDays * 2;
+                circularProgressBar1.SuperscriptText = userTableAdapter1.GetDataUserBMR(id).Rows[0]["ProgressPoints"].ToString();
+                if ((DateTime.Now.Date - start.Date).TotalDays * 2 >= 8)
+                {
+                    button12.Enabled = true;
+                }
             }
+            catch (Exception es)
+            {
+                MessageBox.Show("Cant have negative progress");
+                circularProgressBar1.Value = 0;
+                userTableAdapter1.updatePoints(0,id);
+                    }
 
 
 
@@ -141,6 +150,18 @@ namespace HealthCompanion_version1._0
             FinalForm ff = new FinalForm();
             ff.Show();
             this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void UndoBtn_Click(object sender, EventArgs e)
+        {
+            userTableAdapter1.updatePoints(circularProgressBar1.Value + -1, id);
+            Progress_Load(this, e);
+
         }
 
         private void button11_Click(object sender, EventArgs e)

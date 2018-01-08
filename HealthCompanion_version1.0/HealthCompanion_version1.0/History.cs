@@ -23,5 +23,12 @@ namespace HealthCompanion_version1._0
             this.goalsTableAdapter.FillHistory(this.fitnessDatabaseDataSet.Goals, int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString()));
 
         }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            Progress pr = new Progress();
+            pr.Show();
+            this.Hide();
+        }
     }
 }

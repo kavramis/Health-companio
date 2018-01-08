@@ -55,6 +55,7 @@
             this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
             this.userDietPlanTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserDietPlanTableAdapter();
             this.dietPlanTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.DietPlanTableAdapter();
+            this.returnBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dietPlanFoodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fitnessDatabaseDataSet)).BeginInit();
@@ -74,11 +75,12 @@
             this.mealNumberDataGridViewTextBoxColumn,
             this.mealDayDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dietPlanFoodBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(413, 14);
+            this.dataGridView1.Location = new System.Drawing.Point(310, 11);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 160);
+            this.dataGridView1.Size = new System.Drawing.Size(512, 130);
             this.dataGridView1.TabIndex = 0;
             // 
             // dietPlanIDDataGridViewTextBoxColumn
@@ -125,11 +127,12 @@
             this.caloriesDataGridViewTextBoxColumn1,
             this.typeDataGridViewTextBoxColumn1});
             this.add.DataSource = this.foodsBindingSource;
-            this.add.Location = new System.Drawing.Point(413, 346);
+            this.add.Location = new System.Drawing.Point(310, 281);
+            this.add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add.MultiSelect = false;
             this.add.Name = "add";
             this.add.RowTemplate.Height = 24;
-            this.add.Size = new System.Drawing.Size(683, 183);
+            this.add.Size = new System.Drawing.Size(512, 149);
             this.add.TabIndex = 1;
             // 
             // foodIDDataGridViewTextBoxColumn2
@@ -171,10 +174,11 @@
             this.caloriesDataGridViewTextBoxColumn,
             this.typeDataGridViewTextBoxColumn});
             this.old.DataSource = this.foodsDietPlanFoodBindingSource;
-            this.old.Location = new System.Drawing.Point(413, 180);
+            this.old.Location = new System.Drawing.Point(310, 146);
+            this.old.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.old.MultiSelect = false;
             this.old.Name = "old";
-            this.old.Size = new System.Drawing.Size(683, 160);
+            this.old.Size = new System.Drawing.Size(512, 130);
             this.old.TabIndex = 2;
             // 
             // foodIDDataGridViewTextBoxColumn1
@@ -208,9 +212,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(274, 346);
+            this.button1.Location = new System.Drawing.Point(206, 281);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 50);
+            this.button1.Size = new System.Drawing.Size(100, 41);
             this.button1.TabIndex = 3;
             this.button1.Text = "Swap my foods";
             this.button1.UseVisualStyleBackColor = true;
@@ -218,9 +223,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(274, 450);
+            this.button2.Location = new System.Drawing.Point(206, 366);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 79);
+            this.button2.Size = new System.Drawing.Size(100, 64);
             this.button2.TabIndex = 4;
             this.button2.Text = "Save my program";
             this.button2.UseVisualStyleBackColor = true;
@@ -246,17 +252,29 @@
             // 
             this.dietPlanTableAdapter1.ClearBeforeFill = true;
             // 
+            // returnBtn
+            // 
+            this.returnBtn.Location = new System.Drawing.Point(13, 383);
+            this.returnBtn.Name = "returnBtn";
+            this.returnBtn.Size = new System.Drawing.Size(131, 48);
+            this.returnBtn.TabIndex = 5;
+            this.returnBtn.Text = "RETURN";
+            this.returnBtn.UseVisualStyleBackColor = true;
+            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
+            // 
             // SwapMeals
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 545);
+            this.ClientSize = new System.Drawing.Size(831, 443);
+            this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.old);
             this.Controls.Add(this.add);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SwapMeals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SwapMeals";
@@ -300,5 +318,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private FitnessDatabaseDataSetTableAdapters.DietPlanTableAdapter dietPlanTableAdapter1;
+        private System.Windows.Forms.Button returnBtn;
     }
 }
