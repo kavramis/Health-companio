@@ -50,6 +50,7 @@ namespace HealthCompanion_version1._0
             String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
             pictureBox1.Image = new Bitmap(path);
             s = path;            
+
             fname.Text = userTableAdapter1.GetDataUserBMR(n).Rows[0]["UserName"].ToString();
             lname.Text = userTableAdapter1.GetDataUserBMR(n).Rows[0]["UserLastName"].ToString();
             weight.Text = userTableAdapter1.GetDataUserBMR(n).Rows[0]["Weight"].ToString();
