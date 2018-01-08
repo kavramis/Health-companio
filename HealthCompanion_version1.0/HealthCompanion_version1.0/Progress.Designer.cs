@@ -186,7 +186,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 46);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Personal Data  ";
+            this.button4.Text = "Personal Data       ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = true;
@@ -249,7 +249,7 @@
             this.circularProgressBar1.InnerColor = System.Drawing.Color.Gray;
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(449, 27);
+            this.circularProgressBar1.Location = new System.Drawing.Point(454, 135);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.SystemColors.Control;
