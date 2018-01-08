@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HealthCompanion_version1._0
 {
-    public partial class Progress : Form
+    public partial class ProgressTracking : Form
     {
-        public Progress()
+        public ProgressTracking()
         {
             InitializeComponent();
         }
