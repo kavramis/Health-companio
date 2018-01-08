@@ -114,8 +114,8 @@ namespace HealthCompanion_version1._0
               }
               else
               {
-                  LoginUserTableAdapter.Insert(nameTxtBox.Text,lnameTxtBox.Text,cpassTxtBox.Text,0,0,0,"","",0,0,userTxtBox.Text);               
-                createMsg.Text = "Succesfull Register... Welcome to Health Companion";
+                  LoginUserTableAdapter.Insert(nameTxtBox.Text,lnameTxtBox.Text,cpassTxtBox.Text,0,0,0,"","",0,0,userTxtBox.Text,0);               
+                createMsg.Text = "Successful Register... Welcome to Health Companion";
               }
         }
 
@@ -124,11 +124,45 @@ namespace HealthCompanion_version1._0
             errorMsg.Text = "";
             if (LoginUserTableAdapter.checkLogin(loginUserTxtBox.Text,loginPassTxtBox.Text).Value == 1)
              {
+                UserClass.firstTime = true;
                 UserClass.Name = loginUserTxtBox.Text;
                 UserClass.Password = loginPassTxtBox.Text;
-                PersonalData pd = new PersonalData();
-                pd.Show();
-                this.Hide();
+                int n = int.Parse(LoginUserTableAdapter.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
+
+                if (int.Parse(LoginUserTableAdapter.GetCheckForUpdated(UserClass.Name, UserClass.Password).Rows[0]["BMI"].ToString()) != 0)
+                {
+                    if (goalsTableAdapter1.getGoalsAndStatus(n,"Incomplete") < 1)
+                    {
+                        TrainningForm tf = new TrainningForm();
+                        tf.Show();
+                        this.Hide();
+                    }
+                    else if (userRoutineTableAdapter1.checkRoutine(n) < 1)
+                    {
+                        RoutineMenu rm = new RoutineMenu();
+                        rm.Show();
+                        this.Hide();
+                    }
+                    else if (userDietPlanTableAdapter1.checkDietPlan(n) < 1)
+                    {
+                        DietForm df = new DietForm();
+                        df.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        FinalForm ff = new FinalForm();
+                        UserClass.firstTime = false;
+                        ff.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    PersonalData pd = new PersonalData();
+                    pd.Show();
+                    this.Hide();
+                }
              }
              else
              {

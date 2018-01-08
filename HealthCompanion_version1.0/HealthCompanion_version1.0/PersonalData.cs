@@ -75,7 +75,8 @@ namespace HealthCompanion_version1._0
                 this.BiometricTableAdapter.UpdateBiometrics(int.Parse(ageTxtBox.Text), int.Parse(heightTxtBox.Text), int.Parse(weightTxtBox.Text),
                     athleticCmbBox.Text.ToString(), GenderComboBox.Text.ToString(), decimal.Parse(BmrValue.Text),
                     (int)Math.Round(decimal.Parse(BmiValue.Text)), UserClass.Name, UserClass.Password);
-                MessageBox.Show("Succesfull update", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successful update", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                button1.Enabled = true;
             }
             catch (Exception s)
             {

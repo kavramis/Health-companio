@@ -35,7 +35,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,6 +51,9 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.5.6403.13419\lib\net35-client\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,6 +65,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DietForm.cs">
@@ -76,10 +82,19 @@
     <Compile Include="FinalForm.Designer.cs">
       <DependentUpon>FinalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FitnessDatabaseDataSet.cs">
+      <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FitnessDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonalData.cs">
       <SubType>Form</SubType>
@@ -88,7 +103,18 @@
       <DependentUpon>PersonalData.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Progress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress.Designer.cs">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RoutineMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +126,12 @@
     </Compile>
     <Compile Include="StartUI.Designer.cs">
       <DependentUpon>StartUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SwapMeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SwapMeals.Designer.cs">
+      <DependentUpon>SwapMeals.cs</DependentUpon>
     </Compile>
     <Compile Include="TrainningForm.cs">
       <SubType>Form</SubType>
@@ -114,23 +146,28 @@
     <EmbeddedResource Include="FinalForm.resx">
       <DependentUpon>FinalForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PersonalData.resx">
       <DependentUpon>PersonalData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Progress.resx">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="RoutineMenu.resx">
       <DependentUpon>RoutineMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartUI.resx">
       <DependentUpon>StartUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwapMeals.resx">
+      <DependentUpon>SwapMeals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainningForm.resx">
       <DependentUpon>TrainningForm.cs</DependentUpon>
@@ -146,6 +183,7 @@
     <None Include="FitnessDatabaseDataSet.xss">
       <DependentUpon>FitnessDatabaseDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -163,6 +201,71 @@
     <Content Include="FitnessDatabase.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Wide Push Ups.gif" />
+    <None Include="Resources\weight_training_legs_lying_leg_curl.gif" />
+    <None Include="Resources\weight_training_back_seated_cable_row_how_to_do_pulley_rows.gif" />
+    <None Include="Resources\weight_training_back_pulldowns_behind_the_neck_with_a_wide_grip.gif" />
+    <None Include="Resources\Upright Rows.gif" />
+    <None Include="Resources\T-Bar Rows.gif" />
+    <None Include="Resources\Superman_back_extension.gif" />
+    <None Include="Resources\Standing Calf Raises.gif" />
+    <None Include="Resources\Squats.gif" />
+    <None Include="Resources\skullCrushers.gif" />
+    <None Include="Resources\Side laterals.gif" />
+    <None Include="Resources\Shoulder Presses.gif" />
+    <None Include="Resources\Second Wall Sit.gif" />
+    <None Include="Resources\Seated calf raise.gif" />
+    <None Include="Resources\Reverse grip pulldowns.gif" />
+    <None Include="Resources\Pushdowns.gif" />
+    <None Include="Resources\Push ups.gif" />
+    <None Include="Resources\Push ups tracep.gif" />
+    <None Include="Resources\pull_ups.gif" />
+    <None Include="Resources\plank_abs.gif" />
+    <None Include="Resources\Pike-Push-Up.gif" />
+    <None Include="Resources\Overhead Tricep Extensions.gif" />
+    <None Include="Resources\One-Arm Dumbbell Rows.gif" />
+    <None Include="Resources\Lunges.gif" />
+    <None Include="Resources\Lunges %28With Dumbbells%29.gif" />
+    <None Include="Resources\Leg press.gif" />
+    <None Include="Resources\Leg Extensions.gif" />
+    <None Include="Resources\Lateral Raises.gif" />
+    <None Include="Resources\Jump Squats.gif" />
+    <None Include="Resources\inverted row pull up.gif" />
+    <None Include="Resources\incline-bench-press.gif" />
+    <None Include="Resources\Incline sit ups.gif" />
+    <None Include="Resources\Incline Dumbbell Presses.gif" />
+    <None Include="Resources\Incline Curl.gif" />
+    <None Include="Resources\Hyperextensions.gif" />
+    <None Include="Resources\Hanging Leg Raises.gif" />
+    <None Include="Resources\Front_pulldowns.gif" />
+    <None Include="Resources\Flat dumbbell flies.gif" />
+    <None Include="Resources\Dumbbell side bends.gif" />
+    <None Include="Resources\Dumbbell pullovers.gif" />
+    <None Include="Resources\down_abs.gif" />
+    <None Include="Resources\Donkey Calf Raises.gif" />
+    <None Include="Resources\Dips.gif" />
+    <None Include="Resources\decline-push-up-exercise-illustration-spotebi.gif" />
+    <None Include="Resources\Decline-chest-db.gif" />
+    <None Include="Resources\Concentration Curl.gif" />
+    <None Include="Resources\Close Hands Chin Ups.gif" />
+    <None Include="Resources\Close grip bench press.gif" />
+    <None Include="Resources\classic_abs.gif" />
+    <None Include="Resources\Chin up.gif" />
+    <None Include="Resources\Cable Tricep Extensions.gif" />
+    <None Include="Resources\Cable crunches.gif" />
+    <None Include="Resources\bowflex-back-exercise-3-2.gif" />
+    <None Include="Resources\bodyweight-squat.gif" />
+    <None Include="Resources\Bodyweight squats.gif" />
+    <None Include="Resources\Bent Over Laterals.gif" />
+    <None Include="Resources\bench_gif.gif" />
+    <None Include="Resources\Behind The Neck MilitaryPress.gif" />
+    <None Include="Resources\Barbell upright rows.gif" />
+    <None Include="Resources\Barbell power cleans.gif" />
+    <None Include="Resources\Barbell Curl.gif" />
+    <None Include="Resources\Back-Extensions.gif" />
+    <None Include="Resources\armplank.gif" />
+    <None Include="Resources\annie-23.w710.h473.gif" />
+    <None Include="Resources\53a0cfa9148a7_-_gif4mountainclimbers.gif" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
