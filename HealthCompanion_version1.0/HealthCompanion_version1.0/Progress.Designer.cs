@@ -386,7 +386,7 @@
             // 
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(59)))));
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(943, 396);
+            this.button13.Location = new System.Drawing.Point(943, 394);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(133, 46);
