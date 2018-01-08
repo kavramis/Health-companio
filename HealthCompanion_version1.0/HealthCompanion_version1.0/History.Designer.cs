@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +52,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.userIDDataGridViewTextBoxColumn,
@@ -62,11 +64,11 @@
             this.dateEndDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.goalsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(121, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 11);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(637, 252);
+            this.dataGridView1.Size = new System.Drawing.Size(996, 119);
             this.dataGridView1.TabIndex = 0;
             // 
             // userIDDataGridViewTextBoxColumn
@@ -137,23 +139,31 @@
             // 
             // ReturnBtn
             // 
-            this.ReturnBtn.Location = new System.Drawing.Point(683, 369);
+            this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ReturnBtn.FlatAppearance.BorderSize = 0;
+            this.ReturnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReturnBtn.Font = new System.Drawing.Font("Gabriola", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnBtn.ForeColor = System.Drawing.Color.White;
+            this.ReturnBtn.Location = new System.Drawing.Point(695, 429);
+            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ReturnBtn.Name = "ReturnBtn";
-            this.ReturnBtn.Size = new System.Drawing.Size(75, 66);
+            this.ReturnBtn.Size = new System.Drawing.Size(304, 99);
             this.ReturnBtn.TabIndex = 1;
             this.ReturnBtn.Text = "Return";
-            this.ReturnBtn.UseVisualStyleBackColor = true;
+            this.ReturnBtn.UseVisualStyleBackColor = false;
             this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // History
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 435);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1004, 531);
             this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "History";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "History";

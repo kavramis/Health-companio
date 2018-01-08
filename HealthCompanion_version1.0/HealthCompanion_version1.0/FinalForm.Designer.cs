@@ -44,6 +44,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,10 +71,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.exNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.routineDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userGoalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clearBtn = new System.Windows.Forms.Button();
             this.routineExerciseTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.RoutineExerciseTableAdapter();
             this.exerciseTableAdapter = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.ExerciseTableAdapter();
             this.userTableAdapter1 = new HealthCompanion_version1._0.FitnessDatabaseDataSetTableAdapters.UserTableAdapter();
@@ -91,7 +92,6 @@
             this.weight = new System.Windows.Forms.Label();
             this.goal = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -132,7 +132,7 @@
             this.button9.BackColor = System.Drawing.Color.DarkRed;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Ravie", 28.2F, System.Drawing.FontStyle.Bold);
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.Location = new System.Drawing.Point(0, 642);
@@ -324,6 +324,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1022, 366);
             this.panel3.TabIndex = 4;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.DarkRed;
+            this.button8.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(790, 102);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(225, 79);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Swap meals";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label7
             // 
@@ -529,6 +542,21 @@
             this.routineDayDataGridViewTextBoxColumn.HeaderText = "RoutineDay";
             this.routineDayDataGridViewTextBoxColumn.Name = "routineDayDataGridViewTextBoxColumn";
             // 
+            // clearBtn
+            // 
+            this.clearBtn.BackColor = System.Drawing.Color.DarkRed;
+            this.clearBtn.Enabled = false;
+            this.clearBtn.Font = new System.Drawing.Font("Gabriola", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBtn.Location = new System.Drawing.Point(790, 8);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(225, 79);
+            this.clearBtn.TabIndex = 6;
+            this.clearBtn.Text = "Clear my records";
+            this.clearBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HealthCompanion_version1._0.Properties.Resources.Wide_Push_Ups;
@@ -548,20 +576,6 @@
             // 
             this.userBindingSource.DataMember = "User";
             this.userBindingSource.DataSource = this.fitnessDatabaseDataSet;
-            // 
-            // clearBtn
-            // 
-            this.clearBtn.BackColor = System.Drawing.Color.Red;
-            this.clearBtn.Enabled = false;
-            this.clearBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.clearBtn.Location = new System.Drawing.Point(790, 8);
-            this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(225, 79);
-            this.clearBtn.TabIndex = 6;
-            this.clearBtn.Text = "Clear my records";
-            this.clearBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.clearBtn.UseVisualStyleBackColor = false;
-            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // routineExerciseTableAdapter
             // 
@@ -598,72 +612,80 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(229, 432);
+            this.label6.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(249, 432);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 17);
+            this.label6.Size = new System.Drawing.Size(88, 31);
             this.label6.TabIndex = 7;
             this.label6.Text = "First name :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(229, 476);
+            this.label8.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(249, 476);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 17);
+            this.label8.Size = new System.Drawing.Size(85, 31);
             this.label8.TabIndex = 8;
             this.label8.Text = "Last name :";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(229, 522);
+            this.label9.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(249, 522);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 17);
+            this.label9.Size = new System.Drawing.Size(64, 31);
             this.label9.TabIndex = 9;
             this.label9.Text = "Weight :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(229, 571);
+            this.label10.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(249, 571);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 17);
+            this.label10.Size = new System.Drawing.Size(94, 31);
             this.label10.TabIndex = 10;
             this.label10.Text = "Fitness goal :";
             // 
             // fname
             // 
             this.fname.AutoSize = true;
-            this.fname.Location = new System.Drawing.Point(369, 432);
+            this.fname.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fname.Location = new System.Drawing.Point(389, 432);
             this.fname.Name = "fname";
-            this.fname.Size = new System.Drawing.Size(54, 17);
+            this.fname.Size = new System.Drawing.Size(53, 31);
             this.fname.TabIndex = 11;
             this.fname.Text = "label11";
             // 
             // lname
             // 
             this.lname.AutoSize = true;
-            this.lname.Location = new System.Drawing.Point(369, 476);
+            this.lname.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lname.Location = new System.Drawing.Point(389, 476);
             this.lname.Name = "lname";
-            this.lname.Size = new System.Drawing.Size(54, 17);
+            this.lname.Size = new System.Drawing.Size(55, 31);
             this.lname.TabIndex = 12;
             this.lname.Text = "label12";
             // 
             // weight
             // 
             this.weight.AutoSize = true;
-            this.weight.Location = new System.Drawing.Point(369, 522);
+            this.weight.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight.Location = new System.Drawing.Point(389, 522);
             this.weight.Name = "weight";
-            this.weight.Size = new System.Drawing.Size(54, 17);
+            this.weight.Size = new System.Drawing.Size(55, 31);
             this.weight.TabIndex = 13;
             this.weight.Text = "label13";
             // 
             // goal
             // 
             this.goal.AutoSize = true;
-            this.goal.Location = new System.Drawing.Point(369, 571);
+            this.goal.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goal.Location = new System.Drawing.Point(389, 571);
             this.goal.Name = "goal";
-            this.goal.Size = new System.Drawing.Size(54, 17);
+            this.goal.Size = new System.Drawing.Size(56, 31);
             this.goal.TabIndex = 14;
             this.goal.Text = "label14";
             // 
@@ -671,21 +693,11 @@
             // 
             this.label11.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(290, 624);
+            this.label11.Location = new System.Drawing.Point(247, 624);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(232, 103);
             this.label11.TabIndex = 15;
-            this.label11.Text = "*Before every trainning day we recommend to do a 10-20 min. aerobic";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(790, 102);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(225, 79);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Swap meals";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.label11.Text = "*Before every training day we recommend to do a 10-20 min. aerobic";
             // 
             // FinalForm
             // 

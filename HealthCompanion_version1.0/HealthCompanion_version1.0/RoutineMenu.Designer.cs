@@ -78,7 +78,7 @@
             this.trainingTypeCmbBox.Items.AddRange(new object[] {
             "Calisthenics",
             "Gym Workout"});
-            this.trainingTypeCmbBox.Location = new System.Drawing.Point(391, 131);
+            this.trainingTypeCmbBox.Location = new System.Drawing.Point(450, 138);
             this.trainingTypeCmbBox.Margin = new System.Windows.Forms.Padding(4);
             this.trainingTypeCmbBox.Name = "trainingTypeCmbBox";
             this.trainingTypeCmbBox.Size = new System.Drawing.Size(210, 24);
@@ -91,7 +91,7 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(226, 135);
+            this.label6.Location = new System.Drawing.Point(285, 142);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 20);
@@ -112,7 +112,7 @@
             this.tipsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.routinesBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(230, 437);
+            this.dataGridView1.Location = new System.Drawing.Point(289, 444);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -172,7 +172,7 @@
             "Home/Outdoors",
             "Gym",
             "I don\'t mind"});
-            this.trainingPlaceCmbBox.Location = new System.Drawing.Point(391, 5);
+            this.trainingPlaceCmbBox.Location = new System.Drawing.Point(450, 12);
             this.trainingPlaceCmbBox.Margin = new System.Windows.Forms.Padding(4);
             this.trainingPlaceCmbBox.Name = "trainingPlaceCmbBox";
             this.trainingPlaceCmbBox.Size = new System.Drawing.Size(210, 24);
@@ -186,7 +186,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(219, 5);
+            this.label5.Location = new System.Drawing.Point(278, 12);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 20);
@@ -195,7 +195,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(230, 230);
+            this.richTextBox1.Location = new System.Drawing.Point(289, 237);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
@@ -208,7 +208,7 @@
             this.saveProgram.BackColor = System.Drawing.Color.Maroon;
             this.saveProgram.Font = new System.Drawing.Font("Gabriola", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveProgram.ForeColor = System.Drawing.Color.White;
-            this.saveProgram.Location = new System.Drawing.Point(1054, 437);
+            this.saveProgram.Location = new System.Drawing.Point(1113, 444);
             this.saveProgram.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveProgram.Name = "saveProgram";
             this.saveProgram.Size = new System.Drawing.Size(137, 156);
@@ -223,7 +223,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(225, 398);
+            this.label1.Location = new System.Drawing.Point(284, 405);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(455, 35);
             this.label1.TabIndex = 21;
@@ -251,7 +251,7 @@
             this.MoveToDietForm.Enabled = false;
             this.MoveToDietForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MoveToDietForm.ForeColor = System.Drawing.Color.White;
-            this.MoveToDietForm.Location = new System.Drawing.Point(595, 601);
+            this.MoveToDietForm.Location = new System.Drawing.Point(654, 608);
             this.MoveToDietForm.Margin = new System.Windows.Forms.Padding(4);
             this.MoveToDietForm.Name = "MoveToDietForm";
             this.MoveToDietForm.Size = new System.Drawing.Size(249, 54);
@@ -275,7 +275,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(212, 655);
+            this.panel1.Size = new System.Drawing.Size(278, 655);
             this.panel1.TabIndex = 25;
             // 
             // panel2
@@ -287,7 +287,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(212, 138);
+            this.panel2.Size = new System.Drawing.Size(278, 138);
             this.panel2.TabIndex = 10;
             // 
             // label2
@@ -332,7 +332,7 @@
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.Location = new System.Drawing.Point(0, 561);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(212, 94);
+            this.button9.Size = new System.Drawing.Size(278, 94);
             this.button9.TabIndex = 9;
             this.button9.Text = "Exit  ";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -464,7 +464,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1192, 655);
+            this.ClientSize = new System.Drawing.Size(1255, 655);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MoveToDietForm);
             this.Controls.Add(this.label1);
