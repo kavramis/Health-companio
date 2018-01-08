@@ -74,5 +74,57 @@ namespace HealthCompanion_version1._0
             FinalForm s = new FinalForm();
             s.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            StartUI sui = new StartUI();
+            UserClass.Name = "";
+            UserClass.Password = "";
+            sui.Show();
+            this.Hide();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            DietForm df = new DietForm();
+            df.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RoutineMenu rm = new RoutineMenu();
+            rm.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PersonalData pd = new PersonalData();
+            pd.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TrainningForm tf = new TrainningForm();
+            tf.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
