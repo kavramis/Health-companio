@@ -15,6 +15,7 @@ namespace HealthCompanion_version1._0
 
     public partial class FinalForm : Form
     {
+        String s;
         public FinalForm()
         {
             InitializeComponent();
@@ -42,30 +43,80 @@ namespace HealthCompanion_version1._0
             int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
             String s = userRoutineTableAdapter1.GetDataUserID(n).Rows[0]["RoutineName"].ToString();
             this.routineExerciseTableAdapter.FillRoutineName(this.fitnessDatabaseDataSet.RoutineExercise, s);
-             String imgFile = dataGridView2.Rows[0].Cells[3].Value.ToString();
+            String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
+            pictureBox1.Image = new Bitmap(path);
+            s = path;
             
 
-          
-
-                
-            
-
-
-        }
+    }
         
-        
-
-        private void button8_Click(object sender, EventArgs e)
+        private void dataGridView1_Click(object sender, EventArgs e)
         {
             //AN VRETHEI TROPOS NA FEROUME TO PATH APO TO PROPERTIES.RESOURCES GIA COMBINE ME TO imgFile tha einai idanikos
             //gia na leitourgisei to parakatw prepei na ginei copy o fakelos resources kai sto bin giati to Enviroment.CurreDirectory
             //epistrefei olo to path mexri to debug
-            String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();           
-            String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);            
-            pictureBox1.Image = new Bitmap(path);
+            try
+            {
+                String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+                String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
+                pictureBox1.Image = new Bitmap(path);
+                s = path;
+            }catch(Exception es)
+            {
+                pictureBox1.Image = new Bitmap(s);
+            }
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StartUI sui = new StartUI();
+            UserClass.Name = "";
+            UserClass.Password = "";
+            sui.Show();
+            this.Hide();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DietForm df = new DietForm();
+            df.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RoutineMenu rm = new RoutineMenu();
+            rm.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PersonalData pd = new PersonalData();
+            pd.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TrainningForm tf = new TrainningForm();
+            tf.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
    
 }

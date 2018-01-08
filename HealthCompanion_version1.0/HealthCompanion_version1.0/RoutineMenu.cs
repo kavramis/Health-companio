@@ -67,8 +67,22 @@ namespace HealthCompanion_version1._0
 
         private void saveProgram_Click(object sender, EventArgs e)
         {
-            int n = dataGridView1.CurrentRow.Index;
-            userRoutineTableAdapter1.Insert(Convert.ToDateTime(Goals.Rows[0]["DateStart"].ToString()), int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString()), dataGridView1.Rows[n].Cells[0].Value.ToString());
+            try {
+                int g = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
+                int n = dataGridView1.CurrentRow.Index;
+                if (userRoutineTableAdapter1.checkRoutine(g) > 0)
+                {
+                    userRoutineTableAdapter1.deleteAllDuplicates(g);
+                }
+                userRoutineTableAdapter1.Insert(Convert.ToDateTime(Goals.Rows[0]["DateStart"].ToString()), g, dataGridView1.Rows[n].Cells[0].Value.ToString());
+                MessageBox.Show("Successfull Insert", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                saveProgram.Enabled = false;
+                MoveToDietForm.Enabled = true;
+
+            }catch(Exception es)
+            {
+                MessageBox.Show("Error with insert", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -87,6 +101,58 @@ namespace HealthCompanion_version1._0
         {
             FinalForm ff = new FinalForm();
             ff.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            StartUI sui = new StartUI();
+            UserClass.Name = "";
+            UserClass.Password = "";
+            sui.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DietForm df = new DietForm();
+            df.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RoutineMenu rm = new RoutineMenu();
+            rm.Show();
+            this.Hide();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            PersonalData pd = new PersonalData();
+            pd.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TrainningForm tf = new TrainningForm();
+            tf.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
