@@ -21,7 +21,7 @@ namespace HealthCompanion_version1._0
             User = userTableAdapter1.GetDataUserBMR(n);
             currentUserBmr = User.Rows[0]["BMR"].ToString();
             BmrValue.Text = currentUserBmr;
-            fitnessGoalTxtBox.Text = goalsTableAdapter1.GetUserPrefs(n).Rows[0]["Description"].ToString();
+            fitnessGoalTxtBox.Text = goalsTableAdapter1.GetUserPrefs(n,"Incomplete").Rows[0]["Description"].ToString();
             if(fitnessGoalTxtBox.Text.Equals("Weight Loss"))
             {
                 quickTipTxtBox.Text = "Your daily diet should be \nabout 200 calories below your BMR";
@@ -38,7 +38,13 @@ namespace HealthCompanion_version1._0
         {
             // TODO: This line of code loads data into the 'fitnessDatabaseDataSet.DietPlan' table. You can move, or remove it, as needed.
             this.dietPlanTableAdapter.FillMyDiet(fitnessDatabaseDataSet.DietPlan,(int) Math.Round(decimal.Parse(BmrValue.Text)), (int)Math.Round(decimal.Parse(BmrValue.Text)));
-
+            if(UserClass.firstTime == true)
+            {
+                button3.Enabled = false;
+                button2.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+            }
 
         }
 
@@ -52,7 +58,7 @@ namespace HealthCompanion_version1._0
                 {
                     userDietPlanTableAdapter1.deleteUserDietPlan(g);
                 }
-                DataTable Goals = goalsTableAdapter1.GetUserPrefs(g);
+                DataTable Goals = goalsTableAdapter1.GetUserPrefs(g,"Incomplete");
                 userDietPlanTableAdapter1.Insert(g, dataGridView1.Rows[n].Cells[0].Value.ToString(), Convert.ToDateTime(Goals.Rows[0]["DateStart"].ToString()));
                 MessageBox.Show("Complete with Registration", "Registration Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 finalFormDrive.Enabled = true;
@@ -73,6 +79,7 @@ namespace HealthCompanion_version1._0
         {
             FinalForm s = new FinalForm();
             s.Show();
+            this.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -114,7 +121,9 @@ namespace HealthCompanion_version1._0
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Progress p = new Progress();
+            p.Show();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)

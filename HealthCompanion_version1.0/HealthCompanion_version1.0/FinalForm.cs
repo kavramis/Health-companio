@@ -43,12 +43,19 @@ namespace HealthCompanion_version1._0
             int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
             String s = userRoutineTableAdapter1.GetDataUserID(n).Rows[0]["RoutineName"].ToString();
             this.routineExerciseTableAdapter.FillRoutineName(this.fitnessDatabaseDataSet.RoutineExercise, s);
-            String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();
-            String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
-            pictureBox1.Image = new Bitmap(path);
-            s = path;
-            circularProgressBar1.Value =int.Parse(userTableAdapter1.GetDataUserBMR(n).Rows[0]["ProgressPoints"].ToString());
-            
+            // String imgFile = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            // String path = Path.Combine(Environment.CurrentDirectory, @"Resources\", imgFile);
+            // pictureBox1.Image = new Bitmap(path);
+            // s = path;            
+            fname.Text = userTableAdapter1.GetDataUserBMR(n).Rows[0]["UserName"].ToString();
+            lname.Text = userTableAdapter1.GetDataUserBMR(n).Rows[0]["UserLastName"].ToString();
+            weight.Text = userTableAdapter1.GetDataUserBMR(n).Rows[0]["Weight"].ToString();
+            goal.Text = goalsTableAdapter.GetUserPrefs(n, "Incomplete").Rows[0]["Description"].ToString();
+            UserClass.firstTime = false;
+            if (goalsTableAdapter.getGoals(n) + userRoutineTableAdapter1.checkRoutine(n) + userDietPlanTableAdapter1.checkDietPlan(n) > 25)
+            {
+                clearBtn.Enabled = true;
+            }
 
     }
         
@@ -116,10 +123,25 @@ namespace HealthCompanion_version1._0
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            FinalForm_Load(this, e);
         }
 
-     
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("This will delete all record from Goals, Diet plan and Routine plan", "Warning!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
+                goalsTableAdapter.deleteAllUserRecords(n);
+                userRoutineTableAdapter1.deleteAllDuplicates(n);
+                userDietPlanTableAdapter1.deleteUserDietPlan(n);
+                userTableAdapter1.updatePoints(0, n);
+                MessageBox.Show("Delete successful", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                PersonalData pd = new PersonalData();
+                pd.Show();
+                this.Hide();
+
+            }
+        }
     }
    
 }

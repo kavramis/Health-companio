@@ -115,7 +115,7 @@ namespace HealthCompanion_version1._0
               else
               {
                   LoginUserTableAdapter.Insert(nameTxtBox.Text,lnameTxtBox.Text,cpassTxtBox.Text,0,0,0,"","",0,0,userTxtBox.Text,0);               
-                createMsg.Text = "Succesfull Register... Welcome to Health Companion";
+                createMsg.Text = "Successful Register... Welcome to Health Companion";
               }
         }
 
@@ -124,13 +124,14 @@ namespace HealthCompanion_version1._0
             errorMsg.Text = "";
             if (LoginUserTableAdapter.checkLogin(loginUserTxtBox.Text,loginPassTxtBox.Text).Value == 1)
              {
+                UserClass.firstTime = true;
                 UserClass.Name = loginUserTxtBox.Text;
                 UserClass.Password = loginPassTxtBox.Text;
                 int n = int.Parse(LoginUserTableAdapter.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
 
                 if (int.Parse(LoginUserTableAdapter.GetCheckForUpdated(UserClass.Name, UserClass.Password).Rows[0]["BMI"].ToString()) != 0)
                 {
-                    if (goalsTableAdapter1.getGoals(n) < 1)
+                    if (goalsTableAdapter1.getGoalsAndStatus(n,"Incomplete") < 1)
                     {
                         TrainningForm tf = new TrainningForm();
                         tf.Show();
@@ -151,6 +152,7 @@ namespace HealthCompanion_version1._0
                     else
                     {
                         FinalForm ff = new FinalForm();
+                        UserClass.firstTime = false;
                         ff.Show();
                         this.Hide();
                     }

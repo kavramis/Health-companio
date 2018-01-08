@@ -21,7 +21,7 @@ namespace HealthCompanion_version1._0
         {
             InitializeComponent();
             int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
-            Goals = goalsTableAdapter.GetUserPrefs(n);
+            Goals = goalsTableAdapter.GetUserPrefs(n,"Incomplete");
             trainingTypeCmbBox.Text = trainingTypeCmbBox.Items[0].ToString();
             CurrentUserTrainingDays = int.Parse(Goals.Rows[0]["TrainingDays"].ToString());
 
@@ -33,6 +33,13 @@ namespace HealthCompanion_version1._0
             // TODO: This line of code loads data into the 'fitnessDatabaseDataSet.Routines' table. You can move, or remove it, as needed.
             this.routinesTableAdapter.FillByDays(fitnessDatabaseDataSet.Routines, CurrentUserTrainingDays);
             trainingTypeCmbBox_SelectedIndexChanged(this, e);
+            if(UserClass.firstTime == true)
+            {
+                button3.Enabled = false;
+                button2.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+            }
         }
 
         private void trainingPlaceCmbBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,7 +82,7 @@ namespace HealthCompanion_version1._0
                     userRoutineTableAdapter1.deleteAllDuplicates(g);
                 }
                 userRoutineTableAdapter1.Insert(Convert.ToDateTime(Goals.Rows[0]["DateStart"].ToString()), g, dataGridView1.Rows[n].Cells[0].Value.ToString());
-                MessageBox.Show("Successfull Insert", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successful Insert", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 saveProgram.Enabled = false;
                 MoveToDietForm.Enabled = true;
 
@@ -147,7 +154,9 @@ namespace HealthCompanion_version1._0
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Progress p = new Progress();
+            p.Show();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)

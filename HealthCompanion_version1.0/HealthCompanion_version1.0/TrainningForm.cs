@@ -27,7 +27,7 @@ namespace HealthCompanion_version1._0
                 int n = int.Parse(userTableAdapter1.GetFindUser(UserClass.Name, UserClass.Password).Rows[0][0].ToString());
                 if (goalsTableAdapter1.getGoals(n) > 0)
                 {
-                    goalsTableAdapter1.deleteAllUserGoals(n);
+                    goalsTableAdapter1.deleteAllUserGoals(n,"Incomplete");
                 }
                 DateTime dateStart = DateTime.Now;
                 goalsTableAdapter1.Insert(n, fitnessGoalsCmbBox.Text, int.Parse(trainingTimeCmbBox.Text), (int)TrainingDaysDd.Value, dateStart, (int)ProgramDurationDd.Value, dateStart.AddMonths((int)ProgramDurationDd.Value), "Incomplete");
