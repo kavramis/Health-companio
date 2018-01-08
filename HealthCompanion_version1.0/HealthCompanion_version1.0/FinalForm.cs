@@ -109,7 +109,9 @@ namespace HealthCompanion_version1._0
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Progress pro = new Progress();
+            pro.Show();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
