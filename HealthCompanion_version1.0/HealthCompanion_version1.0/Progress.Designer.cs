@@ -330,7 +330,7 @@
             this.supposed.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supposed.Location = new System.Drawing.Point(838, 64);
             this.supposed.Name = "supposed";
-            this.supposed.Size = new System.Drawing.Size(153, 117);
+            this.supposed.Size = new System.Drawing.Size(153, 144);
             this.supposed.TabIndex = 30;
             // 
             // button11
