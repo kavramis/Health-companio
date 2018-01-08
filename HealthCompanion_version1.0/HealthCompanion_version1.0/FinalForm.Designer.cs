@@ -240,7 +240,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = true;
-           
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -261,7 +261,7 @@
             this.label1.Font = new System.Drawing.Font("Trajan Pro 3", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(108, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 72);
+            this.label1.Size = new System.Drawing.Size(71, 74);
             this.label1.TabIndex = 3;
             this.label1.Text = "C";
             // 
